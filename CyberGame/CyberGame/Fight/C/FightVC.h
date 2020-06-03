@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FightVC.h
 //  CyberGame
 //
 //  Created by apple on 2020/6/3.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface FightVC : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

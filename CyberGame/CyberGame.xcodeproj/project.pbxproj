@@ -3,29 +3,71 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		18BE68A924875414000F6875 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68A824875414000F6875 /* AppDelegate.m */; };
-		18BE68AF24875414000F6875 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68AE24875414000F6875 /* ViewController.m */; };
 		18BE68B224875414000F6875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE68B024875414000F6875 /* Main.storyboard */; };
 		18BE68B424875419000F6875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BE68B324875419000F6875 /* Assets.xcassets */; };
 		18BE68B724875419000F6875 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE68B524875419000F6875 /* LaunchScreen.storyboard */; };
 		18BE68BA24875419000F6875 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68B924875419000F6875 /* main.m */; };
+		18BE68CF24877031000F6875 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68CD24877031000F6875 /* HomeVC.m */; };
+		18BE68D024877031000F6875 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BE68CE24877031000F6875 /* HomeVC.xib */; };
+		18BE68DA248770B2000F6875 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68D5248770B2000F6875 /* UIColor+Hex.m */; };
+		18BE68DB248770B2000F6875 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68D6248770B2000F6875 /* UIImage+Image.m */; };
+		18BE68DC248770B2000F6875 /* UIImage+OriginalImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68D8248770B2000F6875 /* UIImage+OriginalImage.m */; };
+		18BE68E624877929000F6875 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68E424877929000F6875 /* MineVC.m */; };
+		18BE68E724877929000F6875 /* MineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BE68E524877929000F6875 /* MineVC.xib */; };
+		18BE68F324878921000F6875 /* RankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68F124878921000F6875 /* RankVC.m */; };
+		18BE68F424878921000F6875 /* RankVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BE68F224878921000F6875 /* RankVC.xib */; };
+		18BE68FA24878949000F6875 /* ChosenvC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68F824878949000F6875 /* ChosenvC.m */; };
+		18BE68FB24878949000F6875 /* ChosenvC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BE68F924878949000F6875 /* ChosenvC.xib */; };
+		18BE68FE24879FF3000F6875 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68FD24879FF3000F6875 /* BaseTabBarController.m */; };
+		18BE69012487A32D000F6875 /* TestTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68FF2487A32D000F6875 /* TestTabBar.m */; };
+		18BE69072487A66B000F6875 /* FightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE69052487A66B000F6875 /* FightVC.m */; };
+		18BE69082487A66B000F6875 /* FightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BE69062487A66B000F6875 /* FightVC.xib */; };
+		5149357E3B4C57272FA66C2C /* Pods_CyberGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D99866C98418506C3562B6 /* Pods_CyberGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01D99866C98418506C3562B6 /* Pods_CyberGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyberGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BE68A424875414000F6875 /* CyberGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BE68A724875414000F6875 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18BE68A824875414000F6875 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18BE68AD24875414000F6875 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18BE68AE24875414000F6875 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18BE68B124875414000F6875 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18BE68B324875419000F6875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18BE68B624875419000F6875 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18BE68B824875419000F6875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BE68B924875419000F6875 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18BE68CC24877031000F6875 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		18BE68CD24877031000F6875 /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		18BE68CE24877031000F6875 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		18BE68D124877068000F6875 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		18BE68D4248770B2000F6875 /* UIImage+OriginalImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OriginalImage.h"; sourceTree = "<group>"; };
+		18BE68D5248770B2000F6875 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		18BE68D6248770B2000F6875 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		18BE68D7248770B2000F6875 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		18BE68D8248770B2000F6875 /* UIImage+OriginalImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OriginalImage.m"; sourceTree = "<group>"; };
+		18BE68D9248770B2000F6875 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		18BE68E324877929000F6875 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
+		18BE68E424877929000F6875 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
+		18BE68E524877929000F6875 /* MineVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineVC.xib; sourceTree = "<group>"; };
+		18BE68F024878921000F6875 /* RankVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankVC.h; sourceTree = "<group>"; };
+		18BE68F124878921000F6875 /* RankVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankVC.m; sourceTree = "<group>"; };
+		18BE68F224878921000F6875 /* RankVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankVC.xib; sourceTree = "<group>"; };
+		18BE68F724878949000F6875 /* ChosenvC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChosenvC.h; sourceTree = "<group>"; };
+		18BE68F824878949000F6875 /* ChosenvC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChosenvC.m; sourceTree = "<group>"; };
+		18BE68F924878949000F6875 /* ChosenvC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChosenvC.xib; sourceTree = "<group>"; };
+		18BE68FC24879FF3000F6875 /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		18BE68FD24879FF3000F6875 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		18BE68FF2487A32D000F6875 /* TestTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTabBar.m; sourceTree = "<group>"; };
+		18BE69002487A32D000F6875 /* TestTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTabBar.h; sourceTree = "<group>"; };
+		18BE69042487A66B000F6875 /* FightVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightVC.h; sourceTree = "<group>"; };
+		18BE69052487A66B000F6875 /* FightVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightVC.m; sourceTree = "<group>"; };
+		18BE69062487A66B000F6875 /* FightVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FightVC.xib; sourceTree = "<group>"; };
+		577562BDC0A4EBD5EC5AFD66 /* Pods-CyberGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberGame.release.xcconfig"; path = "Target Support Files/Pods-CyberGame/Pods-CyberGame.release.xcconfig"; sourceTree = "<group>"; };
+		DAEDEFB90D39407557EEE57D /* Pods-CyberGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberGame.debug.xcconfig"; path = "Target Support Files/Pods-CyberGame/Pods-CyberGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5149357E3B4C57272FA66C2C /* Pods_CyberGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13E3FD15FC84A92448D29C06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01D99866C98418506C3562B6 /* Pods_CyberGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		18BE689B24875414000F6875 = {
 			isa = PBXGroup;
 			children = (
 				18BE68A624875414000F6875 /* CyberGame */,
 				18BE68A524875414000F6875 /* Products */,
+				9346A7158852E3B3AE907F52 /* Pods */,
+				13E3FD15FC84A92448D29C06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +111,186 @@
 		18BE68A624875414000F6875 /* CyberGame */ = {
 			isa = PBXGroup;
 			children = (
+				18BE69022487A63E000F6875 /* Fight */,
+				18BE68C524876F7A000F6875 /* Home */,
+				18BE68EB24877F63000F6875 /* Rank */,
+				18BE68EC24877F9C000F6875 /* Chosen */,
+				18BE68C724876FA9000F6875 /* Mine */,
 				18BE68A724875414000F6875 /* AppDelegate.h */,
 				18BE68A824875414000F6875 /* AppDelegate.m */,
-				18BE68AD24875414000F6875 /* ViewController.h */,
-				18BE68AE24875414000F6875 /* ViewController.m */,
 				18BE68B024875414000F6875 /* Main.storyboard */,
 				18BE68B324875419000F6875 /* Assets.xcassets */,
 				18BE68B524875419000F6875 /* LaunchScreen.storyboard */,
 				18BE68B824875419000F6875 /* Info.plist */,
 				18BE68B924875419000F6875 /* main.m */,
+				18BE68D224877085000F6875 /* SupportFile */,
 			);
 			path = CyberGame;
+			sourceTree = "<group>";
+		};
+		18BE68C524876F7A000F6875 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68C924876FBC000F6875 /* V */,
+				18BE68CA24876FCF000F6875 /* M */,
+				18BE68CB24876FD6000F6875 /* C */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		18BE68C724876FA9000F6875 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68E92487793A000F6875 /* M */,
+				18BE68EA2487793F000F6875 /* V */,
+				18BE68E824877932000F6875 /* C */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		18BE68C924876FBC000F6875 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		18BE68CA24876FCF000F6875 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		18BE68CB24876FD6000F6875 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68CC24877031000F6875 /* HomeVC.h */,
+				18BE68CD24877031000F6875 /* HomeVC.m */,
+				18BE68CE24877031000F6875 /* HomeVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		18BE68D224877085000F6875 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68D3248770B2000F6875 /* Category */,
+				18BE68DD248773F9000F6875 /* Common */,
+				18BE68D124877068000F6875 /* PrefixHeader.pch */,
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		18BE68D3248770B2000F6875 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68D7248770B2000F6875 /* UIColor+Hex.h */,
+				18BE68D5248770B2000F6875 /* UIColor+Hex.m */,
+				18BE68D9248770B2000F6875 /* UIImage+Image.h */,
+				18BE68D6248770B2000F6875 /* UIImage+Image.m */,
+				18BE68D4248770B2000F6875 /* UIImage+OriginalImage.h */,
+				18BE68D8248770B2000F6875 /* UIImage+OriginalImage.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		18BE68DD248773F9000F6875 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68FC24879FF3000F6875 /* BaseTabBarController.h */,
+				18BE68FD24879FF3000F6875 /* BaseTabBarController.m */,
+				18BE69002487A32D000F6875 /* TestTabBar.h */,
+				18BE68FF2487A32D000F6875 /* TestTabBar.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		18BE68E824877932000F6875 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68E324877929000F6875 /* MineVC.h */,
+				18BE68E424877929000F6875 /* MineVC.m */,
+				18BE68E524877929000F6875 /* MineVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		18BE68E92487793A000F6875 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		18BE68EA2487793F000F6875 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		18BE68EB24877F63000F6875 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68F524878928000F6875 /* C */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		18BE68EC24877F9C000F6875 /* Chosen */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68F62487893B000F6875 /* C */,
+			);
+			path = Chosen;
+			sourceTree = "<group>";
+		};
+		18BE68F524878928000F6875 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68F024878921000F6875 /* RankVC.h */,
+				18BE68F124878921000F6875 /* RankVC.m */,
+				18BE68F224878921000F6875 /* RankVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		18BE68F62487893B000F6875 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				18BE68F724878949000F6875 /* ChosenvC.h */,
+				18BE68F824878949000F6875 /* ChosenvC.m */,
+				18BE68F924878949000F6875 /* ChosenvC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		18BE69022487A63E000F6875 /* Fight */ = {
+			isa = PBXGroup;
+			children = (
+				18BE69032487A645000F6875 /* C */,
+			);
+			path = Fight;
+			sourceTree = "<group>";
+		};
+		18BE69032487A645000F6875 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				18BE69042487A66B000F6875 /* FightVC.h */,
+				18BE69052487A66B000F6875 /* FightVC.m */,
+				18BE69062487A66B000F6875 /* FightVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		9346A7158852E3B3AE907F52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAEDEFB90D39407557EEE57D /* Pods-CyberGame.debug.xcconfig */,
+				577562BDC0A4EBD5EC5AFD66 /* Pods-CyberGame.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +300,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18BE68BD24875419000F6875 /* Build configuration list for PBXNativeTarget "CyberGame" */;
 			buildPhases = (
+				AA1AF20518A7B4ACF6E6B9FC /* [CP] Check Pods Manifest.lock */,
 				18BE68A024875414000F6875 /* Sources */,
 				18BE68A124875414000F6875 /* Frameworks */,
 				18BE68A224875414000F6875 /* Resources */,
+				9F926DDD5E7568DB634BCF09 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,21 +352,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BE68FB24878949000F6875 /* ChosenvC.xib in Resources */,
+				18BE68F424878921000F6875 /* RankVC.xib in Resources */,
 				18BE68B724875419000F6875 /* LaunchScreen.storyboard in Resources */,
+				18BE68D024877031000F6875 /* HomeVC.xib in Resources */,
+				18BE68E724877929000F6875 /* MineVC.xib in Resources */,
 				18BE68B424875419000F6875 /* Assets.xcassets in Resources */,
 				18BE68B224875414000F6875 /* Main.storyboard in Resources */,
+				18BE69082487A66B000F6875 /* FightVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F926DDD5E7568DB634BCF09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CyberGame/Pods-CyberGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CyberGame/Pods-CyberGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CyberGame/Pods-CyberGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA1AF20518A7B4ACF6E6B9FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CyberGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18BE68A024875414000F6875 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BE68AF24875414000F6875 /* ViewController.m in Sources */,
+				18BE69012487A32D000F6875 /* TestTabBar.m in Sources */,
+				18BE68CF24877031000F6875 /* HomeVC.m in Sources */,
+				18BE68FA24878949000F6875 /* ChosenvC.m in Sources */,
+				18BE68DB248770B2000F6875 /* UIImage+Image.m in Sources */,
+				18BE68DA248770B2000F6875 /* UIColor+Hex.m in Sources */,
 				18BE68A924875414000F6875 /* AppDelegate.m in Sources */,
+				18BE68E624877929000F6875 /* MineVC.m in Sources */,
+				18BE69072487A66B000F6875 /* FightVC.m in Sources */,
+				18BE68DC248770B2000F6875 /* UIImage+OriginalImage.m in Sources */,
+				18BE68FE24879FF3000F6875 /* BaseTabBarController.m in Sources */,
+				18BE68F324878921000F6875 /* RankVC.m in Sources */,
 				18BE68BA24875419000F6875 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +561,7 @@
 		};
 		18BE68BE24875419000F6875 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAEDEFB90D39407557EEE57D /* Pods-CyberGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +578,7 @@
 		};
 		18BE68BF24875419000F6875 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 577562BDC0A4EBD5EC5AFD66 /* Pods-CyberGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

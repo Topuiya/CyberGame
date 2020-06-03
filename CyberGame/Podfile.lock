@@ -1,0 +1,28 @@
+PODS:
+  - AxcAE_TabBar (1.0.5)
+  - IQKeyboardManager (6.5.5)
+  - JXCategoryView (1.5.5)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - AxcAE_TabBar
+  - IQKeyboardManager
+  - JXCategoryView
+  - Masonry
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - AxcAE_TabBar
+    - IQKeyboardManager
+    - JXCategoryView
+    - Masonry
+
+SPEC CHECKSUMS:
+  AxcAE_TabBar: 1d5bcf6c4921889dc38839b6ba2c584a9b55251a
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: f0c830dea3f2108f9700560e1244e594f2631723
+
+COCOAPODS: 1.9.1
