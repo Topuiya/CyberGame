@@ -26,6 +26,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
+    
+    //去掉原生tabbar分割线
+    [self.tabBar setShadowImage:[UIImage new]];
+    [self.tabBar setBackgroundImage:[UIImage new]];
+    
+    self.tabBar.tintColor = RGBA_COLOR(254, 162, 3, 1);
+    self.tabBar.unselectedItemTintColor = [UIColor blackColor];
+    
     // 添加子VC
     [self addChildViewControllers];
 }
@@ -54,18 +62,21 @@
         model.selectColor = [UIColor colorWithHexString:@"#6717D6"];
         model.normalColor = [UIColor colorWithHexString:@"#C6C6C6"];
         
-        /***********************************/
+        //设置item的按钮背景
+        model.normalBackgroundColor = UIColor.whiteColor;
+        model.selectBackgroundColor = UIColor.whiteColor;
+
+    
         if (idx == 2 ) { // 如果是中间的
             CGFloat height = self.tabBar.frame.size.height;
             // 设置凸出
             model.bulgeStyle = AxcAE_TabBarConfigBulgeStyleNormal;
             // 设置凸出高度
             model.bulgeHeight = 0;
-            model.bulgeRoundedCorners = 0; // 修角
+            model.bulgeRoundedCorners = height / 2; // 修角
             // 设置成纯图片展示
             model.itemLayoutStyle = AxcAE_TabBarItemLayoutStylePicture;
-            model.normalImageName = @"tab_ic_fight";
-            model.selectImageName = @"tab_ic_fight";
+            model.normalImageName = model.selectImageName = @"tab_ic_fight";
             model.componentMargin = UIEdgeInsetsMake(0, 0, 0, 0);// 无边距
             // 设置大小/边长
             model.itemSize = CGSizeMake(self.tabBar.frame.size.width / 5,height);
@@ -73,9 +84,9 @@
         // 备注 如果一步设置的VC的背景颜色，VC就会提前绘制驻留，优化这方面的话最好不要这么写
         // 示例中为了方便就在这写了
         UIViewController *vc = [obj objectForKey:@"vc"];
-        vc.view.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.f
-                                                  green:arc4random()%255/255.f
-                                                   blue:arc4random()%255/255.f alpha:1];
+//        vc.view.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.f
+//                                                  green:arc4random()%255/255.f
+//                                                   blue:arc4random()%255/255.f alpha:1];
         // 5.将VC添加到系统控制组
         [tabBarVCs addObject:vc];
         // 5.1添加构造Model到集合
@@ -103,21 +114,23 @@
 // 9.实现代理，如下：
 static NSInteger lastIdx = 0;
 - (void)axcAE_TabBar:(AxcAE_TabBar *)tabbar selectIndex:(NSInteger)index{
-    if (index != 2) { // 不是中间的就切换
+//    if (index != 2) { // 不是中间的就切换
         // 通知 切换视图控制器
         [self setSelectedIndex:index];
         lastIdx = index;
-    }else{ // 点击了中间的
-        [self.axcTabBar setSelectIndex:lastIdx WithAnimation:NO]; // 换回上一个选中状态
-        // 或者
-        //        self.axcTabBar.selectIndex = lastIdx; // 不去切换TabBar的选中状态
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击了中间的,不切换视图"
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSLog(@"好的！！！！");
-        }])];
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
+//    }
+//    else{ // 点击了中间的
+//        [self.axcTabBar setSelectIndex:lastIdx WithAnimation:NO]; // 换回上一个选中状态
+//        // 或者
+//        //        self.axcTabBar.selectIndex = lastIdx; // 不去切换TabBar的选中状态
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击了中间的,不切换视图"
+//                                                                          preferredStyle:UIAlertControllerStyleAlert];
+//        [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            NSLog(@"好的！！！！");
+//        }])];
+//        [self presentViewController:alertController animated:YES completion:nil];
+//    }
+    
 }
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
     [super setSelectedIndex:selectedIndex];
