@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    UIImage *bgNav = [UIImage imageNamed:@"bg"];
+    [self.navigationController.navigationBar setBackgroundImage:bgNav forBarMetrics:UIBarMetricsDefault];
 }
 
 

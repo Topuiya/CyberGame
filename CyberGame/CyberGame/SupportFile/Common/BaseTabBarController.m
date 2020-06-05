@@ -10,10 +10,11 @@
 #import <AxcAE_TabBar.h>
 #import "TestTabBar.h"
 #import "UIColor+Hex.h"
+#import "UIImage+Image.h"
 
 #import "HomeVC.h"
 #import "RankVC.h"
-#import "ChosenvC.h"
+#import "Featured.h"
 #import "MineVC.h"
 #import "FightVC.h"
 
@@ -30,9 +31,21 @@
     //去掉原生tabbar分割线
     [self.tabBar setShadowImage:[UIImage new]];
     [self.tabBar setBackgroundImage:[UIImage new]];
-    
-    self.tabBar.tintColor = RGBA_COLOR(254, 162, 3, 1);
+
+    self.tabBar.tintColor = RGBA_COLOR(0, 255, 255, 1);
     self.tabBar.unselectedItemTintColor = [UIColor blackColor];
+    
+//    if (@available(iOS 13, *)) {
+//    UITabBarAppearance *appearance = [self.tabBar.standardAppearance copy];
+//    appearance.backgroundImage = [UIImage imageWithColor:[UIColor clearColor]];
+//    appearance.shadowImage = [UIImage imageWithColor:[UIColor clearColor]];
+//    // 官方文档写的是 重置背景和阴影为透明
+//    [appearance configureWithTransparentBackground];
+//    self.tabBar.standardAppearance = appearance;
+//    } else {
+//    self.tabBar.backgroundImage = [UIImage new];
+//    self.tabBar.shadowImage = [UIImage new];
+//    }
     
     // 添加子VC
     [self addChildViewControllers];
@@ -44,7 +57,7 @@
     @[@{@"vc":[HomeVC new],@"normalImg":@"tab_ic_home_d",@"selectImg":@"tab_ic_home_s",@"itemTitle":@"首页"},
       @{@"vc":[RankVC new],@"normalImg":@"tab_ic_rank_d",@"selectImg":@"tab_ic_rank_s",@"itemTitle":@"排名"},
       @{@"vc":[FightVC new],@"normalImg":@"",@"selectImg":@"",@"itemTitle":@""},
-      @{@"vc":[ChosenvC new],@"normalImg":@"tab_ic_featured_d",@"selectImg":@"tab_ic_featured_s",@"itemTitle":@"精选"},
+      @{@"vc":[Featured new],@"normalImg":@"tab_ic_featured_d",@"selectImg":@"tab_ic_featured_s",@"itemTitle":@"精选"},
       @{@"vc":[MineVC new],@"normalImg":@"tab_ic_mine_d",@"selectImg":@"tab_ic_mine_s",@"itemTitle":@"我的"}];
     // 1.遍历这个集合
     // 1.1 设置一个保存构造器的数组

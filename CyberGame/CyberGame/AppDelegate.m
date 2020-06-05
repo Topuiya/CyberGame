@@ -8,12 +8,19 @@
 
 #import "AppDelegate.h"
 #import "BaseTabBarController.h"
+#import "HomeVC.h"
+#import "RankVC.h"
+#import "FightVC.h"
+#import "Featured.h"
+#import "MineVC.h"
 
+#import "BaseNavigationController.h"
+
+#import "WRNavigationBar.h"
 #import "UIColor+Hex.h"
 #import <IQKeyboardManager.h>
 
 @interface AppDelegate ()
-
 
 @end
 
@@ -26,35 +33,32 @@
     // 设置主窗口,并设置根控制器
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    BaseTabBarController *rootViewController = [[BaseTabBarController alloc] init];
-    [self.window setRootViewController:rootViewController];
-    [self.window makeKeyAndVisible];
+//    BaseTabBarController *baseTabBarController = [[BaseTabBarController alloc] init];
+        
+//    self.window.rootViewController = [[RTRootNavigationController alloc] initWithRootViewController:tabbar];
+    BaseNavigationController *homeNav = [[BaseNavigationController alloc] initWithRootViewController:[HomeVC new]];
+    BaseNavigationController *rankNav = [[BaseNavigationController alloc] initWithRootViewController:[RankVC new]];
+    BaseNavigationController *fightNav = [[BaseNavigationController alloc] initWithRootViewController:[FightVC new]];
+    BaseNavigationController *chosenNav = [[BaseNavigationController alloc] initWithRootViewController:[Featured new]];
+    BaseNavigationController *mineNav = [[BaseNavigationController alloc] initWithRootViewController:[MineVC new]];
     
-//    CustomTabBarController *customTabBarC = CustomTabBarController.new;
-//    self.customTabBarC = customTabBarC;
+    //开启AxcAE_TabBar
+    BaseTabBarController *tabBarVC = [BaseTabBarController new];
+//    UITabBarController *tabBarVC = [UITabBarController new];
+    tabBarVC.viewControllers = @[homeNav, rankNav, fightNav, chosenNav, mineNav];
+//    [self setTabBarItems:tabBarVC];
+    self.window.rootViewController = tabBarVC;
+    
+    [self setNavBarAppearence];
+    
+    
+    
+//    RTRootNavigationController *nav = [[RTRootNavigationController alloc] initWithRootViewController:tabBarVC];
 //
+//    [self.window setRootViewController:baseTabBarController];
 //
-//
-//    HomeVC *homeVC = HomeVC.new;
-//    homeVC.view.backgroundColor = UIColor.whiteColor;
-//    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
-//    [self addChildVC:homeNav title:@"首页" imgName:@"tab_ic_home_d" selectedImgName:@"tab_ic_home_s"];
-//
-//
-//    MineVC *mineVC = MineVC.new;
-//    mineVC.view.backgroundColor = UIColor.whiteColor;
-//    UINavigationController *mineNav = [[UINavigationController alloc] initWithRootViewController:mineVC];
-//    [self addChildVC:mineNav title:@"我的" imgName:@"tab_ic_mine_d" selectedImgName:@"tab_ic_mine_s"];
-//
-//
-//    NSArray *array = [NSArray arrayWithObjects:homeNav, mineNav, nil];
-//
-//    UITabBarController *tabar = [[UITabBarController alloc] init];
-//    tabar.viewControllers = array;
-//
-//    self.window.rootViewController = tabar;
-//    [self.window makeKeyAndVisible];
-//
+    [self.window makeKeyAndVisible];
+  
     
     //默认开启IQKeyboard键盘
     [IQKeyboardManager sharedManager];
@@ -64,14 +68,38 @@
     return YES;
 }
 
-//- (void)addChildVC:(UINavigationController *)nav title:(NSString *)title imgName:(NSString *)imageName selectedImgName:(NSString *)selectedImgName
-//{
-//    nav.tabBarItem.title = title;
-//    nav.tabBarItem.image = [UIImage imageNamed:imageName];
-////    [self.customTabBarC addChildViewController:nav];
+//
+//- (void)setTabBarItems:(UITabBarController*)tabBarVC {
+//    NSArray *titles = @[@"1", @"2", @" ", @"4", @"5"];
+//    NSArray *normalImages = @[@"tab_ic_mine_s", @"tab_ic_mine_s", @"tab_ic_mine_s", @"tab_ic_mine_s", @"tab_ic_mine_s"];
+//    NSArray *highlightImages = @[@"tab_ic_mine_d", @"tab_ic_mine_d", @"tab_ic_mine_d", @"tab_ic_mine_d", @"tab_ic_mine_d"];
+//    [tabBarVC.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        obj.title = titles[idx];
+//        obj.image = [[UIImage imageNamed:normalImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//        obj.selectedImage = [[UIImage imageNamed:highlightImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    }];
+//
 //}
 
-
-
+- (void)setNavBarAppearence {
+    // 设置是 广泛使用WRNavigationBar，还是局部使用WRNavigationBar，目前默认是广泛使用
+    [WRNavigationBar wr_widely];
+    [WRNavigationBar wr_setBlacklist:@[@"HomeVC",
+                                       @"RankVC",
+                                       @"FightVC",
+                                       @"Featured",
+                                       @"MineVC"]];
+    //#6716d6
+    // 设置导航栏默认的背景颜色
+    [WRNavigationBar wr_setDefaultNavBarBarTintColor:[UIColor colorWithHexString:@"#6716d6"]];
+    // 设置导航栏所有按钮的默认颜色
+    [WRNavigationBar wr_setDefaultNavBarTintColor:[UIColor whiteColor]];
+    // 设置导航栏标题默认颜色
+    [WRNavigationBar wr_setDefaultNavBarTitleColor:[UIColor whiteColor]];
+    // 统一设置状态栏样式
+    [WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
+    // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
+    [WRNavigationBar wr_setDefaultNavBarShadowImageHidden:YES];
+}
 
 @end

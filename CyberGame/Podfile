@@ -10,5 +10,9 @@ pod 'JXCategoryView'
 pod 'IQKeyboardManager'
 pod 'AxcAE_TabBar'
 pod 'Masonry'
+pod 'WRNavigationBar','~>1.2.0’
+pod 'TYCyclePagerView'
+pod 'SDCycleScrollView'
+pod 'SDWebImage', '>= 5.0.0'
 
 end

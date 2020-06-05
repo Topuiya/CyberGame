@@ -1,22 +1,24 @@
 //
-//  ChosenvC.m
+//  Featured.m
 //  CyberGame
 //
-//  Created by apple on 2020/6/3.
+//  Created by apple on 2020/6/4.
 //  Copyright © 2020 zzh. All rights reserved.
 //
 
-#import "ChosenvC.h"
+#import "Featured.h"
 
-@interface ChosenvC ()
+@interface Featured ()
 
 @end
 
-@implementation ChosenvC
+@implementation Featured
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.title = @"精选";
+    UIImage *bgNav = [UIImage imageNamed:@"bg"];
+    [self.navigationController.navigationBar setBackgroundImage:bgNav forBarMetrics:UIBarMetricsDefault];
 }
 
 /*
