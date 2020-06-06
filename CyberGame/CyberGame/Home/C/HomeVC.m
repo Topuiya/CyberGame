@@ -133,7 +133,7 @@ NSString *GameTabCellID = @"GameTabCell";
     
     
     UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_sar zone"]];
-    titleImageView.frame = CGRectMake((SCREEN_WIDTH - 151.5) / 2, 30, 151.5, 15.5);
+    titleImageView.frame = CGRectMake((SCREEN_WIDTH - 151.5) / 2, 40, 151.5, 15.5);
     [sortView addSubview:titleImageView];
 }
 
@@ -200,7 +200,7 @@ NSString *GameTabCellID = @"GameTabCell";
     if (section == 0) {
         return nil;
     }else if (section == 1) {
-        UIView *gameHeadView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        UIView *gameHeadView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
         [self setSortBtn:gameHeadView];
         return gameHeadView;
     }
@@ -214,7 +214,7 @@ NSString *GameTabCellID = @"GameTabCell";
         return 0.01f;
     }
     else if (section == 1) {
-        return 50;
+        return 60;
     }
     else
     {
