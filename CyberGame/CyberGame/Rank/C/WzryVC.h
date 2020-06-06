@@ -1,5 +1,5 @@
 //
-//  RankVC.h
+//  WzryVC.h
 //  CyberGame
 //
 //  Created by apple on 2020/6/6.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RankVC : ContentBaseViewController
+@interface WzryVC : ContentBaseViewController <JXCategoryListContentViewDelegate>
 
 @end
 

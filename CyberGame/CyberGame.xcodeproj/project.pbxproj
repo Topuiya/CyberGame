@@ -20,6 +20,17 @@
 		183AABFF248A03F60044ED05 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AABFD248A03F60044ED05 /* BannerCollectionViewCell.xib */; };
 		183AAC0B248A30FF0044ED05 /* GameSortTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AAC09248A30FF0044ED05 /* GameSortTabCell.xib */; };
 		183AAC14248A3F5D0044ED05 /* GameSortTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183AAC13248A3F5D0044ED05 /* GameSortTabCell.m */; };
+		185EC403248B46E000C22C98 /* WzryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC401248B46E000C22C98 /* WzryVC.m */; };
+		185EC404248B46E000C22C98 /* WzryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC402248B46E000C22C98 /* WzryVC.xib */; };
+		185EC408248B483700C22C98 /* LscsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC406248B483700C22C98 /* LscsVC.m */; };
+		185EC409248B483700C22C98 /* LscsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC407248B483700C22C98 /* LscsVC.xib */; };
+		185EC40D248B484400C22C98 /* LolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC40B248B484400C22C98 /* LolVC.m */; };
+		185EC40E248B484400C22C98 /* LolVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC40C248B484400C22C98 /* LolVC.xib */; };
+		185EC412248B484E00C22C98 /* OwVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC410248B484E00C22C98 /* OwVC.m */; };
+		185EC413248B484E00C22C98 /* OwVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC411248B484E00C22C98 /* OwVC.xib */; };
+		1864F65D248B3224001AEF84 /* NaviSegmentedControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864F65B248B3224001AEF84 /* NaviSegmentedControlViewController.m */; };
+		1864F660248B32EE001AEF84 /* ContentBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864F65F248B32EE001AEF84 /* ContentBaseViewController.m */; };
+		1864F663248B331E001AEF84 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864F661248B331E001AEF84 /* ListViewController.m */; };
 		18BE68A924875414000F6875 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68A824875414000F6875 /* AppDelegate.m */; };
 		18BE68B224875414000F6875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE68B024875414000F6875 /* Main.storyboard */; };
 		18BE68B424875419000F6875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BE68B324875419000F6875 /* Assets.xcassets */; };
@@ -62,6 +73,24 @@
 		183AAC09248A30FF0044ED05 /* GameSortTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameSortTabCell.xib; sourceTree = "<group>"; };
 		183AAC12248A3F5D0044ED05 /* GameSortTabCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSortTabCell.h; sourceTree = "<group>"; };
 		183AAC13248A3F5D0044ED05 /* GameSortTabCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSortTabCell.m; sourceTree = "<group>"; };
+		185EC400248B46E000C22C98 /* WzryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WzryVC.h; sourceTree = "<group>"; };
+		185EC401248B46E000C22C98 /* WzryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WzryVC.m; sourceTree = "<group>"; };
+		185EC402248B46E000C22C98 /* WzryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WzryVC.xib; sourceTree = "<group>"; };
+		185EC405248B483700C22C98 /* LscsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LscsVC.h; sourceTree = "<group>"; };
+		185EC406248B483700C22C98 /* LscsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LscsVC.m; sourceTree = "<group>"; };
+		185EC407248B483700C22C98 /* LscsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LscsVC.xib; sourceTree = "<group>"; };
+		185EC40A248B484400C22C98 /* LolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LolVC.h; sourceTree = "<group>"; };
+		185EC40B248B484400C22C98 /* LolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LolVC.m; sourceTree = "<group>"; };
+		185EC40C248B484400C22C98 /* LolVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LolVC.xib; sourceTree = "<group>"; };
+		185EC40F248B484E00C22C98 /* OwVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwVC.h; sourceTree = "<group>"; };
+		185EC410248B484E00C22C98 /* OwVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OwVC.m; sourceTree = "<group>"; };
+		185EC411248B484E00C22C98 /* OwVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwVC.xib; sourceTree = "<group>"; };
+		1864F65B248B3224001AEF84 /* NaviSegmentedControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviSegmentedControlViewController.m; sourceTree = "<group>"; };
+		1864F65C248B3224001AEF84 /* NaviSegmentedControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviSegmentedControlViewController.h; sourceTree = "<group>"; };
+		1864F65E248B32EE001AEF84 /* ContentBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentBaseViewController.h; sourceTree = "<group>"; };
+		1864F65F248B32EE001AEF84 /* ContentBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentBaseViewController.m; sourceTree = "<group>"; };
+		1864F661248B331E001AEF84 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		1864F662248B331E001AEF84 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		18BE68A424875414000F6875 /* CyberGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BE68A724875414000F6875 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18BE68A824875414000F6875 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +141,20 @@
 				01D99866C98418506C3562B6 /* Pods_CyberGame.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		185EC414248B55B000C22C98 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		185EC415248B55B600C22C98 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
 			sourceTree = "<group>";
 		};
 		18BE689B24875414000F6875 = {
@@ -207,6 +250,12 @@
 				183AABF82489D4900044ED05 /* HomeVC.xib */,
 				183AA7E82488F15900D88B76 /* WRImageHelper.h */,
 				183AA7E72488F15900D88B76 /* WRImageHelper.m */,
+				1864F65C248B3224001AEF84 /* NaviSegmentedControlViewController.h */,
+				1864F65B248B3224001AEF84 /* NaviSegmentedControlViewController.m */,
+				1864F65E248B32EE001AEF84 /* ContentBaseViewController.h */,
+				1864F65F248B32EE001AEF84 /* ContentBaseViewController.m */,
+				1864F662248B331E001AEF84 /* ListViewController.h */,
+				1864F661248B331E001AEF84 /* ListViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -272,6 +321,8 @@
 		18BE68EB24877F63000F6875 /* Rank */ = {
 			isa = PBXGroup;
 			children = (
+				185EC415248B55B600C22C98 /* M */,
+				185EC414248B55B000C22C98 /* V */,
 				18BE68F524878928000F6875 /* C */,
 			);
 			path = Rank;
@@ -291,6 +342,18 @@
 				18BE68F024878921000F6875 /* RankVC.h */,
 				18BE68F124878921000F6875 /* RankVC.m */,
 				18BE68F224878921000F6875 /* RankVC.xib */,
+				185EC400248B46E000C22C98 /* WzryVC.h */,
+				185EC401248B46E000C22C98 /* WzryVC.m */,
+				185EC402248B46E000C22C98 /* WzryVC.xib */,
+				185EC405248B483700C22C98 /* LscsVC.h */,
+				185EC406248B483700C22C98 /* LscsVC.m */,
+				185EC407248B483700C22C98 /* LscsVC.xib */,
+				185EC40A248B484400C22C98 /* LolVC.h */,
+				185EC40B248B484400C22C98 /* LolVC.m */,
+				185EC40C248B484400C22C98 /* LolVC.xib */,
+				185EC40F248B484E00C22C98 /* OwVC.h */,
+				185EC410248B484E00C22C98 /* OwVC.m */,
+				185EC411248B484E00C22C98 /* OwVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -392,14 +455,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				183AA7E12488E20200D88B76 /* HomeBannerCell.xib in Resources */,
+				185EC413248B484E00C22C98 /* OwVC.xib in Resources */,
+				185EC404248B46E000C22C98 /* WzryVC.xib in Resources */,
 				183AAC0B248A30FF0044ED05 /* GameSortTabCell.xib in Resources */,
 				183AA7DC2488CFB000D88B76 /* Featured.xib in Resources */,
 				18BE68F424878921000F6875 /* RankVC.xib in Resources */,
 				18BE68B724875419000F6875 /* LaunchScreen.storyboard in Resources */,
 				183AABFF248A03F60044ED05 /* BannerCollectionViewCell.xib in Resources */,
 				18BE68E724877929000F6875 /* MineVC.xib in Resources */,
+				185EC40E248B484400C22C98 /* LolVC.xib in Resources */,
 				18BE68B424875419000F6875 /* Assets.xcassets in Resources */,
 				183AABFA2489D4900044ED05 /* HomeVC.xib in Resources */,
+				185EC409248B483700C22C98 /* LscsVC.xib in Resources */,
 				18BE68B224875414000F6875 /* Main.storyboard in Resources */,
 				18BE69082487A66B000F6875 /* FightVC.xib in Resources */,
 			);
@@ -454,23 +521,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185EC408248B483700C22C98 /* LscsVC.m in Sources */,
 				18BE69012487A32D000F6875 /* TestTabBar.m in Sources */,
+				1864F663248B331E001AEF84 /* ListViewController.m in Sources */,
 				18BE68DB248770B2000F6875 /* UIImage+Image.m in Sources */,
 				18BE68DA248770B2000F6875 /* UIColor+Hex.m in Sources */,
 				183AA7EC2488F47600D88B76 /* HomeBannerDataM.m in Sources */,
 				18BE68A924875414000F6875 /* AppDelegate.m in Sources */,
 				183AA7D72488C3CE00D88B76 /* BaseNavigationController.m in Sources */,
 				183AA7E92488F15900D88B76 /* WRImageHelper.m in Sources */,
+				1864F660248B32EE001AEF84 /* ContentBaseViewController.m in Sources */,
+				185EC412248B484E00C22C98 /* OwVC.m in Sources */,
 				183AA7DB2488CFB000D88B76 /* Featured.m in Sources */,
+				1864F65D248B3224001AEF84 /* NaviSegmentedControlViewController.m in Sources */,
 				183AAC14248A3F5D0044ED05 /* GameSortTabCell.m in Sources */,
 				18BE68E624877929000F6875 /* MineVC.m in Sources */,
 				18BE69072487A66B000F6875 /* FightVC.m in Sources */,
 				18BE68DC248770B2000F6875 /* UIImage+OriginalImage.m in Sources */,
 				183AA7E02488E20200D88B76 /* HomeBannerCell.m in Sources */,
 				183AABF92489D4900044ED05 /* HomeVC.m in Sources */,
+				185EC40D248B484400C22C98 /* LolVC.m in Sources */,
 				183AABFE248A03F60044ED05 /* BannerCollectionViewCell.m in Sources */,
 				18BE68FE24879FF3000F6875 /* BaseTabBarController.m in Sources */,
 				18BE68F324878921000F6875 /* RankVC.m in Sources */,
+				185EC403248B46E000C22C98 /* WzryVC.m in Sources */,
 				18BE68BA24875419000F6875 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,8 @@
 #import "GameSortTabCell.h"
 
 
+#import "NaviSegmentedControlViewController.h"
+
 #import "UIImage+OriginalImage.h"
 
 @interface HomeVC () <UITableViewDelegate, UITableViewDataSource>
@@ -111,7 +113,7 @@ NSString *GameTabCellID = @"GameTabCell";
     [gameNewsBtn addTarget:self action:@selector(gameNewsBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     //游戏排名榜(第二个)按钮
-    UIButton *gameRankBtn = [[UIButton alloc] initWithFrame:CGRectMake(61 + 14.5 + spaceW, -20, 100, 41.5)];;
+    UIButton *gameRankBtn = [[UIButton alloc] initWithFrame:CGRectMake(61 + spaceW, -20, 100, 41.5)];;
     [gameRankBtn setTitle:@"电竞快讯" forState:UIControlStateNormal];
     gameRankBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [gameRankBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
@@ -139,6 +141,8 @@ NSString *GameTabCellID = @"GameTabCell";
 
 - (void)gameNewsBtnClick {
     NSLog(@"gameNewsBtnClick");
+    NaviSegmentedControlViewController *testVC = [[NaviSegmentedControlViewController alloc] init];;
+    [self.navigationController pushViewController:testVC animated:YES];
 }
 
 #pragma mark - UITableViewViewDataSource

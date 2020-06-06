@@ -52,11 +52,6 @@
     [self setNavBarAppearence];
     
     
-    
-//    RTRootNavigationController *nav = [[RTRootNavigationController alloc] initWithRootViewController:tabBarVC];
-//
-//    [self.window setRootViewController:baseTabBarController];
-//
     [self.window makeKeyAndVisible];
   
     
@@ -68,18 +63,7 @@
     return YES;
 }
 
-//
-//- (void)setTabBarItems:(UITabBarController*)tabBarVC {
-//    NSArray *titles = @[@"1", @"2", @" ", @"4", @"5"];
-//    NSArray *normalImages = @[@"tab_ic_mine_s", @"tab_ic_mine_s", @"tab_ic_mine_s", @"tab_ic_mine_s", @"tab_ic_mine_s"];
-//    NSArray *highlightImages = @[@"tab_ic_mine_d", @"tab_ic_mine_d", @"tab_ic_mine_d", @"tab_ic_mine_d", @"tab_ic_mine_d"];
-//    [tabBarVC.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        obj.title = titles[idx];
-//        obj.image = [[UIImage imageNamed:normalImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        obj.selectedImage = [[UIImage imageNamed:highlightImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    }];
-//
-//}
+
 
 - (void)setNavBarAppearence {
     // 设置是 广泛使用WRNavigationBar，还是局部使用WRNavigationBar，目前默认是广泛使用
