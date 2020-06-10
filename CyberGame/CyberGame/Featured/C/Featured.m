@@ -2,13 +2,24 @@
 //  Featured.m
 //  CyberGame
 //
-//  Created by apple on 2020/6/4.
+//  Created by apple on 2020/6/10.
 //  Copyright © 2020 zzh. All rights reserved.
 //
 
 #import "Featured.h"
+#import "UIImage+Image.h"
+#import "UIImage+OriginalImage.h"
 
-@interface Featured ()
+#import "FeatureWzry.h"
+#import "FeaturedLscs.h"
+#import "FeaturedLol.h"
+#import "FeaturedOw.h"
+
+#import "JXCategoryTitleView.h"
+
+@interface Featured () <JXCategoryViewDelegate>
+
+@property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
 
 @end
 
@@ -16,19 +27,90 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"精选";
-    UIImage *bgNav = [UIImage imageNamed:@"bg"];
-    [self.navigationController.navigationBar setBackgroundImage:bgNav forBarMetrics:UIBarMetricsDefault];
+    self.title = @"电竞快讯";
+    //    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:RGBA(255, 255, 255, 0)] forBarMetrics:UIBarMetricsDefault];
+    
+    [self addNavBarButtonItem];
+    
+    
+    self.titles = @[@"王者荣耀", @"炉石传说", @"英雄联盟", @"守望先锋", ];
+    CGFloat totalItemWidth = self.view.bounds.size.width - 30*2;
+    
+    self.myCategoryView.titles = self.titles;
+    self.myCategoryView.cellSpacing = 0;
+    self.myCategoryView.cellWidth = totalItemWidth/self.titles.count;
+    self.myCategoryView.titleFont = [UIFont systemFontOfSize:15];
+    self.myCategoryView.titleColor = RGBA(255, 255, 255, 1);
+    self.myCategoryView.titleSelectedColor = RGBA(255, 255, 255, 1);
+    //cell之间的间距，默认20
+    self.myCategoryView.cellSpacing = 34.5;
+    //默认JXCategoryViewAutomaticDimension
+    self.myCategoryView.cellWidth = 60;
+    self.myCategoryView.titleLabelMaskEnabled = YES;
+    
+    
+    JXCategoryIndicatorImageView *indicatorImageView = [[JXCategoryIndicatorImageView alloc] init];
+    indicatorImageView.indicatorImageView.image = [UIImage imageNamed:@"ic_selector"];
+//    indicatorImageView.verticalMargin = -5;
+    indicatorImageView.indicatorImageViewSize = CGSizeMake(22.5, 9);
+    self.myCategoryView.indicators = @[indicatorImageView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - navBarButtonItem
+- (void)addNavBarButtonItem {
+    //右边按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_search"] style:UIBarButtonItemStyleDone target:self action:@selector(searchBtnClick)];
+    
 }
-*/
+
+- (void)searchBtnClick {
+    
+}
+
+#pragma mark - JXCategoryListContentViewDelegate
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.myCategoryView.frame = CGRectMake(0, 80, SCREEN_WIDTH, 40);
+}
+
+- (JXCategoryTitleView *)myCategoryView {
+    return (JXCategoryTitleView *)self.categoryView;
+}
+
+- (JXCategoryBaseView *)preferredCategoryView {
+    return [[JXCategoryTitleView alloc] init];
+}
+
+- (CGFloat)preferredCategoryViewHeight {
+    return 0;
+}
+
+
+-(NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView{
+    return  4;
+}
+
+- (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
+    if (index == 0) {
+        FeatureWzry *fewzryVC = FeatureWzry.new;
+        return fewzryVC;
+    }
+    if (index == 1) {
+        FeaturedLscs *felscsVC = FeaturedLscs.new;
+        return felscsVC;
+    }
+    if (index == 2) {
+        FeaturedLol *felolVC = FeaturedLol.new;
+        return felolVC;
+    }
+    else {
+        FeaturedOw *feowVC = FeaturedOw.new;
+        return feowVC;
+    }
+}
+
+
 
 @end

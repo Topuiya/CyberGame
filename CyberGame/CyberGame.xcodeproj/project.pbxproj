@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18140EEF2490713000849DD3 /* RankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18140EED2490713000849DD3 /* RankTableViewCell.m */; };
+		18140EF02490713000849DD3 /* RankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18140EEE2490713000849DD3 /* RankTableViewCell.xib */; };
+		1821862E2490A73D003861C1 /* FeatureWzry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821862C2490A73C003861C1 /* FeatureWzry.m */; };
+		1821862F2490A73D003861C1 /* FeatureWzry.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821862D2490A73C003861C1 /* FeatureWzry.xib */; };
+		182186332490AB79003861C1 /* FeaturedLscs.m in Sources */ = {isa = PBXBuildFile; fileRef = 182186312490AB79003861C1 /* FeaturedLscs.m */; };
+		182186342490AB79003861C1 /* FeaturedLscs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182186322490AB79003861C1 /* FeaturedLscs.xib */; };
+		182186382490AB94003861C1 /* FeaturedLol.m in Sources */ = {isa = PBXBuildFile; fileRef = 182186362490AB94003861C1 /* FeaturedLol.m */; };
+		182186392490AB94003861C1 /* FeaturedLol.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182186372490AB94003861C1 /* FeaturedLol.xib */; };
+		1821863D2490ABA5003861C1 /* FeaturedOw.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821863B2490ABA5003861C1 /* FeaturedOw.m */; };
+		1821863E2490ABA5003861C1 /* FeaturedOw.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821863C2490ABA5003861C1 /* FeaturedOw.xib */; };
+		182186432490B269003861C1 /* FeaturedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182186412490B269003861C1 /* FeaturedTableViewCell.m */; };
+		182186442490B269003861C1 /* FeaturedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182186422490B269003861C1 /* FeaturedTableViewCell.xib */; };
+		182186462490CA41003861C1 /* DJClub.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182186452490CA41003861C1 /* DJClub.plist */; };
+		182186482490CA52003861C1 /* teamList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182186472490CA52003861C1 /* teamList.plist */; };
 		183AA7D72488C3CE00D88B76 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183AA7D52488C3CE00D88B76 /* BaseNavigationController.m */; };
 		183AA7DB2488CFB000D88B76 /* Featured.m in Sources */ = {isa = PBXBuildFile; fileRef = 183AA7D92488CFB000D88B76 /* Featured.m */; };
 		183AA7DC2488CFB000D88B76 /* Featured.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AA7DA2488CFB000D88B76 /* Featured.xib */; };
@@ -28,7 +42,6 @@
 		185EC40E248B484400C22C98 /* LolVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC40C248B484400C22C98 /* LolVC.xib */; };
 		185EC412248B484E00C22C98 /* OwVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC410248B484E00C22C98 /* OwVC.m */; };
 		185EC413248B484E00C22C98 /* OwVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC411248B484E00C22C98 /* OwVC.xib */; };
-		1864F65D248B3224001AEF84 /* NaviSegmentedControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864F65B248B3224001AEF84 /* NaviSegmentedControlViewController.m */; };
 		1864F660248B32EE001AEF84 /* ContentBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864F65F248B32EE001AEF84 /* ContentBaseViewController.m */; };
 		1864F663248B331E001AEF84 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864F661248B331E001AEF84 /* ListViewController.m */; };
 		18BE68A924875414000F6875 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68A824875414000F6875 /* AppDelegate.m */; };
@@ -52,6 +65,26 @@
 
 /* Begin PBXFileReference section */
 		01D99866C98418506C3562B6 /* Pods_CyberGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyberGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18140EEC2490713000849DD3 /* RankTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankTableViewCell.h; sourceTree = "<group>"; };
+		18140EED2490713000849DD3 /* RankTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankTableViewCell.m; sourceTree = "<group>"; };
+		18140EEE2490713000849DD3 /* RankTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankTableViewCell.xib; sourceTree = "<group>"; };
+		1821862B2490A73C003861C1 /* FeatureWzry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureWzry.h; sourceTree = "<group>"; };
+		1821862C2490A73C003861C1 /* FeatureWzry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeatureWzry.m; sourceTree = "<group>"; };
+		1821862D2490A73C003861C1 /* FeatureWzry.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureWzry.xib; sourceTree = "<group>"; };
+		182186302490AB79003861C1 /* FeaturedLscs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedLscs.h; sourceTree = "<group>"; };
+		182186312490AB79003861C1 /* FeaturedLscs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedLscs.m; sourceTree = "<group>"; };
+		182186322490AB79003861C1 /* FeaturedLscs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedLscs.xib; sourceTree = "<group>"; };
+		182186352490AB94003861C1 /* FeaturedLol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedLol.h; sourceTree = "<group>"; };
+		182186362490AB94003861C1 /* FeaturedLol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedLol.m; sourceTree = "<group>"; };
+		182186372490AB94003861C1 /* FeaturedLol.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedLol.xib; sourceTree = "<group>"; };
+		1821863A2490ABA5003861C1 /* FeaturedOw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedOw.h; sourceTree = "<group>"; };
+		1821863B2490ABA5003861C1 /* FeaturedOw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedOw.m; sourceTree = "<group>"; };
+		1821863C2490ABA5003861C1 /* FeaturedOw.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedOw.xib; sourceTree = "<group>"; };
+		182186402490B269003861C1 /* FeaturedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedTableViewCell.h; sourceTree = "<group>"; };
+		182186412490B269003861C1 /* FeaturedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedTableViewCell.m; sourceTree = "<group>"; };
+		182186422490B269003861C1 /* FeaturedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedTableViewCell.xib; sourceTree = "<group>"; };
+		182186452490CA41003861C1 /* DJClub.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DJClub.plist; sourceTree = "<group>"; };
+		182186472490CA52003861C1 /* teamList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = teamList.plist; sourceTree = "<group>"; };
 		183AA7D52488C3CE00D88B76 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		183AA7D62488C3CE00D88B76 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		183AA7D82488CFB000D88B76 /* Featured.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Featured.h; sourceTree = "<group>"; };
@@ -85,8 +118,6 @@
 		185EC40F248B484E00C22C98 /* OwVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwVC.h; sourceTree = "<group>"; };
 		185EC410248B484E00C22C98 /* OwVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OwVC.m; sourceTree = "<group>"; };
 		185EC411248B484E00C22C98 /* OwVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwVC.xib; sourceTree = "<group>"; };
-		1864F65B248B3224001AEF84 /* NaviSegmentedControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviSegmentedControlViewController.m; sourceTree = "<group>"; };
-		1864F65C248B3224001AEF84 /* NaviSegmentedControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviSegmentedControlViewController.h; sourceTree = "<group>"; };
 		1864F65E248B32EE001AEF84 /* ContentBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentBaseViewController.h; sourceTree = "<group>"; };
 		1864F65F248B32EE001AEF84 /* ContentBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentBaseViewController.m; sourceTree = "<group>"; };
 		1864F661248B331E001AEF84 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
@@ -143,9 +174,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1821863F2490B24D003861C1 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				182186402490B269003861C1 /* FeaturedTableViewCell.h */,
+				182186412490B269003861C1 /* FeaturedTableViewCell.m */,
+				182186422490B269003861C1 /* FeaturedTableViewCell.xib */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 		185EC414248B55B000C22C98 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				18140EEC2490713000849DD3 /* RankTableViewCell.h */,
+				18140EED2490713000849DD3 /* RankTableViewCell.m */,
+				18140EEE2490713000849DD3 /* RankTableViewCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -187,6 +231,8 @@
 				18BE68A824875414000F6875 /* AppDelegate.m */,
 				183AA7D62488C3CE00D88B76 /* BaseNavigationController.h */,
 				183AA7D52488C3CE00D88B76 /* BaseNavigationController.m */,
+				182186452490CA41003861C1 /* DJClub.plist */,
+				182186472490CA52003861C1 /* teamList.plist */,
 				18BE68B024875414000F6875 /* Main.storyboard */,
 				18BE68B324875419000F6875 /* Assets.xcassets */,
 				18BE68B524875419000F6875 /* LaunchScreen.storyboard */,
@@ -250,8 +296,6 @@
 				183AABF82489D4900044ED05 /* HomeVC.xib */,
 				183AA7E82488F15900D88B76 /* WRImageHelper.h */,
 				183AA7E72488F15900D88B76 /* WRImageHelper.m */,
-				1864F65C248B3224001AEF84 /* NaviSegmentedControlViewController.h */,
-				1864F65B248B3224001AEF84 /* NaviSegmentedControlViewController.m */,
 				1864F65E248B32EE001AEF84 /* ContentBaseViewController.h */,
 				1864F65F248B32EE001AEF84 /* ContentBaseViewController.m */,
 				1864F662248B331E001AEF84 /* ListViewController.h */,
@@ -331,6 +375,7 @@
 		18BE68EC24877F9C000F6875 /* Featured */ = {
 			isa = PBXGroup;
 			children = (
+				1821863F2490B24D003861C1 /* V */,
 				18BE68F62487893B000F6875 /* C */,
 			);
 			path = Featured;
@@ -364,6 +409,18 @@
 				183AA7D82488CFB000D88B76 /* Featured.h */,
 				183AA7D92488CFB000D88B76 /* Featured.m */,
 				183AA7DA2488CFB000D88B76 /* Featured.xib */,
+				1821862B2490A73C003861C1 /* FeatureWzry.h */,
+				1821862C2490A73C003861C1 /* FeatureWzry.m */,
+				1821862D2490A73C003861C1 /* FeatureWzry.xib */,
+				182186302490AB79003861C1 /* FeaturedLscs.h */,
+				182186312490AB79003861C1 /* FeaturedLscs.m */,
+				182186322490AB79003861C1 /* FeaturedLscs.xib */,
+				182186352490AB94003861C1 /* FeaturedLol.h */,
+				182186362490AB94003861C1 /* FeaturedLol.m */,
+				182186372490AB94003861C1 /* FeaturedLol.xib */,
+				1821863A2490ABA5003861C1 /* FeaturedOw.h */,
+				1821863B2490ABA5003861C1 /* FeaturedOw.m */,
+				1821863C2490ABA5003861C1 /* FeaturedOw.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -454,16 +511,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182186462490CA41003861C1 /* DJClub.plist in Resources */,
 				183AA7E12488E20200D88B76 /* HomeBannerCell.xib in Resources */,
 				185EC413248B484E00C22C98 /* OwVC.xib in Resources */,
+				182186392490AB94003861C1 /* FeaturedLol.xib in Resources */,
+				182186482490CA52003861C1 /* teamList.plist in Resources */,
 				185EC404248B46E000C22C98 /* WzryVC.xib in Resources */,
 				183AAC0B248A30FF0044ED05 /* GameSortTabCell.xib in Resources */,
 				183AA7DC2488CFB000D88B76 /* Featured.xib in Resources */,
+				18140EF02490713000849DD3 /* RankTableViewCell.xib in Resources */,
+				182186342490AB79003861C1 /* FeaturedLscs.xib in Resources */,
+				182186442490B269003861C1 /* FeaturedTableViewCell.xib in Resources */,
 				18BE68F424878921000F6875 /* RankVC.xib in Resources */,
+				1821863E2490ABA5003861C1 /* FeaturedOw.xib in Resources */,
 				18BE68B724875419000F6875 /* LaunchScreen.storyboard in Resources */,
 				183AABFF248A03F60044ED05 /* BannerCollectionViewCell.xib in Resources */,
 				18BE68E724877929000F6875 /* MineVC.xib in Resources */,
 				185EC40E248B484400C22C98 /* LolVC.xib in Resources */,
+				1821862F2490A73D003861C1 /* FeatureWzry.xib in Resources */,
 				18BE68B424875419000F6875 /* Assets.xcassets in Resources */,
 				183AABFA2489D4900044ED05 /* HomeVC.xib in Resources */,
 				185EC409248B483700C22C98 /* LscsVC.xib in Resources */,
@@ -522,18 +587,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				185EC408248B483700C22C98 /* LscsVC.m in Sources */,
+				18140EEF2490713000849DD3 /* RankTableViewCell.m in Sources */,
 				18BE69012487A32D000F6875 /* TestTabBar.m in Sources */,
+				1821862E2490A73D003861C1 /* FeatureWzry.m in Sources */,
 				1864F663248B331E001AEF84 /* ListViewController.m in Sources */,
 				18BE68DB248770B2000F6875 /* UIImage+Image.m in Sources */,
 				18BE68DA248770B2000F6875 /* UIColor+Hex.m in Sources */,
+				1821863D2490ABA5003861C1 /* FeaturedOw.m in Sources */,
 				183AA7EC2488F47600D88B76 /* HomeBannerDataM.m in Sources */,
+				182186432490B269003861C1 /* FeaturedTableViewCell.m in Sources */,
 				18BE68A924875414000F6875 /* AppDelegate.m in Sources */,
 				183AA7D72488C3CE00D88B76 /* BaseNavigationController.m in Sources */,
 				183AA7E92488F15900D88B76 /* WRImageHelper.m in Sources */,
 				1864F660248B32EE001AEF84 /* ContentBaseViewController.m in Sources */,
 				185EC412248B484E00C22C98 /* OwVC.m in Sources */,
 				183AA7DB2488CFB000D88B76 /* Featured.m in Sources */,
-				1864F65D248B3224001AEF84 /* NaviSegmentedControlViewController.m in Sources */,
+				182186382490AB94003861C1 /* FeaturedLol.m in Sources */,
 				183AAC14248A3F5D0044ED05 /* GameSortTabCell.m in Sources */,
 				18BE68E624877929000F6875 /* MineVC.m in Sources */,
 				18BE69072487A66B000F6875 /* FightVC.m in Sources */,
@@ -541,6 +610,7 @@
 				183AA7E02488E20200D88B76 /* HomeBannerCell.m in Sources */,
 				183AABF92489D4900044ED05 /* HomeVC.m in Sources */,
 				185EC40D248B484400C22C98 /* LolVC.m in Sources */,
+				182186332490AB79003861C1 /* FeaturedLscs.m in Sources */,
 				183AABFE248A03F60044ED05 /* BannerCollectionViewCell.m in Sources */,
 				18BE68FE24879FF3000F6875 /* BaseTabBarController.m in Sources */,
 				18BE68F324878921000F6875 /* RankVC.m in Sources */,

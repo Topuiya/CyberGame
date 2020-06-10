@@ -32,11 +32,6 @@
     self.navigationItem.title = @"排名";
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#6716d6"]] forBarMetrics:UIBarMetricsDefault];
     
-
-//    self.myCategoryView.indicators = @[lineView];
-//    [self.myCategoryView removeFromSuperview];
-//    self.navigationItem.titleView = self.myCategoryView;
-//    self.myCategoryView.listContainer.contentScrollView.scrollEnabled = NO;
     
     self.titles = @[@"王者荣耀", @"炉石传说", @"英雄联盟", @"守望先锋", ];
     CGFloat totalItemWidth = self.view.bounds.size.width - 30*2;
@@ -44,23 +39,22 @@
     self.myCategoryView.titles = self.titles;
     self.myCategoryView.cellSpacing = 0;
     self.myCategoryView.cellWidth = totalItemWidth/self.titles.count;
-    self.myCategoryView.titleFont = [UIFont systemFontOfSize:18];
-//    self.myCategoryView.titleColor = RGBA(255, 255, 255, 1);
-//    self.myCategoryView.titleSelectedColor = RGBA(255, 255, 255, 1);
-    self.myCategoryView.titleColor = [UIColor redColor];
-    self.myCategoryView.titleSelectedColor = [UIColor whiteColor];
+    self.myCategoryView.titleFont = [UIFont systemFontOfSize:15];
+    self.myCategoryView.titleColor = RGBA(255, 255, 255, 1);
+    self.myCategoryView.titleSelectedColor = RGBA(255, 255, 255, 1);
     //cell之间的间距，默认20
     self.myCategoryView.cellSpacing = 34.5;
     //默认JXCategoryViewAutomaticDimension
     self.myCategoryView.cellWidth = 60;
     self.myCategoryView.titleLabelMaskEnabled = YES;
+    self.myCategoryView.titleLabelVerticalOffset = -10;
 
     JXCategoryIndicatorBackgroundView *backgroundView = [[JXCategoryIndicatorBackgroundView alloc] init];
     backgroundView.componentPosition = JXCategoryComponentPosition_Bottom;
     backgroundView.indicatorHeight = 2;
     //指示器宽度增量
-//    backgroundView.indicatorWidthIncrement = 6;
-    backgroundView.verticalMargin = 10;
+    backgroundView.indicatorWidthIncrement = -6;
+    backgroundView.verticalMargin = -12;
     backgroundView.indicatorColor = [UIColor colorWithHexString:@"#FA810C"];;
     self.myCategoryView.indicators = @[backgroundView];
     
@@ -73,7 +67,7 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
-    self.myCategoryView.frame = CGRectMake(0, 20, SCREEN_WIDTH, 30);
+    self.myCategoryView.frame = CGRectMake(0, 10, SCREEN_WIDTH, 40);
 }
 
 - (JXCategoryTitleView *)myCategoryView {
@@ -92,17 +86,6 @@
 -(NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView{
     return  4;
 }
-
-//- (void)viewDidLayoutSubviews {
-//    [super viewDidLayoutSubviews];
-//
-//    CGFloat totalItemWidth = self.view.bounds.size.width - 30*2;
-//    self.myCategoryView.frame = CGRectMake(30, 10, totalItemWidth, 30);
-//}
-
-//- (CGFloat)preferredCategoryViewHeight {
-//    return 50;
-//}
 
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     if (index == 0)

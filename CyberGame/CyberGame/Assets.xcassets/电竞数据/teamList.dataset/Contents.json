@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "teamList.plist",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

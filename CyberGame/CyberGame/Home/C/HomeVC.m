@@ -12,8 +12,6 @@
 #import "GameSortTabCell.h"
 
 
-#import "NaviSegmentedControlViewController.h"
-
 #import "UIImage+OriginalImage.h"
 
 @interface HomeVC () <UITableViewDelegate, UITableViewDataSource>
@@ -141,8 +139,6 @@ NSString *GameTabCellID = @"GameTabCell";
 
 - (void)gameNewsBtnClick {
     NSLog(@"gameNewsBtnClick");
-    NaviSegmentedControlViewController *testVC = [[NaviSegmentedControlViewController alloc] init];;
-    [self.navigationController pushViewController:testVC animated:YES];
 }
 
 #pragma mark - UITableViewViewDataSource
