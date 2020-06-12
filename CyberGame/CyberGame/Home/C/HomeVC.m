@@ -10,13 +10,22 @@
 #import "HomeBannerCell.h"
 #import "HomeBannerDataM.h"
 #import "GameSortTabCell.h"
+#import "SortHeadView.h"
+#import "SortLeftTableCell.h"
+#import "SortRightTableCell.h"
+#import "DJClubModel.h"
 
-
+#import <SDWebImage/SDWebImage.h>
+#import <MJExtension/MJExtension.h>
 #import "UIImage+OriginalImage.h"
+
+#define KbaseUrlString @"http://image.yysc.online/files/"
 
 @interface HomeVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong)NSArray *clubArray;
+@property (nonatomic, strong)NSMutableArray *dataArray;
 
 @end
 
@@ -26,7 +35,7 @@
     [super viewDidLoad];
     self.title = @"首页";
     //修改navigationBar背景
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg-1"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg"] forBarMetrics:UIBarMetricsDefault];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -38,16 +47,21 @@
     [self addNavBarButtonItem];
     
     [self addRegisterXib];
-    
-    
-    self.tableView.separatorStyle = NO;
+
     
     //隐藏滚动条
     self.tableView.showsVerticalScrollIndicator = NO;
+    
+    _clubArray = [DJClubModel mj_objectArrayWithFilename:@"DJClub.plist"];
+    
+    
+       
 }
 
 NSString *BannerTabCellID = @"BannerTabCell";
 NSString *GameTabCellID = @"GameTabCell";
+NSString *SortLeftTableCellID = @"SortLeftTableCell";
+NSString *SortRightTableCellID = @"SortRightTableCell";
 
 - (void)addRegisterXib {
     //注册轮播图tableViewCell
@@ -55,6 +69,12 @@ NSString *GameTabCellID = @"GameTabCell";
     
     //注册游戏分区tableViewCell
        [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([GameSortTabCell class]) bundle:nil] forCellReuseIdentifier:GameTabCellID];
+    
+    //注册电竞馆tableViewCell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SortLeftTableCell class]) bundle:nil] forCellReuseIdentifier:SortLeftTableCellID];
+    
+    //注册排行榜tableViewCell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SortRightTableCellID class]) bundle:nil] forCellReuseIdentifier:SortRightTableCellID];
 }
 
 - (void)addNavBarButtonItem {
@@ -111,8 +131,8 @@ NSString *GameTabCellID = @"GameTabCell";
     [gameNewsBtn addTarget:self action:@selector(gameNewsBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     //游戏排名榜(第二个)按钮
-    UIButton *gameRankBtn = [[UIButton alloc] initWithFrame:CGRectMake(61 + spaceW, -20, 100, 41.5)];;
-    [gameRankBtn setTitle:@"电竞快讯" forState:UIControlStateNormal];
+    UIButton *gameRankBtn = [[UIButton alloc] initWithFrame:CGRectMake(61 + spaceW, -20, 120, 41.5)];;
+    [gameRankBtn setTitle:@"游戏排名榜" forState:UIControlStateNormal];
     gameRankBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [gameRankBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [gameRankBtn setImage:[UIImage imageNamed:@"ic_02"] forState:UIControlStateNormal];
@@ -123,7 +143,7 @@ NSString *GameTabCellID = @"GameTabCell";
     
     //每日签到(第三个)按钮
     UIButton *daySignBtn = [[UIButton alloc] initWithFrame:CGRectMake(122 + spaceW * 2 - 14.5, -20, 100, 41.5)];;
-    [daySignBtn setTitle:@"电竞快讯" forState:UIControlStateNormal];
+    [daySignBtn setTitle:@"每日签到" forState:UIControlStateNormal];
     daySignBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [daySignBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [daySignBtn setImage:[UIImage imageNamed:@"ic_03"] forState:UIControlStateNormal];
@@ -152,9 +172,8 @@ NSString *GameTabCellID = @"GameTabCell";
         return 1;
     }else if (section == 1) {
         return 1;
-    }
-    else {
-        return 10;
+    }else {
+        return _clubArray.count;
     }
 }
 
@@ -166,6 +185,7 @@ NSString *GameTabCellID = @"GameTabCell";
         HomeBannerCell *cell = [tableView dequeueReusableCellWithIdentifier:BannerTabCellID];
         //去掉cell的选中效果
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        self.tableView.separatorStyle = NO;
         return cell;
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
@@ -175,8 +195,14 @@ NSString *GameTabCellID = @"GameTabCell";
         return cell;
     }
     else {
-        UITableViewCell *cell = UITableViewCell.new;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        SortLeftTableCell *cell = [tableView dequeueReusableCellWithIdentifier:SortLeftTableCellID];
+        DJClubModel *tempModel = self.clubArray[indexPath.row];
+        
+        //设置图片
+        NSURL *picURL = [NSURL URLWithString:tempModel.pic];
+        [cell.picImageView sd_setImageWithURL:picURL];
+        
+        cell.nameLabel.text = tempModel.name;
         return cell;
     }
     
@@ -191,7 +217,7 @@ NSString *GameTabCellID = @"GameTabCell";
         return 220;
     }
     else {
-        return 44;
+        return UITableViewAutomaticDimension;
     }
     
 }
@@ -199,13 +225,16 @@ NSString *GameTabCellID = @"GameTabCell";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return nil;
-    }else if (section == 1) {
+    }
+    else if (section == 1) {
         UIView *gameHeadView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
         [self setSortBtn:gameHeadView];
         return gameHeadView;
     }
     else {
-        return nil;
+        SortHeadView *sortHeadView = [[SortHeadView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 65)];
+        
+        return sortHeadView;
     }
 }
 
@@ -216,9 +245,8 @@ NSString *GameTabCellID = @"GameTabCell";
     else if (section == 1) {
         return 60;
     }
-    else
-    {
-        return 30;
+    else {
+        return 65;
     }
 }
 

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FeaturedLscs : ContentBaseViewController <JXCategoryListContentViewDelegate>
+@interface FeaturedPubg : ContentBaseViewController <JXCategoryListContentViewDelegate>
 
 @end
 

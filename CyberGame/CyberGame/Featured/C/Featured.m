@@ -11,7 +11,7 @@
 #import "UIImage+OriginalImage.h"
 
 #import "FeatureWzry.h"
-#import "FeaturedLscs.h"
+#import "FeaturedPubg.h"
 #import "FeaturedLol.h"
 #import "FeaturedOw.h"
 
@@ -34,7 +34,7 @@
     [self addNavBarButtonItem];
     
     
-    self.titles = @[@"王者荣耀", @"炉石传说", @"英雄联盟", @"守望先锋", ];
+    self.titles = @[@"王者荣耀", @"英雄联盟", @"绝地求生", @"守望先锋", ];
     CGFloat totalItemWidth = self.view.bounds.size.width - 30*2;
     
     self.myCategoryView.titles = self.titles;
@@ -52,7 +52,7 @@
     
     JXCategoryIndicatorImageView *indicatorImageView = [[JXCategoryIndicatorImageView alloc] init];
     indicatorImageView.indicatorImageView.image = [UIImage imageNamed:@"ic_selector"];
-//    indicatorImageView.verticalMargin = -5;
+//    indicatorImageView.verticalMargin = - 5;
     indicatorImageView.indicatorImageViewSize = CGSizeMake(22.5, 9);
     self.myCategoryView.indicators = @[indicatorImageView];
 }
@@ -71,8 +71,11 @@
 #pragma mark - JXCategoryListContentViewDelegate
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    
-    self.myCategoryView.frame = CGRectMake(0, 80, SCREEN_WIDTH, 40);
+    if (SCREEN_WIDTH == 414) {
+        self.myCategoryView.frame = CGRectMake(0, 80, SCREEN_WIDTH, 50);
+    } else {
+        self.myCategoryView.frame = CGRectMake(0, 80, SCREEN_WIDTH, 40);
+    }
 }
 
 - (JXCategoryTitleView *)myCategoryView {
@@ -98,12 +101,12 @@
         return fewzryVC;
     }
     if (index == 1) {
-        FeaturedLscs *felscsVC = FeaturedLscs.new;
-        return felscsVC;
-    }
-    if (index == 2) {
         FeaturedLol *felolVC = FeaturedLol.new;
         return felolVC;
+    }
+    if (index == 2) {
+        FeaturedPubg *felscsVC = FeaturedPubg.new;
+        return felscsVC;
     }
     else {
         FeaturedOw *feowVC = FeaturedOw.new;

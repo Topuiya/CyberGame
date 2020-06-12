@@ -9,8 +9,10 @@
 #import "ContentBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class RankTeamListModel;
 @interface WzryVC : ContentBaseViewController <JXCategoryListContentViewDelegate>
+
+@property (nonatomic, strong)RankTeamListModel *WzryModel;
 
 @end
 

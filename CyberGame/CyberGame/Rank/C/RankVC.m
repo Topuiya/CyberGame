@@ -7,20 +7,28 @@
 //
 
 #import "RankVC.h"
-#import "JXCategoryTitleView.h"
+#import "RankTeamListModel.h"
+#import "RankListModel.h"
 
 #import "UIImage+Image.h"
 #import "UIColor+Hex.h"
+#import "JXCategoryTitleView.h"
+#import <MJExtension/MJExtension.h>
+#import "MutableCopyCatetory.h"
 
 //ViewControllers
 #import "WzryVC.h"
-#import "LscsVC.h"
 #import "LolVC.h"
+#import "PubgVC.h"
 #import "OwVC.h"
 
 @interface RankVC () <JXCategoryViewDelegate>
 
 @property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
+
+@property(nonatomic,strong)NSArray *teamListArray;
+
+@property(nonatomic,strong)NSMutableArray *myListArray;
 
 @end
 
@@ -29,11 +37,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"teamList.plist" ofType:nil];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    //使用MJ框架转数组会变成NSArray不可变数组
+    _teamListArray = [RankTeamListModel mj_objectArrayWithKeyValuesArray:dic[@"data"] context:nil];
+ 
+    
     self.navigationItem.title = @"排名";
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#6716d6"]] forBarMetrics:UIBarMetricsDefault];
     
     
-    self.titles = @[@"王者荣耀", @"炉石传说", @"英雄联盟", @"守望先锋", ];
+    self.titles = @[@"王者荣耀", @"英雄联盟", @"绝地求生", @"守望先锋", ];
     CGFloat totalItemWidth = self.view.bounds.size.width - 30*2;
     
     self.myCategoryView.titles = self.titles;
@@ -63,7 +78,6 @@
 //    self.myCategoryView.listContainer.contentScrollView.scrollEnabled = NO;
 }
 
-
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
@@ -91,25 +105,53 @@
     if (index == 0)
     {
         WzryVC *wzryVC = [[WzryVC alloc]init];
-        
+//        wzryVC.WzryModel = _myListArray[index];
+        //拿到要使用的模型数组
+        RankTeamListModel *tempModel = _teamListArray[0];
+        //对改数组排序
+        NSArray *wzryArray = [self mySortArray:tempModel.list];
+        tempModel.list = wzryArray;
+        //传递模型
+        wzryVC.WzryModel = tempModel;
         return wzryVC;
     }
     else if(index == 1)
     {
-        LscsVC *lscsVC = [[LscsVC alloc]init];
-        return lscsVC;
+        LolVC *lolVC = [[LolVC alloc]init];
+        //拿到要使用的模型数组
+        RankTeamListModel *tempModel = _teamListArray[1];
+        //对改数组排序
+        NSArray *lscsArray = [self mySortArray:tempModel.list];
+        tempModel.list = lscsArray;
+        lolVC.LscsModel = tempModel;
+        return lolVC;
     }
     else if(index == 2)
     {
-        LolVC *lolVC = [[LolVC alloc]init];
-        return lolVC;
+        PubgVC *pubgVC = [[PubgVC alloc]init];
+        RankTeamListModel *tempModel = _teamListArray[2];
+        NSArray *pubgArray = [self mySortArray:tempModel.list];
+        tempModel.list = pubgArray;
+        pubgVC.PubgModel = tempModel;
+        return pubgVC;
     }
     else
     {
         OwVC *owVC = [[OwVC alloc]init];
+        RankTeamListModel *tempModel = _teamListArray[3];
+        NSArray *owArray = [self mySortArray:tempModel.list];
+        tempModel.list = owArray;
+        owVC.OwModel = tempModel;
         return owVC;
     }
     
+}
+
+- (NSArray *)mySortArray:(NSArray *)list {
+    //降序
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:NO];
+    NSArray *arr = [list sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    return arr;
 }
 
 @end

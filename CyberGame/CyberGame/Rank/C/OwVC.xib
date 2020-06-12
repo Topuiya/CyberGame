@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OwVC">
             <connections>
+                <outlet property="tableView" destination="BFZ-8M-t5I" id="jnh-io-D0L"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +20,29 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U70-zX-RVY">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiI-Hm-Gd6">
+                            <rect key="frame" x="0.0" y="41" width="414" height="42.5"/>
+                            <color key="backgroundColor" red="0.46970266100000002" green="0.25535532830000002" blue="0.82834607360000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42.5" id="zEO-Xq-dcJ"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-8M-t5I">
+                            <rect key="frame" x="0.0" y="83.5" width="414" height="734.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
                     <color key="backgroundColor" red="0.37185144419999999" green="0.11449768389999999" blue="0.80631011720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="BFZ-8M-t5I" firstAttribute="top" secondItem="KiI-Hm-Gd6" secondAttribute="bottom" id="Iaf-xM-3HN"/>
+                        <constraint firstAttribute="trailing" secondItem="KiI-Hm-Gd6" secondAttribute="trailing" id="JDf-qP-gVw"/>
+                        <constraint firstItem="KiI-Hm-Gd6" firstAttribute="top" secondItem="U70-zX-RVY" secondAttribute="top" constant="41" id="K3c-em-GrR"/>
+                        <constraint firstAttribute="bottom" secondItem="BFZ-8M-t5I" secondAttribute="bottom" id="fpI-cQ-QNU"/>
+                        <constraint firstItem="KiI-Hm-Gd6" firstAttribute="leading" secondItem="U70-zX-RVY" secondAttribute="leading" id="hHr-Pp-WRw"/>
+                        <constraint firstItem="BFZ-8M-t5I" firstAttribute="leading" secondItem="U70-zX-RVY" secondAttribute="leading" id="hqu-N0-VsW"/>
+                        <constraint firstAttribute="trailing" secondItem="BFZ-8M-t5I" secondAttribute="trailing" id="xov-Yh-4dT"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

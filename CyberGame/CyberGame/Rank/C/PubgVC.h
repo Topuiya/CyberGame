@@ -1,5 +1,5 @@
 //
-//  LscsVC.h
+//  LolVC.h
 //  CyberGame
 //
 //  Created by apple on 2020/6/6.
@@ -9,8 +9,10 @@
 #import "ContentBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
+@class RankTeamListModel;
+@interface PubgVC : ContentBaseViewController <JXCategoryListContentViewDelegate>
 
-@interface LscsVC : ContentBaseViewController <JXCategoryListContentViewDelegate>
+@property (nonatomic, strong)RankTeamListModel *PubgModel;
 
 @end
 

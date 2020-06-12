@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="KGk-i7-Jjw" customClass="FightRuleCell">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUl-OF-PhI">
+                        <rect key="frame" x="21.5" y="17" width="77" height="58"/>
+                        <state key="normal" title="三局二胜制"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tch-Pr-wKb">
+                        <rect key="frame" x="141.5" y="31" width="77" height="30"/>
+                        <state key="normal" title="五句三胜制"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gos-UX-d7I">
+                        <rect key="frame" x="269" y="31" width="62" height="30"/>
+                        <state key="normal" title="单淘汰制"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gos-UX-d7I" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.25" id="2C5-kS-Ao5"/>
+                    <constraint firstItem="Tch-Pr-wKb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.75" id="7YJ-t7-FLu"/>
+                    <constraint firstItem="pUl-OF-PhI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="BVr-C9-6VB"/>
+                    <constraint firstAttribute="bottom" secondItem="pUl-OF-PhI" secondAttribute="bottom" constant="17" id="PyN-Tp-AMf"/>
+                    <constraint firstItem="pUl-OF-PhI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bkV-4z-bd5"/>
+                    <constraint firstItem="pUl-OF-PhI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.25" id="e0D-Dy-Fqk"/>
+                    <constraint firstItem="Tch-Pr-wKb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ep3-Eb-Lkv"/>
+                    <constraint firstItem="gos-UX-d7I" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="r2a-xU-7be"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

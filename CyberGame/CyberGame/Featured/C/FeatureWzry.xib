@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeatureWzry">
             <connections>
+                <outlet property="headViewHeight" destination="jsl-K9-htE" id="Vz3-nO-BDL"/>
                 <outlet property="tableView" destination="kqF-5q-6bZ" id="Ct1-fs-Lzi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,29 +19,35 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_news" translatesAutoresizingMaskIntoConstraints="NO" id="vJH-LD-07y">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uad-za-yLj">
+                    <rect key="frame" x="19.666666666666657" y="0.0" width="375" height="156"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_news" translatesAutoresizingMaskIntoConstraints="NO" id="vJH-LD-07y">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+                        </imageView>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="156" id="Urb-Ya-skS"/>
+                        <constraint firstItem="vJH-LD-07y" firstAttribute="top" secondItem="uad-za-yLj" secondAttribute="top" id="GLn-wd-7Jx"/>
+                        <constraint firstAttribute="width" secondItem="uad-za-yLj" secondAttribute="height" multiplier="375:156" id="NoH-zd-UP5"/>
+                        <constraint firstAttribute="bottom" secondItem="vJH-LD-07y" secondAttribute="bottom" id="biJ-Xx-fUu"/>
+                        <constraint firstAttribute="trailing" secondItem="vJH-LD-07y" secondAttribute="trailing" id="foZ-Nq-FBV"/>
+                        <constraint firstItem="vJH-LD-07y" firstAttribute="leading" secondItem="uad-za-yLj" secondAttribute="leading" id="hXy-g1-ppM"/>
+                        <constraint firstAttribute="height" constant="156" id="jsl-K9-htE"/>
                     </constraints>
-                </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kqF-5q-6bZ">
-                    <rect key="frame" x="0.0" y="156" width="414" height="706"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kqF-5q-6bZ">
+                    <rect key="frame" x="0.0" y="180" width="414" height="682"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="kqF-5q-6bZ" secondAttribute="bottom" id="9OK-wA-aWJ"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="kqF-5q-6bZ" secondAttribute="trailing" id="Ezm-f6-4fg"/>
-                <constraint firstItem="kqF-5q-6bZ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="O4D-OO-Tfv"/>
-                <constraint firstItem="vJH-LD-07y" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="TAM-Zp-zrb"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="vJH-LD-07y" secondAttribute="trailing" id="bYq-0v-zVO"/>
-                <constraint firstItem="vJH-LD-07y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fK1-ra-luK"/>
-                <constraint firstItem="kqF-5q-6bZ" firstAttribute="top" secondItem="vJH-LD-07y" secondAttribute="bottom" id="qME-bu-9kS"/>
+                <constraint firstItem="uad-za-yLj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7AC-wY-Jy3"/>
+                <constraint firstItem="uad-za-yLj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zDY-Ym-Gvq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="139" y="135"/>
+            <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
         </view>
     </objects>
     <resources>

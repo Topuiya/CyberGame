@@ -3,8 +3,7 @@ PODS:
   - IQKeyboardManager (6.5.5)
   - JXCategoryView (1.5.5)
   - Masonry (1.1.0)
-  - SDCycleScrollView (1.80):
-    - SDWebImage (>= 5.0.0)
+  - MJExtension (3.2.1)
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
@@ -16,7 +15,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - JXCategoryView
   - Masonry
-  - SDCycleScrollView
+  - MJExtension
   - SDWebImage (>= 5.0.0)
   - TYCyclePagerView
   - WRNavigationBar (~> 1.2.0)
@@ -27,7 +26,7 @@ SPEC REPOS:
     - IQKeyboardManager
     - JXCategoryView
     - Masonry
-    - SDCycleScrollView
+    - MJExtension
     - SDWebImage
     - TYCyclePagerView
     - WRNavigationBar
@@ -37,11 +36,11 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
   WRNavigationBar: dc952230effbb646785f962587caaac06c60f229
 
-PODFILE CHECKSUM: 0ddf8638b2380d7409f30cc26f48e64a3fa706a6
+PODFILE CHECKSUM: 1a67599b70cdb368d9871167f9b6ba05a3ae4466
 
 COCOAPODS: 1.9.1

@@ -9,8 +9,10 @@
 #import "ContentBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class RankTeamListModel;
 @interface OwVC : ContentBaseViewController <JXCategoryListContentViewDelegate>
+
+@property (nonatomic, strong)RankTeamListModel *OwModel;
 
 @end
 

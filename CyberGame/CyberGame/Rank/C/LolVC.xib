@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LolVC">
             <connections>
+                <outlet property="tableView" destination="kvd-tK-Uxc" id="yjJ-LF-EBG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,17 +18,39 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFP-Tm-YHi">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLb-1P-eBD">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFS-1I-fND">
+                            <rect key="frame" x="0.0" y="41" width="414" height="42.5"/>
+                            <color key="backgroundColor" red="0.46970266100000002" green="0.25535532830000002" blue="0.82834607360000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42.5" id="BTO-dv-aQI"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-tK-Uxc">
+                            <rect key="frame" x="0.0" y="83.5" width="414" height="734.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
                     <color key="backgroundColor" red="0.37185144419999999" green="0.11449768389999999" blue="0.80631011720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="pFS-1I-fND" firstAttribute="leading" secondItem="RLb-1P-eBD" secondAttribute="leading" id="Mot-al-fch"/>
+                        <constraint firstItem="kvd-tK-Uxc" firstAttribute="leading" secondItem="RLb-1P-eBD" secondAttribute="leading" id="WOh-Ab-g9T"/>
+                        <constraint firstAttribute="bottom" secondItem="kvd-tK-Uxc" secondAttribute="bottom" id="dI3-xG-1ts"/>
+                        <constraint firstAttribute="trailing" secondItem="kvd-tK-Uxc" secondAttribute="trailing" id="enT-Fg-mPH"/>
+                        <constraint firstItem="pFS-1I-fND" firstAttribute="top" secondItem="RLb-1P-eBD" secondAttribute="top" constant="41" id="fJg-8A-EfJ"/>
+                        <constraint firstItem="kvd-tK-Uxc" firstAttribute="top" secondItem="pFS-1I-fND" secondAttribute="bottom" id="mqB-Yy-yMP"/>
+                        <constraint firstAttribute="trailing" secondItem="pFS-1I-fND" secondAttribute="trailing" id="vku-ZZ-3w5"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="OFP-Tm-YHi" secondAttribute="bottom" id="Bwb-cE-fNB"/>
-                <constraint firstItem="OFP-Tm-YHi" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="CIo-1Z-dyL"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="OFP-Tm-YHi" secondAttribute="trailing" id="lG5-Zd-nlM"/>
-                <constraint firstItem="OFP-Tm-YHi" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="qVH-Zr-ngV"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="RLb-1P-eBD" secondAttribute="trailing" id="Iwx-Ee-i2p"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="RLb-1P-eBD" secondAttribute="bottom" id="J0n-NY-VUs"/>
+                <constraint firstItem="RLb-1P-eBD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="UOr-sj-Ugh"/>
+                <constraint firstItem="RLb-1P-eBD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="mhP-6y-ZyO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="139" y="135"/>

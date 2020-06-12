@@ -11,8 +11,6 @@
 		18140EF02490713000849DD3 /* RankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18140EEE2490713000849DD3 /* RankTableViewCell.xib */; };
 		1821862E2490A73D003861C1 /* FeatureWzry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821862C2490A73C003861C1 /* FeatureWzry.m */; };
 		1821862F2490A73D003861C1 /* FeatureWzry.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821862D2490A73C003861C1 /* FeatureWzry.xib */; };
-		182186332490AB79003861C1 /* FeaturedLscs.m in Sources */ = {isa = PBXBuildFile; fileRef = 182186312490AB79003861C1 /* FeaturedLscs.m */; };
-		182186342490AB79003861C1 /* FeaturedLscs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182186322490AB79003861C1 /* FeaturedLscs.xib */; };
 		182186382490AB94003861C1 /* FeaturedLol.m in Sources */ = {isa = PBXBuildFile; fileRef = 182186362490AB94003861C1 /* FeaturedLol.m */; };
 		182186392490AB94003861C1 /* FeaturedLol.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182186372490AB94003861C1 /* FeaturedLol.xib */; };
 		1821863D2490ABA5003861C1 /* FeaturedOw.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821863B2490ABA5003861C1 /* FeaturedOw.m */; };
@@ -21,6 +19,19 @@
 		182186442490B269003861C1 /* FeaturedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182186422490B269003861C1 /* FeaturedTableViewCell.xib */; };
 		182186462490CA41003861C1 /* DJClub.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182186452490CA41003861C1 /* DJClub.plist */; };
 		182186482490CA52003861C1 /* teamList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182186472490CA52003861C1 /* teamList.plist */; };
+		1821864B2491C97F003861C1 /* RankTeamListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821864A2491C97F003861C1 /* RankTeamListModel.m */; };
+		1821864E2491CAB9003861C1 /* RankListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821864D2491CAB9003861C1 /* RankListModel.m */; };
+		1821865124920F76003861C1 /* MutableCopyCatetory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821865024920F76003861C1 /* MutableCopyCatetory.m */; };
+		18218657249225EE003861C1 /* FihghtThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18218655249225EE003861C1 /* FihghtThemeCell.m */; };
+		18218658249225EE003861C1 /* FihghtThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18218656249225EE003861C1 /* FihghtThemeCell.xib */; };
+		1821865C249225FF003861C1 /* FightTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821865A249225FF003861C1 /* FightTimeCell.m */; };
+		1821865D249225FF003861C1 /* FightTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821865B249225FF003861C1 /* FightTimeCell.xib */; };
+		1821866124922618003861C1 /* FightRuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821865F24922618003861C1 /* FightRuleCell.m */; };
+		1821866224922618003861C1 /* FightRuleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821866024922618003861C1 /* FightRuleCell.xib */; };
+		182186662492262D003861C1 /* FightTeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182186642492262D003861C1 /* FightTeamCell.m */; };
+		182186672492262D003861C1 /* FightTeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182186652492262D003861C1 /* FightTeamCell.xib */; };
+		1821866B24922640003861C1 /* FightOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821866924922640003861C1 /* FightOtherCell.m */; };
+		1821866C24922640003861C1 /* FightOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821866A24922640003861C1 /* FightOtherCell.xib */; };
 		183AA7D72488C3CE00D88B76 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183AA7D52488C3CE00D88B76 /* BaseNavigationController.m */; };
 		183AA7DB2488CFB000D88B76 /* Featured.m in Sources */ = {isa = PBXBuildFile; fileRef = 183AA7D92488CFB000D88B76 /* Featured.m */; };
 		183AA7DC2488CFB000D88B76 /* Featured.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AA7DA2488CFB000D88B76 /* Featured.xib */; };
@@ -36,10 +47,10 @@
 		183AAC14248A3F5D0044ED05 /* GameSortTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183AAC13248A3F5D0044ED05 /* GameSortTabCell.m */; };
 		185EC403248B46E000C22C98 /* WzryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC401248B46E000C22C98 /* WzryVC.m */; };
 		185EC404248B46E000C22C98 /* WzryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC402248B46E000C22C98 /* WzryVC.xib */; };
-		185EC408248B483700C22C98 /* LscsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC406248B483700C22C98 /* LscsVC.m */; };
-		185EC409248B483700C22C98 /* LscsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC407248B483700C22C98 /* LscsVC.xib */; };
-		185EC40D248B484400C22C98 /* LolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC40B248B484400C22C98 /* LolVC.m */; };
-		185EC40E248B484400C22C98 /* LolVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC40C248B484400C22C98 /* LolVC.xib */; };
+		185EC408248B483700C22C98 /* LolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC406248B483700C22C98 /* LolVC.m */; };
+		185EC409248B483700C22C98 /* LolVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC407248B483700C22C98 /* LolVC.xib */; };
+		185EC40D248B484400C22C98 /* PubgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC40B248B484400C22C98 /* PubgVC.m */; };
+		185EC40E248B484400C22C98 /* PubgVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC40C248B484400C22C98 /* PubgVC.xib */; };
 		185EC412248B484E00C22C98 /* OwVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC410248B484E00C22C98 /* OwVC.m */; };
 		185EC413248B484E00C22C98 /* OwVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC411248B484E00C22C98 /* OwVC.xib */; };
 		1864F660248B32EE001AEF84 /* ContentBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864F65F248B32EE001AEF84 /* ContentBaseViewController.m */; };
@@ -60,6 +71,18 @@
 		18BE69012487A32D000F6875 /* TestTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE68FF2487A32D000F6875 /* TestTabBar.m */; };
 		18BE69072487A66B000F6875 /* FightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE69052487A66B000F6875 /* FightVC.m */; };
 		18BE69082487A66B000F6875 /* FightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BE69062487A66B000F6875 /* FightVC.xib */; };
+		18F8A80B249351AB0026458E /* FeaturedPubg.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8A809249351AA0026458E /* FeaturedPubg.m */; };
+		18F8A80C249351AB0026458E /* FeaturedPubg.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8A80A249351AB0026458E /* FeaturedPubg.xib */; };
+		18F8A810249353200026458E /* MineTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8A80E249353200026458E /* MineTableCell.m */; };
+		18F8A811249353200026458E /* MineTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8A80F249353200026458E /* MineTableCell.xib */; };
+		18F8A814249368DF0026458E /* SortHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8A813249368DF0026458E /* SortHeadView.m */; };
+		18F8A816249368EA0026458E /* SortHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8A815249368EA0026458E /* SortHeadView.xib */; };
+		18F8A81A249374430026458E /* SortLeftTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8A818249374430026458E /* SortLeftTableCell.m */; };
+		18F8A81B249374430026458E /* SortLeftTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8A819249374430026458E /* SortLeftTableCell.xib */; };
+		18F8A81F249374550026458E /* SortRightTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8A81D249374550026458E /* SortRightTableCell.m */; };
+		18F8A820249374550026458E /* SortRightTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8A81E249374550026458E /* SortRightTableCell.xib */; };
+		18F8A82324937E3C0026458E /* DJClubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8A82224937E3C0026458E /* DJClubModel.m */; };
+		18F8A826249382910026458E /* ClubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8A825249382910026458E /* ClubModel.m */; };
 		5149357E3B4C57272FA66C2C /* Pods_CyberGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D99866C98418506C3562B6 /* Pods_CyberGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,9 +94,6 @@
 		1821862B2490A73C003861C1 /* FeatureWzry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureWzry.h; sourceTree = "<group>"; };
 		1821862C2490A73C003861C1 /* FeatureWzry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeatureWzry.m; sourceTree = "<group>"; };
 		1821862D2490A73C003861C1 /* FeatureWzry.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureWzry.xib; sourceTree = "<group>"; };
-		182186302490AB79003861C1 /* FeaturedLscs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedLscs.h; sourceTree = "<group>"; };
-		182186312490AB79003861C1 /* FeaturedLscs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedLscs.m; sourceTree = "<group>"; };
-		182186322490AB79003861C1 /* FeaturedLscs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedLscs.xib; sourceTree = "<group>"; };
 		182186352490AB94003861C1 /* FeaturedLol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedLol.h; sourceTree = "<group>"; };
 		182186362490AB94003861C1 /* FeaturedLol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedLol.m; sourceTree = "<group>"; };
 		182186372490AB94003861C1 /* FeaturedLol.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedLol.xib; sourceTree = "<group>"; };
@@ -85,6 +105,27 @@
 		182186422490B269003861C1 /* FeaturedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedTableViewCell.xib; sourceTree = "<group>"; };
 		182186452490CA41003861C1 /* DJClub.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DJClub.plist; sourceTree = "<group>"; };
 		182186472490CA52003861C1 /* teamList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = teamList.plist; sourceTree = "<group>"; };
+		182186492491C97F003861C1 /* RankTeamListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankTeamListModel.h; sourceTree = "<group>"; };
+		1821864A2491C97F003861C1 /* RankTeamListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankTeamListModel.m; sourceTree = "<group>"; };
+		1821864C2491CAB9003861C1 /* RankListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankListModel.h; sourceTree = "<group>"; };
+		1821864D2491CAB9003861C1 /* RankListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankListModel.m; sourceTree = "<group>"; };
+		1821864F24920F76003861C1 /* MutableCopyCatetory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutableCopyCatetory.h; sourceTree = "<group>"; };
+		1821865024920F76003861C1 /* MutableCopyCatetory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutableCopyCatetory.m; sourceTree = "<group>"; };
+		18218654249225EE003861C1 /* FihghtThemeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FihghtThemeCell.h; sourceTree = "<group>"; };
+		18218655249225EE003861C1 /* FihghtThemeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FihghtThemeCell.m; sourceTree = "<group>"; };
+		18218656249225EE003861C1 /* FihghtThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FihghtThemeCell.xib; sourceTree = "<group>"; };
+		18218659249225FF003861C1 /* FightTimeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightTimeCell.h; sourceTree = "<group>"; };
+		1821865A249225FF003861C1 /* FightTimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightTimeCell.m; sourceTree = "<group>"; };
+		1821865B249225FF003861C1 /* FightTimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FightTimeCell.xib; sourceTree = "<group>"; };
+		1821865E24922618003861C1 /* FightRuleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightRuleCell.h; sourceTree = "<group>"; };
+		1821865F24922618003861C1 /* FightRuleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightRuleCell.m; sourceTree = "<group>"; };
+		1821866024922618003861C1 /* FightRuleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FightRuleCell.xib; sourceTree = "<group>"; };
+		182186632492262D003861C1 /* FightTeamCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightTeamCell.h; sourceTree = "<group>"; };
+		182186642492262D003861C1 /* FightTeamCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightTeamCell.m; sourceTree = "<group>"; };
+		182186652492262D003861C1 /* FightTeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FightTeamCell.xib; sourceTree = "<group>"; };
+		1821866824922640003861C1 /* FightOtherCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightOtherCell.h; sourceTree = "<group>"; };
+		1821866924922640003861C1 /* FightOtherCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightOtherCell.m; sourceTree = "<group>"; };
+		1821866A24922640003861C1 /* FightOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FightOtherCell.xib; sourceTree = "<group>"; };
 		183AA7D52488C3CE00D88B76 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		183AA7D62488C3CE00D88B76 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		183AA7D82488CFB000D88B76 /* Featured.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Featured.h; sourceTree = "<group>"; };
@@ -109,12 +150,12 @@
 		185EC400248B46E000C22C98 /* WzryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WzryVC.h; sourceTree = "<group>"; };
 		185EC401248B46E000C22C98 /* WzryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WzryVC.m; sourceTree = "<group>"; };
 		185EC402248B46E000C22C98 /* WzryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WzryVC.xib; sourceTree = "<group>"; };
-		185EC405248B483700C22C98 /* LscsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LscsVC.h; sourceTree = "<group>"; };
-		185EC406248B483700C22C98 /* LscsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LscsVC.m; sourceTree = "<group>"; };
-		185EC407248B483700C22C98 /* LscsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LscsVC.xib; sourceTree = "<group>"; };
-		185EC40A248B484400C22C98 /* LolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LolVC.h; sourceTree = "<group>"; };
-		185EC40B248B484400C22C98 /* LolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LolVC.m; sourceTree = "<group>"; };
-		185EC40C248B484400C22C98 /* LolVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LolVC.xib; sourceTree = "<group>"; };
+		185EC405248B483700C22C98 /* LolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LolVC.h; sourceTree = "<group>"; };
+		185EC406248B483700C22C98 /* LolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LolVC.m; sourceTree = "<group>"; };
+		185EC407248B483700C22C98 /* LolVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LolVC.xib; sourceTree = "<group>"; };
+		185EC40A248B484400C22C98 /* PubgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PubgVC.h; sourceTree = "<group>"; };
+		185EC40B248B484400C22C98 /* PubgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PubgVC.m; sourceTree = "<group>"; };
+		185EC40C248B484400C22C98 /* PubgVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PubgVC.xib; sourceTree = "<group>"; };
 		185EC40F248B484E00C22C98 /* OwVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwVC.h; sourceTree = "<group>"; };
 		185EC410248B484E00C22C98 /* OwVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OwVC.m; sourceTree = "<group>"; };
 		185EC411248B484E00C22C98 /* OwVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwVC.xib; sourceTree = "<group>"; };
@@ -150,6 +191,25 @@
 		18BE69042487A66B000F6875 /* FightVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightVC.h; sourceTree = "<group>"; };
 		18BE69052487A66B000F6875 /* FightVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightVC.m; sourceTree = "<group>"; };
 		18BE69062487A66B000F6875 /* FightVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FightVC.xib; sourceTree = "<group>"; };
+		18F8A808249351AA0026458E /* FeaturedPubg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedPubg.h; sourceTree = "<group>"; };
+		18F8A809249351AA0026458E /* FeaturedPubg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedPubg.m; sourceTree = "<group>"; };
+		18F8A80A249351AB0026458E /* FeaturedPubg.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedPubg.xib; sourceTree = "<group>"; };
+		18F8A80D249353200026458E /* MineTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineTableCell.h; sourceTree = "<group>"; };
+		18F8A80E249353200026458E /* MineTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineTableCell.m; sourceTree = "<group>"; };
+		18F8A80F249353200026458E /* MineTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTableCell.xib; sourceTree = "<group>"; };
+		18F8A812249368DF0026458E /* SortHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortHeadView.h; sourceTree = "<group>"; };
+		18F8A813249368DF0026458E /* SortHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortHeadView.m; sourceTree = "<group>"; };
+		18F8A815249368EA0026458E /* SortHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortHeadView.xib; sourceTree = "<group>"; };
+		18F8A817249374430026458E /* SortLeftTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortLeftTableCell.h; sourceTree = "<group>"; };
+		18F8A818249374430026458E /* SortLeftTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortLeftTableCell.m; sourceTree = "<group>"; };
+		18F8A819249374430026458E /* SortLeftTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortLeftTableCell.xib; sourceTree = "<group>"; };
+		18F8A81C249374550026458E /* SortRightTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortRightTableCell.h; sourceTree = "<group>"; };
+		18F8A81D249374550026458E /* SortRightTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortRightTableCell.m; sourceTree = "<group>"; };
+		18F8A81E249374550026458E /* SortRightTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortRightTableCell.xib; sourceTree = "<group>"; };
+		18F8A82124937E3C0026458E /* DJClubModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJClubModel.h; sourceTree = "<group>"; };
+		18F8A82224937E3C0026458E /* DJClubModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DJClubModel.m; sourceTree = "<group>"; };
+		18F8A824249382910026458E /* ClubModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClubModel.h; sourceTree = "<group>"; };
+		18F8A825249382910026458E /* ClubModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClubModel.m; sourceTree = "<group>"; };
 		577562BDC0A4EBD5EC5AFD66 /* Pods-CyberGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberGame.release.xcconfig"; path = "Target Support Files/Pods-CyberGame/Pods-CyberGame.release.xcconfig"; sourceTree = "<group>"; };
 		DAEDEFB90D39407557EEE57D /* Pods-CyberGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyberGame.debug.xcconfig"; path = "Target Support Files/Pods-CyberGame/Pods-CyberGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +244,35 @@
 			path = V;
 			sourceTree = "<group>";
 		};
+		18218652249225BC003861C1 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				18218654249225EE003861C1 /* FihghtThemeCell.h */,
+				18218655249225EE003861C1 /* FihghtThemeCell.m */,
+				18218656249225EE003861C1 /* FihghtThemeCell.xib */,
+				18218659249225FF003861C1 /* FightTimeCell.h */,
+				1821865A249225FF003861C1 /* FightTimeCell.m */,
+				1821865B249225FF003861C1 /* FightTimeCell.xib */,
+				1821865E24922618003861C1 /* FightRuleCell.h */,
+				1821865F24922618003861C1 /* FightRuleCell.m */,
+				1821866024922618003861C1 /* FightRuleCell.xib */,
+				182186632492262D003861C1 /* FightTeamCell.h */,
+				182186642492262D003861C1 /* FightTeamCell.m */,
+				182186652492262D003861C1 /* FightTeamCell.xib */,
+				1821866824922640003861C1 /* FightOtherCell.h */,
+				1821866924922640003861C1 /* FightOtherCell.m */,
+				1821866A24922640003861C1 /* FightOtherCell.xib */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		18218653249225C2003861C1 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
 		185EC414248B55B000C22C98 /* V */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +286,11 @@
 		185EC415248B55B600C22C98 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				182186472490CA52003861C1 /* teamList.plist */,
+				182186492491C97F003861C1 /* RankTeamListModel.h */,
+				1821864A2491C97F003861C1 /* RankTeamListModel.m */,
+				1821864C2491CAB9003861C1 /* RankListModel.h */,
+				1821864D2491CAB9003861C1 /* RankListModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -231,8 +325,6 @@
 				18BE68A824875414000F6875 /* AppDelegate.m */,
 				183AA7D62488C3CE00D88B76 /* BaseNavigationController.h */,
 				183AA7D52488C3CE00D88B76 /* BaseNavigationController.m */,
-				182186452490CA41003861C1 /* DJClub.plist */,
-				182186472490CA52003861C1 /* teamList.plist */,
 				18BE68B024875414000F6875 /* Main.storyboard */,
 				18BE68B324875419000F6875 /* Assets.xcassets */,
 				18BE68B524875419000F6875 /* LaunchScreen.storyboard */,
@@ -246,8 +338,8 @@
 		18BE68C524876F7A000F6875 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				18BE68C924876FBC000F6875 /* V */,
 				18BE68CA24876FCF000F6875 /* M */,
+				18BE68C924876FBC000F6875 /* V */,
 				18BE68CB24876FD6000F6875 /* C */,
 			);
 			path = Home;
@@ -275,6 +367,15 @@
 				183AAC12248A3F5D0044ED05 /* GameSortTabCell.h */,
 				183AAC13248A3F5D0044ED05 /* GameSortTabCell.m */,
 				183AAC09248A30FF0044ED05 /* GameSortTabCell.xib */,
+				18F8A812249368DF0026458E /* SortHeadView.h */,
+				18F8A813249368DF0026458E /* SortHeadView.m */,
+				18F8A815249368EA0026458E /* SortHeadView.xib */,
+				18F8A817249374430026458E /* SortLeftTableCell.h */,
+				18F8A818249374430026458E /* SortLeftTableCell.m */,
+				18F8A819249374430026458E /* SortLeftTableCell.xib */,
+				18F8A81C249374550026458E /* SortRightTableCell.h */,
+				18F8A81D249374550026458E /* SortRightTableCell.m */,
+				18F8A81E249374550026458E /* SortRightTableCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -284,6 +385,11 @@
 			children = (
 				183AA7EA2488F47600D88B76 /* HomeBannerDataM.h */,
 				183AA7EB2488F47600D88B76 /* HomeBannerDataM.m */,
+				182186452490CA41003861C1 /* DJClub.plist */,
+				18F8A824249382910026458E /* ClubModel.h */,
+				18F8A825249382910026458E /* ClubModel.m */,
+				18F8A82124937E3C0026458E /* DJClubModel.h */,
+				18F8A82224937E3C0026458E /* DJClubModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -334,6 +440,8 @@
 				18BE68FD24879FF3000F6875 /* BaseTabBarController.m */,
 				18BE69002487A32D000F6875 /* TestTabBar.h */,
 				18BE68FF2487A32D000F6875 /* TestTabBar.m */,
+				1821864F24920F76003861C1 /* MutableCopyCatetory.h */,
+				1821865024920F76003861C1 /* MutableCopyCatetory.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -358,6 +466,9 @@
 		18BE68EA2487793F000F6875 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				18F8A80D249353200026458E /* MineTableCell.h */,
+				18F8A80E249353200026458E /* MineTableCell.m */,
+				18F8A80F249353200026458E /* MineTableCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -390,12 +501,12 @@
 				185EC400248B46E000C22C98 /* WzryVC.h */,
 				185EC401248B46E000C22C98 /* WzryVC.m */,
 				185EC402248B46E000C22C98 /* WzryVC.xib */,
-				185EC405248B483700C22C98 /* LscsVC.h */,
-				185EC406248B483700C22C98 /* LscsVC.m */,
-				185EC407248B483700C22C98 /* LscsVC.xib */,
-				185EC40A248B484400C22C98 /* LolVC.h */,
-				185EC40B248B484400C22C98 /* LolVC.m */,
-				185EC40C248B484400C22C98 /* LolVC.xib */,
+				185EC405248B483700C22C98 /* LolVC.h */,
+				185EC406248B483700C22C98 /* LolVC.m */,
+				185EC407248B483700C22C98 /* LolVC.xib */,
+				185EC40A248B484400C22C98 /* PubgVC.h */,
+				185EC40B248B484400C22C98 /* PubgVC.m */,
+				185EC40C248B484400C22C98 /* PubgVC.xib */,
 				185EC40F248B484E00C22C98 /* OwVC.h */,
 				185EC410248B484E00C22C98 /* OwVC.m */,
 				185EC411248B484E00C22C98 /* OwVC.xib */,
@@ -412,12 +523,12 @@
 				1821862B2490A73C003861C1 /* FeatureWzry.h */,
 				1821862C2490A73C003861C1 /* FeatureWzry.m */,
 				1821862D2490A73C003861C1 /* FeatureWzry.xib */,
-				182186302490AB79003861C1 /* FeaturedLscs.h */,
-				182186312490AB79003861C1 /* FeaturedLscs.m */,
-				182186322490AB79003861C1 /* FeaturedLscs.xib */,
 				182186352490AB94003861C1 /* FeaturedLol.h */,
 				182186362490AB94003861C1 /* FeaturedLol.m */,
 				182186372490AB94003861C1 /* FeaturedLol.xib */,
+				18F8A808249351AA0026458E /* FeaturedPubg.h */,
+				18F8A809249351AA0026458E /* FeaturedPubg.m */,
+				18F8A80A249351AB0026458E /* FeaturedPubg.xib */,
 				1821863A2490ABA5003861C1 /* FeaturedOw.h */,
 				1821863B2490ABA5003861C1 /* FeaturedOw.m */,
 				1821863C2490ABA5003861C1 /* FeaturedOw.xib */,
@@ -428,6 +539,8 @@
 		18BE69022487A63E000F6875 /* Fight */ = {
 			isa = PBXGroup;
 			children = (
+				18218653249225C2003861C1 /* M */,
+				18218652249225BC003861C1 /* V */,
 				18BE69032487A645000F6875 /* C */,
 			);
 			path = Fight;
@@ -513,25 +626,34 @@
 			files = (
 				182186462490CA41003861C1 /* DJClub.plist in Resources */,
 				183AA7E12488E20200D88B76 /* HomeBannerCell.xib in Resources */,
+				1821865D249225FF003861C1 /* FightTimeCell.xib in Resources */,
+				18F8A80C249351AB0026458E /* FeaturedPubg.xib in Resources */,
 				185EC413248B484E00C22C98 /* OwVC.xib in Resources */,
 				182186392490AB94003861C1 /* FeaturedLol.xib in Resources */,
+				18F8A81B249374430026458E /* SortLeftTableCell.xib in Resources */,
 				182186482490CA52003861C1 /* teamList.plist in Resources */,
+				1821866224922618003861C1 /* FightRuleCell.xib in Resources */,
+				1821866C24922640003861C1 /* FightOtherCell.xib in Resources */,
+				182186672492262D003861C1 /* FightTeamCell.xib in Resources */,
 				185EC404248B46E000C22C98 /* WzryVC.xib in Resources */,
 				183AAC0B248A30FF0044ED05 /* GameSortTabCell.xib in Resources */,
 				183AA7DC2488CFB000D88B76 /* Featured.xib in Resources */,
 				18140EF02490713000849DD3 /* RankTableViewCell.xib in Resources */,
-				182186342490AB79003861C1 /* FeaturedLscs.xib in Resources */,
 				182186442490B269003861C1 /* FeaturedTableViewCell.xib in Resources */,
 				18BE68F424878921000F6875 /* RankVC.xib in Resources */,
 				1821863E2490ABA5003861C1 /* FeaturedOw.xib in Resources */,
 				18BE68B724875419000F6875 /* LaunchScreen.storyboard in Resources */,
 				183AABFF248A03F60044ED05 /* BannerCollectionViewCell.xib in Resources */,
 				18BE68E724877929000F6875 /* MineVC.xib in Resources */,
-				185EC40E248B484400C22C98 /* LolVC.xib in Resources */,
+				18F8A820249374550026458E /* SortRightTableCell.xib in Resources */,
+				18F8A816249368EA0026458E /* SortHeadView.xib in Resources */,
+				185EC40E248B484400C22C98 /* PubgVC.xib in Resources */,
+				18F8A811249353200026458E /* MineTableCell.xib in Resources */,
+				18218658249225EE003861C1 /* FihghtThemeCell.xib in Resources */,
 				1821862F2490A73D003861C1 /* FeatureWzry.xib in Resources */,
 				18BE68B424875419000F6875 /* Assets.xcassets in Resources */,
 				183AABFA2489D4900044ED05 /* HomeVC.xib in Resources */,
-				185EC409248B483700C22C98 /* LscsVC.xib in Resources */,
+				185EC409248B483700C22C98 /* LolVC.xib in Resources */,
 				18BE68B224875414000F6875 /* Main.storyboard in Resources */,
 				18BE69082487A66B000F6875 /* FightVC.xib in Resources */,
 			);
@@ -586,36 +708,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185EC408248B483700C22C98 /* LscsVC.m in Sources */,
+				1821866124922618003861C1 /* FightRuleCell.m in Sources */,
+				185EC408248B483700C22C98 /* LolVC.m in Sources */,
 				18140EEF2490713000849DD3 /* RankTableViewCell.m in Sources */,
 				18BE69012487A32D000F6875 /* TestTabBar.m in Sources */,
+				182186662492262D003861C1 /* FightTeamCell.m in Sources */,
+				18F8A826249382910026458E /* ClubModel.m in Sources */,
 				1821862E2490A73D003861C1 /* FeatureWzry.m in Sources */,
+				1821864E2491CAB9003861C1 /* RankListModel.m in Sources */,
 				1864F663248B331E001AEF84 /* ListViewController.m in Sources */,
+				18F8A82324937E3C0026458E /* DJClubModel.m in Sources */,
 				18BE68DB248770B2000F6875 /* UIImage+Image.m in Sources */,
+				1821865124920F76003861C1 /* MutableCopyCatetory.m in Sources */,
 				18BE68DA248770B2000F6875 /* UIColor+Hex.m in Sources */,
 				1821863D2490ABA5003861C1 /* FeaturedOw.m in Sources */,
 				183AA7EC2488F47600D88B76 /* HomeBannerDataM.m in Sources */,
 				182186432490B269003861C1 /* FeaturedTableViewCell.m in Sources */,
 				18BE68A924875414000F6875 /* AppDelegate.m in Sources */,
 				183AA7D72488C3CE00D88B76 /* BaseNavigationController.m in Sources */,
+				18F8A81A249374430026458E /* SortLeftTableCell.m in Sources */,
 				183AA7E92488F15900D88B76 /* WRImageHelper.m in Sources */,
 				1864F660248B32EE001AEF84 /* ContentBaseViewController.m in Sources */,
 				185EC412248B484E00C22C98 /* OwVC.m in Sources */,
+				1821866B24922640003861C1 /* FightOtherCell.m in Sources */,
 				183AA7DB2488CFB000D88B76 /* Featured.m in Sources */,
+				18F8A80B249351AB0026458E /* FeaturedPubg.m in Sources */,
+				18F8A814249368DF0026458E /* SortHeadView.m in Sources */,
 				182186382490AB94003861C1 /* FeaturedLol.m in Sources */,
 				183AAC14248A3F5D0044ED05 /* GameSortTabCell.m in Sources */,
 				18BE68E624877929000F6875 /* MineVC.m in Sources */,
+				18F8A81F249374550026458E /* SortRightTableCell.m in Sources */,
 				18BE69072487A66B000F6875 /* FightVC.m in Sources */,
 				18BE68DC248770B2000F6875 /* UIImage+OriginalImage.m in Sources */,
 				183AA7E02488E20200D88B76 /* HomeBannerCell.m in Sources */,
 				183AABF92489D4900044ED05 /* HomeVC.m in Sources */,
-				185EC40D248B484400C22C98 /* LolVC.m in Sources */,
-				182186332490AB79003861C1 /* FeaturedLscs.m in Sources */,
+				1821865C249225FF003861C1 /* FightTimeCell.m in Sources */,
+				185EC40D248B484400C22C98 /* PubgVC.m in Sources */,
 				183AABFE248A03F60044ED05 /* BannerCollectionViewCell.m in Sources */,
+				18F8A810249353200026458E /* MineTableCell.m in Sources */,
+				1821864B2491C97F003861C1 /* RankTeamListModel.m in Sources */,
 				18BE68FE24879FF3000F6875 /* BaseTabBarController.m in Sources */,
 				18BE68F324878921000F6875 /* RankVC.m in Sources */,
 				185EC403248B46E000C22C98 /* WzryVC.m in Sources */,
 				18BE68BA24875419000F6875 /* main.m in Sources */,
+				18218657249225EE003861C1 /* FihghtThemeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

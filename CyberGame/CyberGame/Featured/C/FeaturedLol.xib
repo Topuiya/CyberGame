@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeaturedLol">
             <connections>
+                <outlet property="headViewHeight" destination="cLl-mg-djh" id="ZoQ-Lo-dFn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,21 +18,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_news" translatesAutoresizingMaskIntoConstraints="NO" id="hJg-ef-gkA">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9R4-Xg-MxX">
+                    <rect key="frame" x="19.5" y="0.0" width="375" height="156"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_news" translatesAutoresizingMaskIntoConstraints="NO" id="hJg-ef-gkA">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+                        </imageView>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="156" id="DeD-bW-lUL"/>
+                        <constraint firstItem="hJg-ef-gkA" firstAttribute="leading" secondItem="9R4-Xg-MxX" secondAttribute="leading" id="Eoy-o9-xLg"/>
+                        <constraint firstAttribute="trailing" secondItem="hJg-ef-gkA" secondAttribute="trailing" id="Nsi-rg-n1D"/>
+                        <constraint firstAttribute="bottom" secondItem="hJg-ef-gkA" secondAttribute="bottom" id="Wd2-QF-t0e"/>
+                        <constraint firstAttribute="height" constant="156" id="cLl-mg-djh"/>
+                        <constraint firstAttribute="width" secondItem="9R4-Xg-MxX" secondAttribute="height" multiplier="375:156" id="fzg-nb-aqA"/>
+                        <constraint firstItem="hJg-ef-gkA" firstAttribute="top" secondItem="9R4-Xg-MxX" secondAttribute="top" id="q7K-dE-PbQ"/>
                     </constraints>
-                </imageView>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="hJg-ef-gkA" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="DiH-pV-bTV"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="hJg-ef-gkA" secondAttribute="trailing" id="gEv-QA-MbR"/>
-                <constraint firstItem="hJg-ef-gkA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ibr-19-bHP"/>
+                <constraint firstItem="9R4-Xg-MxX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lNH-W1-Zak"/>
+                <constraint firstItem="9R4-Xg-MxX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mki-76-QOT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="139" y="135"/>
+            <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
         </view>
     </objects>
     <resources>

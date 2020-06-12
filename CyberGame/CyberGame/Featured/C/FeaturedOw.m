@@ -15,7 +15,11 @@
 @implementation FeaturedOw
 
 - (void)viewDidLoad {
-    
+    if (SCREEN_WIDTH == 414) {
+        self.headViewHeight.constant = 172.3;
+    }else if (SCREEN_WIDTH == 375){
+        self.headViewHeight.constant = 156;
+    }
 }
 
 -(UIView *)listView{
