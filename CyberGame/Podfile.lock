@@ -1,9 +1,41 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - AxcAE_TabBar (1.0.5)
+  - BRPickerView (2.6.2):
+    - BRPickerView/AddressPickerView (= 2.6.2)
+    - BRPickerView/Base (= 2.6.2)
+    - BRPickerView/DatePickerView (= 2.6.2)
+    - BRPickerView/StringPickerView (= 2.6.2)
+  - BRPickerView/AddressPickerView (2.6.2):
+    - BRPickerView/Base
+  - BRPickerView/Base (2.6.2)
+  - BRPickerView/DatePickerView (2.6.2):
+    - BRPickerView/Base
+  - BRPickerView/StringPickerView (2.6.2):
+    - BRPickerView/Base
   - IQKeyboardManager (6.5.5)
   - JXCategoryView (1.5.5)
+  - Mantle (2.1.1):
+    - Mantle/extobjc (= 2.1.1)
+  - Mantle/extobjc (2.1.1)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - MJExtension (3.2.1)
+  - MJRefresh (3.4.3)
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
@@ -11,36 +43,51 @@ PODS:
   - WRNavigationBar (1.2.0)
 
 DEPENDENCIES:
+  - AFNetworking (<= 3.2.1)
   - AxcAE_TabBar
+  - BRPickerView
   - IQKeyboardManager
   - JXCategoryView
+  - Mantle (~> 2.1.0)
   - Masonry
+  - MBProgressHUD (~> 1.1.0)
   - MJExtension
+  - MJRefresh
   - SDWebImage (>= 5.0.0)
   - TYCyclePagerView
   - WRNavigationBar (~> 1.2.0)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - AFNetworking
     - AxcAE_TabBar
+    - BRPickerView
     - IQKeyboardManager
     - JXCategoryView
+    - Mantle
     - Masonry
+    - MBProgressHUD
     - MJExtension
+    - MJRefresh
     - SDWebImage
     - TYCyclePagerView
     - WRNavigationBar
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   AxcAE_TabBar: 1d5bcf6c4921889dc38839b6ba2c584a9b55251a
+  BRPickerView: ed57c158a1e5e6b71b98347a03d1227a70f674d4
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
+  Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
   WRNavigationBar: dc952230effbb646785f962587caaac06c60f229
 
-PODFILE CHECKSUM: 1a67599b70cdb368d9871167f9b6ba05a3ae4466
+PODFILE CHECKSUM: 44210e3b92591b336dc3ccc2fc8b2408966421ad
 
 COCOAPODS: 1.9.1

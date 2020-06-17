@@ -14,5 +14,11 @@ pod 'WRNavigationBar','~>1.2.0’
 pod 'TYCyclePagerView'
 pod 'SDWebImage', '>= 5.0.0'
 pod 'MJExtension'
+pod 'BRPickerView'
+pod 'Mantle', '~> 2.1.0'
+pod 'MBProgressHUD', '~> 1.1.0'
+pod 'AFNetworking', '<= 3.2.1'
+pod 'MJRefresh'
+pod 'MJExtension'
 
 end

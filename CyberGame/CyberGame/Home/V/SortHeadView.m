@@ -7,19 +7,37 @@
 //
 
 #import "SortHeadView.h"
+#import "UIColor+Hex.h"
 
 @implementation SortHeadView
 
-//初始化
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        UIView *locationView = [[NSBundle mainBundle]loadNibNamed:@"SortHeadView" owner:self options:nil].firstObject;
-        locationView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 65);
-        [self addSubview:locationView];
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self.leftBtn addTarget:self action:@selector(headLeftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.rightBtn addTarget:self action:@selector(headRightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+- (IBAction)headLeftBtnClick:(UIButton *)sender {
+    if (_selectedLeftHeadBlock) {
+        _selectedLeftHeadBlock();
     }
-    return self;
+    
+    self.rightImageView.hidden = YES;
+    self.leftImageView.hidden = NO;
+    
+    [self.rightBtn setTitleColor:[UIColor colorWithHexString:@"#999999"] forState:UIControlStateNormal];
+    [self.leftBtn setTitleColor:[UIColor colorWithHexString:@"#333333"] forState:UIControlStateNormal];
+}
+- (IBAction)headRightBtnClick:(UIButton *)sender {
+    if (_selectedRightHeadBlock) {
+        _selectedRightHeadBlock();
+    }
+    
+    
+    self.rightImageView.hidden = NO;
+    self.leftImageView.hidden = YES;
+    
+    [self.rightBtn setTitleColor:[UIColor colorWithHexString:@"#333333"] forState:UIControlStateNormal];
+    [self.leftBtn setTitleColor:[UIColor colorWithHexString:@"#999999"] forState:UIControlStateNormal];
 }
 
 @end

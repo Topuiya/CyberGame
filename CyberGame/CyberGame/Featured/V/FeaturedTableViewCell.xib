@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,22 +9,22 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="139" id="KGk-i7-Jjw" customClass="FeaturedTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="360" height="139"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="KGk-i7-Jjw" customClass="FeaturedTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="360" height="139"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="346" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tWN-bZ-ezs">
-                        <rect key="frame" x="14.5" y="9" width="98" height="117.5"/>
+                        <rect key="frame" x="14.666666666666664" y="9.0000000000000071" width="98" height="117.66666666666669"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="98" id="9HT-ah-r7U"/>
                             <constraint firstAttribute="height" constant="117.5" id="KzK-qF-fUN"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRx-cr-47J" userLabel="title">
-                        <rect key="frame" x="127" y="9" width="218.5" height="38.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRx-cr-47J" userLabel="title">
+                        <rect key="frame" x="127.66666666666667" y="9" width="163.33333333333331" height="38.333333333333336"/>
                         <string key="text">RNG和TS谁的状态更好?RW能
 否战胜TES?</string>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -32,66 +32,56 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RNG目前位居东部第二，虽然成绩 上面相比大鹅还是有一定的差距， 但整体来看也是相当强势的。最..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqV-Y3-9co">
-                        <rect key="frame" x="127" y="52.5" width="218.5" height="47"/>
+                        <rect key="frame" x="127.66666666666667" y="52.333333333333343" width="163.33333333333331" height="46.666666666666657"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1V-I6-hV0">
+                        <rect key="frame" x="127.66666666666669" y="104.66666666666667" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="4wV-86-lD6"/>
+                            <constraint firstAttribute="height" constant="22" id="Ql2-ZK-asg"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="11"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="六芒星电竞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzF-3a-EWY">
-                        <rect key="frame" x="155.5" y="107.5" width="66.5" height="16"/>
+                        <rect key="frame" x="155.66666666666666" y="107.66666666666667" width="66.333333333333343" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.4590306878" green="0.21826714280000001" blue="0.74545687439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-oI-1PJ">
-                        <rect key="frame" x="240.5" y="107.5" width="47" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <state key="normal" title="9999" image="ic_like">
-                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bM-6j-N7r">
-                        <rect key="frame" x="299.5" y="107.5" width="46" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <state key="normal" title="9999" image="ic_eyes">
-                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                    </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1V-I6-hV0">
-                        <rect key="frame" x="127" y="104.5" width="22" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="22" id="9wA-mW-itx"/>
-                            <constraint firstAttribute="height" constant="22" id="WNY-db-cFs"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Clq-oI-1PJ" firstAttribute="centerY" secondItem="h1V-I6-hV0" secondAttribute="centerY" id="15f-Qc-9bH"/>
-                    <constraint firstItem="bqV-Y3-9co" firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" id="8Td-1Q-eh8"/>
-                    <constraint firstItem="h1V-I6-hV0" firstAttribute="leading" secondItem="WRx-cr-47J" secondAttribute="leading" id="9Ix-R9-ebd"/>
-                    <constraint firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" constant="14.5" id="Bg4-IR-Bu2"/>
-                    <constraint firstItem="bzF-3a-EWY" firstAttribute="leading" secondItem="h1V-I6-hV0" secondAttribute="trailing" constant="6.5" id="D9y-El-W7k"/>
-                    <constraint firstItem="bqV-Y3-9co" firstAttribute="leading" secondItem="WRx-cr-47J" secondAttribute="leading" id="DvO-Zc-tgn"/>
-                    <constraint firstItem="WRx-cr-47J" firstAttribute="leading" secondItem="tWN-bZ-ezs" secondAttribute="trailing" constant="14.5" id="KyM-FP-ozJ"/>
+                    <constraint firstItem="WRx-cr-47J" firstAttribute="leading" secondItem="tWN-bZ-ezs" secondAttribute="trailing" constant="15" id="1AZ-RC-gp5"/>
+                    <constraint firstItem="WRx-cr-47J" firstAttribute="top" secondItem="tWN-bZ-ezs" secondAttribute="top" id="746-NN-dHf"/>
+                    <constraint firstItem="bqV-Y3-9co" firstAttribute="leading" secondItem="WRx-cr-47J" secondAttribute="leading" id="BqL-jR-lcT"/>
+                    <constraint firstItem="bzF-3a-EWY" firstAttribute="centerY" secondItem="h1V-I6-hV0" secondAttribute="centerY" id="KDU-1d-p5T"/>
                     <constraint firstItem="tWN-bZ-ezs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14.5" id="L7Y-bJ-p7H"/>
-                    <constraint firstItem="bzF-3a-EWY" firstAttribute="baseline" secondItem="Clq-oI-1PJ" secondAttribute="baseline" id="Lg8-Zd-JkN"/>
-                    <constraint firstItem="5bM-6j-N7r" firstAttribute="centerY" secondItem="Clq-oI-1PJ" secondAttribute="centerY" id="Mw7-wb-RtD"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="bzF-3a-EWY" secondAttribute="bottom" constant="4.5" id="We0-gF-yLL"/>
                     <constraint firstAttribute="bottom" secondItem="tWN-bZ-ezs" secondAttribute="bottom" constant="9" id="Yag-mA-Ln6"/>
-                    <constraint firstAttribute="trailing" secondItem="5bM-6j-N7r" secondAttribute="trailing" constant="14.5" id="asN-Oo-CI2"/>
-                    <constraint firstItem="WRx-cr-47J" firstAttribute="top" secondItem="tWN-bZ-ezs" secondAttribute="top" id="gwk-QY-CMK"/>
-                    <constraint firstItem="bqV-Y3-9co" firstAttribute="top" secondItem="WRx-cr-47J" secondAttribute="bottom" constant="5" id="khY-Kw-FWF"/>
-                    <constraint firstItem="5bM-6j-N7r" firstAttribute="leading" secondItem="Clq-oI-1PJ" secondAttribute="trailing" constant="12" id="tKw-7y-iNy"/>
+                    <constraint firstItem="h1V-I6-hV0" firstAttribute="bottom" secondItem="tWN-bZ-ezs" secondAttribute="bottom" id="beM-ea-v2W"/>
+                    <constraint firstItem="bqV-Y3-9co" firstAttribute="top" secondItem="WRx-cr-47J" secondAttribute="bottom" constant="5" id="cpU-c1-0dP"/>
+                    <constraint firstItem="bzF-3a-EWY" firstAttribute="leading" secondItem="h1V-I6-hV0" secondAttribute="trailing" constant="6" id="j4H-OA-ig7"/>
+                    <constraint firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" constant="55" id="jZE-CF-Jae"/>
+                    <constraint firstItem="bqV-Y3-9co" firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" id="kxF-oV-rj1"/>
+                    <constraint firstItem="h1V-I6-hV0" firstAttribute="leading" secondItem="bqV-Y3-9co" secondAttribute="leading" id="nwp-JN-mZh"/>
                     <constraint firstItem="tWN-bZ-ezs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="txa-Eh-kYQ"/>
-                    <constraint firstItem="h1V-I6-hV0" firstAttribute="bottom" secondItem="tWN-bZ-ezs" secondAttribute="bottom" id="x3E-TG-X3y"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="108.69565217391305" y="166.40625"/>
+            <connections>
+                <outlet property="contentLabel" destination="bqV-Y3-9co" id="g7w-E3-DpV"/>
+                <outlet property="headImageView" destination="h1V-I6-hV0" id="Ijg-7i-cCb"/>
+                <outlet property="labelWidth" destination="jZE-CF-Jae" id="aeF-q5-qGX"/>
+                <outlet property="nickNameLabel" destination="bzF-3a-EWY" id="fRv-Br-yeA"/>
+                <outlet property="picImageView" destination="tWN-bZ-ezs" id="wgi-pO-2Zg"/>
+                <outlet property="titleLabel" destination="WRx-cr-47J" id="LYD-Mw-jPW"/>
+            </connections>
+            <point key="canvasLocation" x="-393.60000000000002" y="128.57142857142858"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="ic_eyes" width="13" height="9"/>
-        <image name="ic_like" width="14" height="14.5"/>
-    </resources>
 </document>

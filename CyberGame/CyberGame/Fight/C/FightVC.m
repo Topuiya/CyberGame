@@ -10,6 +10,7 @@
 #import "UIImage+Image.h"
 #import "UIImage+OriginalImage.h"
 #import "UIColor+Hex.h"
+#import "FightInfoModel.h"
 
 //ViewControllers
 #import "FihghtThemeCell.h"
@@ -21,7 +22,7 @@
 @interface FightVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic, strong)FightInfoModel *infoModel;
 
 @end
 
@@ -51,12 +52,7 @@ NSString *FightOtherID = @"FightOther";
       NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#333333"]}];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColor.whiteColor] forBarMetrics:UIBarMetricsDefault];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_g"] style:UIBarButtonItemStyleDone target:self action:@selector(backBtnClick)];
-}
-
-- (void)backBtnClick {
-//    [self.navigationController popViewControllerAnimated:YES];
-    NSLog(@"=--------------");
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_g"] style:UIBarButtonItemStyleDone target:self action:@selector(backBtnClick)];
 }
 
 - (void)addRegisterNib {
@@ -84,21 +80,35 @@ NSString *FightOtherID = @"FightOther";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         FightTeamCell *cell = [tableView dequeueReusableCellWithIdentifier:FihghtThemeID];
+        cell.selectionStyle = UITableViewScrollPositionNone;
         return cell;
     }
     else if (indexPath.section == 1) {
         FightTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:FightTimeID];
+        cell.selectionStyle = UITableViewScrollPositionNone;
+        cell.dateTextF.text = self.infoModel.datetimeStr;
         return cell;
     }
+    else if (indexPath.section == 2) {
+        FightRuleCell *cell = [tableView dequeueReusableCellWithIdentifier:FightRuleID];
+        cell.selectionStyle = UITableViewScrollPositionNone;
+        return  cell;
+    }
+    else if (indexPath.section == 3) {
+        FightTeamCell *cell = [tableView dequeueReusableCellWithIdentifier:FightTeamID];
+        cell.selectionStyle = UITableViewScrollPositionNone;
+        return  cell;
+    }
     else{
-        UITableViewCell *cell = UITableViewCell.new;
+        FightOtherCell *cell = [tableView dequeueReusableCellWithIdentifier:FightOtherID];
+        cell.selectionStyle = UITableViewScrollPositionNone;
         return cell;
     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 1) {
-        return 50;
+    if (indexPath.section == 4) {
+        return 240;
     }else {
         return UITableViewAutomaticDimension;
     }

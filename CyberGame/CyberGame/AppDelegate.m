@@ -33,9 +33,7 @@
     // 设置主窗口,并设置根控制器
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-//    BaseTabBarController *baseTabBarController = [[BaseTabBarController alloc] init];
-        
-//    self.window.rootViewController = [[RTRootNavigationController alloc] initWithRootViewController:tabbar];
+    
     BaseNavigationController *homeNav = [[BaseNavigationController alloc] initWithRootViewController:[HomeVC new]];
     BaseNavigationController *rankNav = [[BaseNavigationController alloc] initWithRootViewController:[RankVC new]];
     BaseNavigationController *fightNav = [[BaseNavigationController alloc] initWithRootViewController:[FightVC new]];
@@ -75,7 +73,7 @@
                                        @"MineVC"]];
     //#6716d6
     // 设置导航栏默认的背景颜色
-    [WRNavigationBar wr_setDefaultNavBarBarTintColor:[UIColor colorWithHexString:@"#6716d6"]];
+//    [WRNavigationBar wr_setDefaultNavBarBarTintColor:[UIColor colorWithHexString:@"#6716d6"]];
     // 设置导航栏所有按钮的默认颜色
     [WRNavigationBar wr_setDefaultNavBarTintColor:[UIColor whiteColor]];
     // 设置导航栏标题默认颜色

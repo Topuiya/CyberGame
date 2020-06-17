@@ -31,7 +31,7 @@
                 <constraint firstItem="SfH-eo-D2V" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="ooh-et-BGM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="132" y="154"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </view>
     </objects>
 </document>

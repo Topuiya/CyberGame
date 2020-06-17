@@ -14,18 +14,19 @@
 #import "SortLeftTableCell.h"
 #import "SortRightTableCell.h"
 #import "DJClubModel.h"
+#import "DJDetailVC.h"
 
 #import <SDWebImage/SDWebImage.h>
 #import <MJExtension/MJExtension.h>
 #import "UIImage+OriginalImage.h"
-
-#define KbaseUrlString @"http://image.yysc.online/files/"
+#import <WRNavigationBar.h>
 
 @interface HomeVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)NSArray *clubArray;
-@property (nonatomic, strong)NSMutableArray *dataArray;
+/** 记录点击的是第几个Button */
+@property (nonatomic, assign) NSInteger menuTag;
 
 @end
 
@@ -33,9 +34,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _menuTag = 1;
     self.title = @"首页";
     //修改navigationBar背景
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg"] forBarMetrics:UIBarMetricsDefault];
+//    UIImage *bgImage = [UIImage imageNamed:@"bg"];
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg"] forBarMetrics:UIBarMetricsDefault];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -47,21 +50,28 @@
     [self addNavBarButtonItem];
     
     [self addRegisterXib];
-
-    
     //隐藏滚动条
     self.tableView.showsVerticalScrollIndicator = NO;
+    //隐藏分割线
+    self.tableView.separatorStyle = UITableViewScrollPositionNone;
     
     _clubArray = [DJClubModel mj_objectArrayWithFilename:@"DJClub.plist"];
     
-    
-       
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.tabBar.hidden = NO;
+    self.navigationController.navigationBar.hidden = NO;
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg"] forBarMetrics:UIBarMetricsDefault];
+//    [WRNavigationBar wr_setDefaultNavBarTitleColor:UIColor.whiteColor];
+}
+
 
 NSString *BannerTabCellID = @"BannerTabCell";
 NSString *GameTabCellID = @"GameTabCell";
 NSString *SortLeftTableCellID = @"SortLeftTableCell";
 NSString *SortRightTableCellID = @"SortRightTableCell";
+NSString *SortHeadViewID = @"SortHeadView";
 
 - (void)addRegisterXib {
     //注册轮播图tableViewCell
@@ -74,7 +84,9 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SortLeftTableCell class]) bundle:nil] forCellReuseIdentifier:SortLeftTableCellID];
     
     //注册排行榜tableViewCell
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SortRightTableCellID class]) bundle:nil] forCellReuseIdentifier:SortRightTableCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SortRightTableCell class]) bundle:nil] forCellReuseIdentifier:SortRightTableCellID];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SortHeadView class]) bundle:nil] forCellReuseIdentifier:SortHeadViewID];
 }
 
 - (void)addNavBarButtonItem {
@@ -119,7 +131,7 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
 - (void)setSortBtn:(UIView *)sortView {
     CGFloat spaceW = (SCREEN_WIDTH - 3*61 - 14.5*2)/2;
     //电竞快讯(第一个)按钮
-    UIButton *gameNewsBtn = [[UIButton alloc] initWithFrame:CGRectMake(14.5, -20, 100, 41.5)];
+    UIButton *gameNewsBtn = [[UIButton alloc] initWithFrame:CGRectMake(14.5, 0, 100, 41.5)];
     [gameNewsBtn setTitle:@"电竞快讯" forState:UIControlStateNormal];
 //    [gameNewsBtn setFont:[UIFont systemFontOfSize:13]];
     gameNewsBtn.titleLabel.font = [UIFont systemFontOfSize:13];
@@ -131,7 +143,7 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
     [gameNewsBtn addTarget:self action:@selector(gameNewsBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     //游戏排名榜(第二个)按钮
-    UIButton *gameRankBtn = [[UIButton alloc] initWithFrame:CGRectMake(61 + spaceW, -20, 120, 41.5)];;
+    UIButton *gameRankBtn = [[UIButton alloc] initWithFrame:CGRectMake(61 + spaceW, 0, 120, 41.5)];;
     [gameRankBtn setTitle:@"游戏排名榜" forState:UIControlStateNormal];
     gameRankBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [gameRankBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
@@ -142,7 +154,7 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
 //    [gameRankBtn addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     //每日签到(第三个)按钮
-    UIButton *daySignBtn = [[UIButton alloc] initWithFrame:CGRectMake(122 + spaceW * 2 - 14.5, -20, 100, 41.5)];;
+    UIButton *daySignBtn = [[UIButton alloc] initWithFrame:CGRectMake(122 + spaceW * 2 - 14.5, 0, 100, 41.5)];;
     [daySignBtn setTitle:@"每日签到" forState:UIControlStateNormal];
     daySignBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [daySignBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
@@ -153,7 +165,7 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
     
     
     UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_sar zone"]];
-    titleImageView.frame = CGRectMake((SCREEN_WIDTH - 151.5) / 2, 40, 151.5, 15.5);
+    titleImageView.frame = CGRectMake((SCREEN_WIDTH - 151.5) / 2, 60, 151.5, 15.5);
     [sortView addSubview:titleImageView];
 }
 
@@ -161,9 +173,11 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
     NSLog(@"gameNewsBtnClick");
 }
 
+
+
 #pragma mark - UITableViewViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -172,7 +186,10 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
         return 1;
     }else if (section == 1) {
         return 1;
-    }else {
+    }else if (section == 2) {
+        return 1;
+    }
+    else {
         return _clubArray.count;
     }
 }
@@ -185,7 +202,7 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
         HomeBannerCell *cell = [tableView dequeueReusableCellWithIdentifier:BannerTabCellID];
         //去掉cell的选中效果
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        self.tableView.separatorStyle = NO;
+        
         return cell;
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
@@ -193,19 +210,65 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
         //去掉cell的选中效果
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
-    }
-    else {
-        SortLeftTableCell *cell = [tableView dequeueReusableCellWithIdentifier:SortLeftTableCellID];
-        DJClubModel *tempModel = self.clubArray[indexPath.row];
+    }else if (indexPath.section == 2 && indexPath.row == 0) {
+        SortHeadView *cell = [tableView dequeueReusableCellWithIdentifier:SortHeadViewID];
+        //去掉cell的选中效果
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        //设置图片
-        NSURL *picURL = [NSURL URLWithString:tempModel.pic];
-        [cell.picImageView sd_setImageWithURL:picURL];
+        WEAKSELF
+        cell.selectedLeftHeadBlock = ^{
+            weakSelf.menuTag = 1;
+            [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:3] withRowAnimation:UITableViewRowAnimationFade];
+        };
         
-        cell.nameLabel.text = tempModel.name;
+        cell.selectedRightHeadBlock = ^{
+            weakSelf.menuTag = 2;
+            [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:3] withRowAnimation:UITableViewRowAnimationFade];
+        };
         return cell;
     }
-    
+    else {
+        DJClubModel *tempModel = self.clubArray[indexPath.row];
+        
+        //用star进行降序排序
+//        NSArray *tempArr = self.clubArray[0];
+        DJClubModel *rankModel = self.clubArray[indexPath.row];
+        //降序
+//        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"star" ascending:NO];
+//        NSArray *arr = [tempArr sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+        
+        //加载不同的cell
+        switch (self.menuTag) {
+            case 1:
+                {
+                    SortLeftTableCell *cell = [tableView dequeueReusableCellWithIdentifier:SortLeftTableCellID];
+                    //设置图片
+                    NSURL *picURL = [NSURL URLWithString:tempModel.pic];
+                    [cell.picImageView sd_setImageWithURL:picURL];
+                    cell.nameLabel.text = tempModel.name;
+                    return cell;
+                }
+                break;
+            case 2:
+            {
+                SortRightTableCell *cell = [tableView dequeueReusableCellWithIdentifier:SortRightTableCellID];
+                NSURL *picURL = [NSURL URLWithString:rankModel.pic];
+                [cell.picImageView sd_setImageWithURL:picURL];
+                cell.nameLabel.text = rankModel.name;
+                cell.addressLabel.text = rankModel.address;
+                if (tempModel.hot == 1) {
+                    cell.hotImage.hidden = NO;
+                }
+                else {
+                    cell.hotImage.hidden = YES;
+                }
+                return cell;
+            }
+            default:
+                break;
+        }
+    }
+    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -215,6 +278,9 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
         return 220;
+    }
+    else if (indexPath.section == 2 && indexPath.row == 0) {
+        return 70;
     }
     else {
         return UITableViewAutomaticDimension;
@@ -231,6 +297,9 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
         [self setSortBtn:gameHeadView];
         return gameHeadView;
     }
+    else if (section == 2) {
+        return nil;
+    }
     else {
         SortHeadView *sortHeadView = [[SortHeadView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 65)];
         
@@ -243,11 +312,21 @@ NSString *SortRightTableCellID = @"SortRightTableCell";
         return 0.01f;
     }
     else if (section == 1) {
-        return 60;
+        return 80;
+    }
+    else if (section == 2) {
+        return 0.01f;
     }
     else {
-        return 65;
+        return 0.01f;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DJClubModel *dataModel = self.clubArray[indexPath.row];
+    DJDetailVC *detailVC = DJDetailVC.new;
+    detailVC.model = dataModel;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 @end

@@ -16,6 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 //@property (nonatomic, copy)NSString *address;
 //@property (nonatomic, copy)NSString *pic;
 //@property (nonatomic, copy)NSString *name;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *picImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *hotImage;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

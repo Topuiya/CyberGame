@@ -16,6 +16,7 @@
 #import "FeaturedOw.h"
 
 #import "JXCategoryTitleView.h"
+#import "WRNavigationBar.h"
 
 @interface Featured () <JXCategoryViewDelegate>
 
@@ -28,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"电竞快讯";
-    //    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg"] forBarMetrics:UIBarMetricsDefault];
+    
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:RGBA(255, 255, 255, 0)] forBarMetrics:UIBarMetricsDefault];
     
     [self addNavBarButtonItem];

@@ -18,4 +18,13 @@
 
 #define RGB(R, G, B)    [UIColor colorWithRed:((R) / 255.0f) green:((G) / 255.0f) blue:((B) / 255.0f) alpha:1.0f]
 
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+
+//判断空字符串
+#define  IsEmptyStr(string) ([string isKindOfClass:[NSNull class]] || string == nil || string == NULL || [string isEqualToString:@""] || [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0)
+
+#define TimeForMatterStr @"yyyy-MM-dd HH:mm:ss"
+
+#import "MacroHeader.h"
+
 #endif /* PrefixHeader_pch */

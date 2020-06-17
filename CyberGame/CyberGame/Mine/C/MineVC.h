@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MineVC : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 
 @end
 

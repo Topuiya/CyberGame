@@ -10,6 +10,7 @@
 #import "UIImage+Image.h"
 #import "UIImage+OriginalImage.h"
 #import "MineTableCell.h"
+#import "LoginVC.h"
 
 @interface MineVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -33,6 +34,18 @@ NSString *MineID = @"Mine";
     self.tableView.backgroundColor = [UIColor colorWithHexString:@"#F1F1F9"];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MineTableCell class]) bundle:nil] forCellReuseIdentifier:MineID];
+    
+    _userImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *userTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapUserImageView)];
+    [_userImageView addGestureRecognizer:userTap];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.tabBar.hidden = NO;
+}
+- (void)didTapUserImageView {
+    LoginVC *loginVC = [[LoginVC alloc] init];
+    [self.navigationController pushViewController:loginVC animated:YES];
 }
 
 #pragma mark - UITableViewDataSource
@@ -101,5 +114,9 @@ NSString *MineID = @"Mine";
     UIView *view = UIView.new;
     view.backgroundColor = [UIColor colorWithHexString:@"#F1F1F0"];
     return view;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 @end

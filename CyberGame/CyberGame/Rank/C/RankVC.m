@@ -28,7 +28,6 @@
 
 @property(nonatomic,strong)NSArray *teamListArray;
 
-@property(nonatomic,strong)NSMutableArray *myListArray;
 
 @end
 
@@ -105,7 +104,6 @@
     if (index == 0)
     {
         WzryVC *wzryVC = [[WzryVC alloc]init];
-//        wzryVC.WzryModel = _myListArray[index];
         //拿到要使用的模型数组
         RankTeamListModel *tempModel = _teamListArray[0];
         //对改数组排序

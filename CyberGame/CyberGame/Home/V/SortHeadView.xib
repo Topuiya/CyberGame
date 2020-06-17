@@ -44,6 +44,9 @@
                             <state key="normal" title="电竞馆">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
+                            <connections>
+                                <action selector="headLeftBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="op8-c9-wur"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -62,6 +65,9 @@
                             <state key="normal" title="排行榜">
                                 <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
+                            <connections>
+                                <action selector="headRightBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="DxH-T1-R68"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -78,7 +84,7 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="GtL-Gm-rwW"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_s" translatesAutoresizingMaskIntoConstraints="NO" id="mzf-YN-Ae9" userLabel="line_s2">
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_s" translatesAutoresizingMaskIntoConstraints="NO" id="mzf-YN-Ae9" userLabel="line_s2">
                     <rect key="frame" x="394.5" y="68" width="90" height="2"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="90" id="0Sl-1p-dzX"/>
@@ -119,7 +125,7 @@
                 <outlet property="leftBtn" destination="CUF-dF-DGH" id="CqI-Xt-BCl"/>
                 <outlet property="leftImageView" destination="YZB-U0-GhO" id="lCj-qw-eBT"/>
                 <outlet property="rightBtn" destination="LRP-V4-ujF" id="nZm-Lp-Nbq"/>
-                <outlet property="rightImageView" destination="mzf-YN-Ae9" id="jI6-6r-qlQ"/>
+                <outlet property="rightImageView" destination="mzf-YN-Ae9" id="G1x-Wa-qhJ"/>
             </connections>
             <point key="canvasLocation" x="256.52173913043481" y="48.883928571428569"/>
         </view>
