@@ -15,6 +15,7 @@
 #import "JXCategoryTitleView.h"
 #import <MJExtension/MJExtension.h>
 #import "MutableCopyCatetory.h"
+#import <WRNavigationBar.h>
 
 //ViewControllers
 #import "WzryVC.h"

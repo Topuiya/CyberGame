@@ -29,8 +29,6 @@ NSString *DJDetailID = @"DJDetailTableCell";
     //右边按钮
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_g"] style:UIBarButtonItemStyleDone target:self action:@selector(backBtnClick)];
     
-    // 一行代码搞定导航栏上标题颜色
-//    [self wr_setNavBarTitleColor:[UIColor colorWithHexString:@"333333"]];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -74,6 +72,48 @@ NSString *DJDetailID = @"DJDetailTableCell";
     
     cell.timeLabel.text = @"营业时间";
     cell.dateLabel.text = @"00:00-24:00";
+    NSLog(@"doubleValue:%.1f",_model.star.doubleValue);
+
+    //设置星星
+    //ic_star_s 灰色   ic_half star 半  ic_full star 整颗
+    if ([_model.star isEqual: @1]) {
+        cell.star1.image = [UIImage imageNamed:@"ic_full star"];
+        cell.star2.image = cell.star3.image = cell.star4.image = cell.star5.image = [UIImage imageNamed:@"ic_star_s"];
+    }
+    if ([_model.star isEqual: @2]) {
+        cell.star1.image = cell.star2.image = [UIImage imageNamed:@"ic_full star"];
+        cell.star3.image = cell.star4.image = cell.star5.image = [UIImage imageNamed:@"ic_star_s"];
+    }
+    if ([_model.star isEqual: @3]) {
+        cell.star1.image = cell.star2.image = cell.star3.image = [UIImage imageNamed:@"ic_full star"];
+        cell.star4.image = cell.star5.image = [UIImage imageNamed:@"ic_star_s"];
+    }
+    if ([_model.star isEqual: @4]) {
+        cell.star1.image = cell.star2.image = cell.star3.image = cell.star4.image = [UIImage imageNamed:@"ic_full star"];
+        cell.star5.image = [UIImage imageNamed:@"ic_star_s"];
+    }
+    if ([_model.star isEqual:@5]) {
+        cell.star1.image = cell.star2.image = cell.star3.image = cell.star4.image = cell.star5.image = [UIImage imageNamed:@"ic_full star"];
+    }
+    if (_model.star.doubleValue == 1.5) {
+        cell.star1.image = [UIImage imageNamed:@"ic_full star"];
+        cell.star2.image = [UIImage imageNamed:@"ic_half star"];
+        cell.star3.image = cell.star4.image = cell.star5.image = [UIImage imageNamed:@"ic_star_s"];
+    }
+    if (_model.star.doubleValue == 2.5) {
+        cell.star1.image = cell.star2.image = [UIImage imageNamed:@"ic_full star"];
+        cell.star3.image = [UIImage imageNamed:@"ic_half star"];
+        cell.star4.image = cell.star5.image = [UIImage imageNamed:@"ic_star_s"];
+    }
+    if (_model.star.doubleValue == 3.5) {
+        cell.star1.image = cell.star2.image = cell.star3.image = [UIImage imageNamed:@"ic_full star"];
+        cell.star4.image =  [UIImage imageNamed:@"ic_half star"];
+        cell.star5.image = [UIImage imageNamed:@"ic_star_s"];
+    }
+    if (_model.star.doubleValue == 4.5) {
+        cell.star1.image = cell.star2.image = cell.star3.image = cell.star4.image = [UIImage imageNamed:@"ic_full star"];
+        cell.star5.image = [UIImage imageNamed:@"ic_half star"];
+    }
     
     return cell;
 }

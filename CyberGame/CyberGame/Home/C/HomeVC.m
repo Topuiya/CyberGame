@@ -15,6 +15,8 @@
 #import "SortRightTableCell.h"
 #import "DJClubModel.h"
 #import "DJDetailVC.h"
+#import "RankVC.h"
+#import "Featured.h"
 
 #import <SDWebImage/SDWebImage.h>
 #import <MJExtension/MJExtension.h>
@@ -25,6 +27,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)NSArray *clubArray;
+//保存排序之后的模型数组
+@property (nonatomic, strong)NSArray *arr;
 /** 记录点击的是第几个Button */
 @property (nonatomic, assign) NSInteger menuTag;
 
@@ -55,14 +59,28 @@
     //隐藏分割线
     self.tableView.separatorStyle = UITableViewScrollPositionNone;
     
-    _clubArray = [DJClubModel mj_objectArrayWithFilename:@"DJClub.plist"];
+//    _clubArray = [DJClubModel mj_objectArrayWithFilename:@"DJClub.plist"];
+    
+    
+    NSMutableArray *dictArray = [NSMutableArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"DJClub.plist" ofType:nil]];
+    NSMutableArray *temp = [NSMutableArray array];
+    for (NSDictionary *dict in dictArray) {
+        DJClubModel *djModel = [DJClubModel djWithDict:dict];
+        [temp addObject:djModel];
+    }
+    _clubArray = temp;
     
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     self.tabBarController.tabBar.hidden = NO;
     self.navigationController.navigationBar.hidden = NO;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg"] forBarMetrics:UIBarMetricsDefault];
+    
+    UIImage *navImg =[UIImage imageNamed:@"bg"];
+    navImg = [navImg resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
+  
+    [self.navigationController.navigationBar setBackgroundImage:navImg forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.contentMode = UIViewContentModeScaleAspectFill;
 //    [WRNavigationBar wr_setDefaultNavBarTitleColor:UIColor.whiteColor];
 }
 
@@ -151,7 +169,7 @@ NSString *SortHeadViewID = @"SortHeadView";
     gameRankBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [gameRankBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     [sortView addSubview:gameRankBtn];
-//    [gameRankBtn addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [gameRankBtn addTarget:self action:@selector(gameRankBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     //每日签到(第三个)按钮
     UIButton *daySignBtn = [[UIButton alloc] initWithFrame:CGRectMake(122 + spaceW * 2 - 14.5, 0, 100, 41.5)];;
@@ -171,9 +189,14 @@ NSString *SortHeadViewID = @"SortHeadView";
 
 - (void)gameNewsBtnClick {
     NSLog(@"gameNewsBtnClick");
+    RankVC *rankVC = RankVC.new;
+    [self.navigationController pushViewController:rankVC animated:YES];
 }
 
-
+- (void)gameRankBtnClick {
+    Featured *featureVC = Featured.new;
+    [self.navigationController pushViewController:featureVC animated:YES];
+}
 
 #pragma mark - UITableViewViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -228,14 +251,12 @@ NSString *SortHeadViewID = @"SortHeadView";
         return cell;
     }
     else {
-        DJClubModel *tempModel = self.clubArray[indexPath.row];
-        
         //用star进行降序排序
-//        NSArray *tempArr = self.clubArray[0];
-        DJClubModel *rankModel = self.clubArray[indexPath.row];
+        NSArray *tempArr = self.clubArray;
         //降序
-//        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"star" ascending:NO];
-//        NSArray *arr = [tempArr sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"star" ascending:NO];
+        _arr = [tempArr sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+        DJClubModel *rankModel = _arr[indexPath.row];
         
         //加载不同的cell
         switch (self.menuTag) {
@@ -243,9 +264,9 @@ NSString *SortHeadViewID = @"SortHeadView";
                 {
                     SortLeftTableCell *cell = [tableView dequeueReusableCellWithIdentifier:SortLeftTableCellID];
                     //设置图片
-                    NSURL *picURL = [NSURL URLWithString:tempModel.pic];
+                    NSURL *picURL = [NSURL URLWithString:rankModel.pic];
                     [cell.picImageView sd_setImageWithURL:picURL];
-                    cell.nameLabel.text = tempModel.name;
+                    cell.nameLabel.text = rankModel.name;
                     return cell;
                 }
                 break;
@@ -256,7 +277,7 @@ NSString *SortHeadViewID = @"SortHeadView";
                 [cell.picImageView sd_setImageWithURL:picURL];
                 cell.nameLabel.text = rankModel.name;
                 cell.addressLabel.text = rankModel.address;
-                if (tempModel.hot == 1) {
+                if (rankModel.isHot == NO) {
                     cell.hotImage.hidden = NO;
                 }
                 else {
@@ -323,10 +344,12 @@ NSString *SortHeadViewID = @"SortHeadView";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DJClubModel *dataModel = self.clubArray[indexPath.row];
-    DJDetailVC *detailVC = DJDetailVC.new;
-    detailVC.model = dataModel;
-    [self.navigationController pushViewController:detailVC animated:YES];
+    if (indexPath.section == 3) {
+        DJClubModel *dataModel = _arr[indexPath.row];
+        DJDetailVC *detailVC = DJDetailVC.new;
+        detailVC.model = dataModel;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
 }
 
 @end

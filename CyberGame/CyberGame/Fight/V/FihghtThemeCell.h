@@ -10,11 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class FightTeamCell;
+
+@protocol FightTeamCellDelegate <NSObject>
+
+- (void)didClickSortGameButton:(UIButton *)button;
+
+@end
+
 @interface FihghtThemeCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIButton *wzryBtn;
-@property (weak, nonatomic) IBOutlet UIButton *lscsBtn;
-@property (weak, nonatomic) IBOutlet UIButton *lolBtn;
-@property (weak, nonatomic) IBOutlet UIButton *owBtn;
+
+@property (nonatomic, weak) id <FightTeamCellDelegate> delegate;
 
 @end
 

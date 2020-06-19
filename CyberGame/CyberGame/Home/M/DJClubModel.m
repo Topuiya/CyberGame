@@ -10,4 +10,14 @@
 
 @implementation DJClubModel
 
++ (instancetype)djWithDict:(NSDictionary *)dict {
+    DJClubModel *djModel = [DJClubModel new];
+    djModel.address = dict[@"address"];
+    djModel.name = dict[@"name"];
+    djModel.pic = dict[@"pic"];
+    djModel.star = dict[@"star"];
+    
+    return djModel;
+}
+
 @end

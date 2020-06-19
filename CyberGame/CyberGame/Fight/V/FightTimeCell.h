@@ -13,8 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FightTimeCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *downImageView;
 @property (weak, nonatomic) IBOutlet UITextField *dateTextF;
-@property (nonatomic, strong) FightInfoModel  *infoModel;
+@property (nonatomic, strong) FightInfoModel  *model;
 
 @end
 

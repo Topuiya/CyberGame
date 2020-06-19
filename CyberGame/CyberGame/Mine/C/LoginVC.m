@@ -57,7 +57,7 @@
 - (void)textChange
 {
     //账号和密码同时有值时,才让登录按钮能够点击
-    self.loginBtn.enabled = self.accountTextF.text.length && self.pwdTextF.text.length;
+    self.loginBtn.enabled = self.accountTextF.text.length >= 11 && self.pwdTextF.text.length;
 }
 - (IBAction)loginBtnClick:(UIButton *)sender {
     //手机号密码正确才能进入下一级

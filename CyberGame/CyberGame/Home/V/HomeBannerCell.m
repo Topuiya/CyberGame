@@ -76,7 +76,8 @@ NSString *HomeBannerCellID = @"BannerCell";
 - (void)addPagerView {
     self.pagerView.layer.borderWidth = 0;
     self.pagerView.isInfiniteLoop = NO;
-//    self.pagerView.autoScrollInterval = 0.0;
+    //间隔多少秒翻页一次
+    self.pagerView.autoScrollInterval = 3.0;
     
     self.pagerView.dataSource = self;
     self.pagerView.delegate = self;

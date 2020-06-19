@@ -26,16 +26,30 @@
                                     <constraint firstAttribute="width" constant="56" id="stw-Y2-m7q"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AG" translatesAutoresizingMaskIntoConstraints="NO" id="VR0-wB-cH9">
-                                <rect key="frame" x="41" y="-14" width="20" height="28.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add can" translatesAutoresizingMaskIntoConstraints="NO" id="VR0-wB-cH9">
+                                <rect key="frame" x="31" y="-28" width="40" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="0RY-rI-A1z"/>
-                                    <constraint firstAttribute="height" constant="28.5" id="H21-hO-57w"/>
+                                    <constraint firstAttribute="width" constant="40" id="0RY-rI-A1z"/>
+                                    <constraint firstAttribute="height" constant="57" id="H21-hO-57w"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BjI-91-J7X">
                                 <rect key="frame" x="11" y="41.5" width="80" height="15.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="添加战队" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PAi-PK-DmS">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="15.5"/>
+                                        <color key="textColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="PAi-PK-DmS" firstAttribute="top" secondItem="BjI-91-J7X" secondAttribute="top" id="S7X-Zm-Dx2"/>
+                                    <constraint firstItem="PAi-PK-DmS" firstAttribute="leading" secondItem="BjI-91-J7X" secondAttribute="leading" id="S9V-o0-Bv9"/>
+                                    <constraint firstAttribute="trailing" secondItem="PAi-PK-DmS" secondAttribute="trailing" id="irz-Jg-mxI"/>
+                                    <constraint firstAttribute="bottom" secondItem="PAi-PK-DmS" secondAttribute="bottom" id="ter-7P-7iL"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="12"/>
@@ -62,19 +76,141 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0v5-gz-Y1a" userLabel="C">
+                        <rect key="frame" x="201" y="64.5" width="102" height="59"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clan logo_box" translatesAutoresizingMaskIntoConstraints="NO" id="Yqo-wb-HSt">
+                                <rect key="frame" x="23" y="-31.5" width="56" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="5Gk-Oo-vFI"/>
+                                    <constraint firstAttribute="width" constant="56" id="Qig-Xk-ia9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wX0-QV-N4Q">
+                                <rect key="frame" x="31" y="-28" width="40" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="3lV-Dn-Nyw"/>
+                                    <constraint firstAttribute="height" constant="57" id="oVh-pg-7wj"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7S-YL-IHc">
+                                <rect key="frame" x="11" y="41.5" width="80" height="15.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="添加战队" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-mi-3ax">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="15.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9630115628" green="0.95918196440000003" blue="0.97210496660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="c7S-YL-IHc" firstAttribute="top" secondItem="Yqo-wb-HSt" secondAttribute="bottom" constant="9" id="6yo-tJ-POL"/>
+                            <constraint firstItem="Yqo-wb-HSt" firstAttribute="centerY" secondItem="0v5-gz-Y1a" secondAttribute="centerY" multiplier="0.01" id="7Ql-AM-2zF"/>
+                            <constraint firstAttribute="height" constant="59" id="8kr-Bg-a3p"/>
+                            <constraint firstItem="c7S-YL-IHc" firstAttribute="leading" secondItem="0v5-gz-Y1a" secondAttribute="leading" constant="11" id="D5w-3C-LNO"/>
+                            <constraint firstAttribute="bottom" secondItem="c7S-YL-IHc" secondAttribute="bottom" constant="2" id="Fxi-9L-ham"/>
+                            <constraint firstAttribute="width" constant="102" id="Ho0-g1-7uJ"/>
+                            <constraint firstItem="wX0-QV-N4Q" firstAttribute="centerX" secondItem="0v5-gz-Y1a" secondAttribute="centerX" id="LVC-GJ-aSa"/>
+                            <constraint firstItem="wX0-QV-N4Q" firstAttribute="centerY" secondItem="0v5-gz-Y1a" secondAttribute="centerY" multiplier="0.01" id="ZRX-dC-UTA"/>
+                            <constraint firstItem="Yqo-wb-HSt" firstAttribute="centerX" secondItem="0v5-gz-Y1a" secondAttribute="centerX" id="axV-1r-mfB"/>
+                            <constraint firstAttribute="trailing" secondItem="c7S-YL-IHc" secondAttribute="trailing" constant="11" id="fjA-fy-eNY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5i-Ks-acP" userLabel="R">
+                        <rect key="frame" x="365" y="64.5" width="102" height="59"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clan logo_box" translatesAutoresizingMaskIntoConstraints="NO" id="qnY-nL-ecC">
+                                <rect key="frame" x="23" y="-31.5" width="56" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="kCp-tB-Nub"/>
+                                    <constraint firstAttribute="width" constant="56" id="qXC-vr-JjI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="taB-gX-i6r">
+                                <rect key="frame" x="31" y="-28" width="40" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="C1e-Zd-8U1"/>
+                                    <constraint firstAttribute="width" constant="40" id="lfW-5o-Q8j"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAe-7q-6yg">
+                                <rect key="frame" x="11" y="41.5" width="80" height="15.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="添加战队" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-LD-vhR">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="15.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9630115628" green="0.95918196440000003" blue="0.97210496660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="taB-gX-i6r" firstAttribute="centerX" secondItem="G5i-Ks-acP" secondAttribute="centerX" id="5c3-0I-RZj"/>
+                            <constraint firstItem="qnY-nL-ecC" firstAttribute="centerX" secondItem="G5i-Ks-acP" secondAttribute="centerX" id="6lM-dF-G1u"/>
+                            <constraint firstItem="qnY-nL-ecC" firstAttribute="centerY" secondItem="G5i-Ks-acP" secondAttribute="centerY" multiplier="0.01" id="FpO-CZ-IFj"/>
+                            <constraint firstItem="taB-gX-i6r" firstAttribute="centerY" secondItem="G5i-Ks-acP" secondAttribute="centerY" multiplier="0.01" id="Fs3-vW-uPd"/>
+                            <constraint firstItem="DAe-7q-6yg" firstAttribute="top" secondItem="qnY-nL-ecC" secondAttribute="bottom" constant="9" id="GZj-BF-qvh"/>
+                            <constraint firstAttribute="width" constant="102" id="RhX-lG-e8w"/>
+                            <constraint firstAttribute="bottom" secondItem="DAe-7q-6yg" secondAttribute="bottom" constant="2" id="aRg-Do-amP"/>
+                            <constraint firstAttribute="trailing" secondItem="DAe-7q-6yg" secondAttribute="trailing" constant="11" id="p6V-09-KMd"/>
+                            <constraint firstItem="DAe-7q-6yg" firstAttribute="leading" secondItem="G5i-Ks-acP" secondAttribute="leading" constant="11" id="raq-5j-Q2k"/>
+                            <constraint firstAttribute="height" constant="59" id="uTd-D6-0Uz"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ipw-wq-9kp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0F8-Av-afd"/>
                     <constraint firstItem="ipw-wq-9kp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="64.5" id="3nx-yN-1HL"/>
                     <constraint firstAttribute="bottom" secondItem="ipw-wq-9kp" secondAttribute="bottom" constant="31" id="4q6-XS-x7J"/>
+                    <constraint firstItem="G5i-Ks-acP" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.65" id="KbH-as-qeR"/>
+                    <constraint firstItem="0v5-gz-Y1a" firstAttribute="top" secondItem="ipw-wq-9kp" secondAttribute="top" id="OwD-1v-Rpi"/>
+                    <constraint firstItem="0v5-gz-Y1a" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="omf-cN-d2h"/>
+                    <constraint firstItem="G5i-Ks-acP" firstAttribute="top" secondItem="0v5-gz-Y1a" secondAttribute="top" id="pwk-b1-Wu0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="centerTextF" destination="cOx-mi-3ax" id="qNR-FF-0yC"/>
+                <outlet property="iconCImageView" destination="wX0-QV-N4Q" id="jyi-be-anp"/>
+                <outlet property="iconLImageView" destination="VR0-wB-cH9" id="2qu-gq-DEp"/>
+                <outlet property="iconRImageView" destination="taB-gX-i6r" id="42h-XB-Pkf"/>
+                <outlet property="leftTextF" destination="PAi-PK-DmS" id="WpA-dV-QT0"/>
+                <outlet property="rightTextF" destination="Re1-LD-vhR" id="00t-5W-4iC"/>
+            </connections>
             <point key="canvasLocation" x="60.869565217391312" y="149.33035714285714"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="AG" width="128" height="128"/>
         <image name="clan logo_box" width="56" height="64"/>
+        <image name="ic_add can" width="56" height="64"/>
     </resources>
 </document>

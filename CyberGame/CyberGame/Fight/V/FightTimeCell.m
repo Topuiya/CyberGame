@@ -9,6 +9,7 @@
 #import "FightTimeCell.h"
 #import <BRPickerView/BRPickerView.h>
 #import "FightInfoModel.h"
+#import "UIColor+Hex.h"
 
 @interface FightTimeCell ()
 
@@ -20,9 +21,11 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _dateTextF.userInteractionEnabled = YES;
+    _downImageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *yearTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapTitleLabel)];
-    [_dateTextF addGestureRecognizer:yearTap];
+    [_downImageView addGestureRecognizer:yearTap];
+    
+    _dateTextF.enabled = NO;
 }
 - (void)didTapTitleLabel {
     //年月日时
@@ -36,7 +39,10 @@
     datePicketView.maxDate = [NSDate br_setYear:2020 month:12 day:31];
     datePicketView.isAutoSelect = YES;
     datePicketView.resultBlock = ^(NSDate * _Nullable selectDate, NSString * _Nullable selectValue) {
-        self.infoModel.datetimeStr = selectValue;
+        //设置dateTextF显示的文字为选择的日期
+        self.dateTextF.text = [NSString stringWithFormat:@"%@时",selectValue];
+        
+        self.dateTextF.textColor = [UIColor colorWithHexString:@"999999"];
         NSLog(@"选择的值: %@",selectValue);
     };
     //设置自定义样式

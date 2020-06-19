@@ -12,11 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DJClubModel : NSObject
 
-@property (nonatomic, assign)NSNumber *star;
-@property (nonatomic, assign)Boolean hot;
+@property (nonatomic, strong)NSNumber *star;
+//@property (nonatomic, assign)Boolean hot;
 @property (nonatomic, copy)NSString *address;
 @property (nonatomic, copy)NSString *pic;
 @property (nonatomic, copy)NSString *name;
+@property (assign, nonatomic, getter=isHot) BOOL hot;
+
++ (instancetype)djWithDict:(NSDictionary *)dict;
 
 @end
 

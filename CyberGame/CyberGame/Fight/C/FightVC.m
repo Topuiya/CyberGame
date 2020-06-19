@@ -11,8 +11,11 @@
 #import "UIImage+OriginalImage.h"
 #import "UIColor+Hex.h"
 #import "FightInfoModel.h"
+#import "RankTeamListModel.h"
+#import <MJExtension/MJExtension.h>
+#import <WRNavigationBar.h>
 
-//ViewControllers
+//TableViewCell
 #import "FihghtThemeCell.h"
 #import "FightTimeCell.h"
 #import "FightRuleCell.h"
@@ -23,7 +26,9 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)FightInfoModel *infoModel;
-
+@property (nonatomic, strong)RankTeamListModel *listModel;
+@property (nonatomic, strong)NSArray *nameArray;
+@property (nonatomic, strong)NSArray *saveListArray;
 @end
 
 @implementation FightVC
@@ -43,6 +48,18 @@ NSString *FightOtherID = @"FightOther";
     self.tableView.dataSource = self;
     
     [self addRegisterNib];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"teamList.plist" ofType:nil];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    //使用MJ框架转数组会变成NSArray不可变数组
+    _nameArray = [RankTeamListModel mj_objectArrayWithKeyValuesArray:dic[@"data"] context:nil];
+    RankTeamListModel *wzryListModel = _nameArray[0];
+    RankTeamListModel *LOLListModel = _nameArray[1];
+    RankTeamListModel *PUBGListModel = _nameArray[2];
+    RankTeamListModel *OWListModel = _nameArray[3];
+    
+    self.saveListArray = [NSArray arrayWithObjects:wzryListModel, LOLListModel, PUBGListModel, OWListModel, nil];
+    
 }
 
 - (void)addNavigationItem {
@@ -51,8 +68,7 @@ NSString *FightOtherID = @"FightOther";
     @{NSFontAttributeName:[UIFont systemFontOfSize:18],
       NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#333333"]}];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColor.whiteColor] forBarMetrics:UIBarMetricsDefault];
-    
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_g"] style:UIBarButtonItemStyleDone target:self action:@selector(backBtnClick)];
+
 }
 
 - (void)addRegisterNib {
@@ -86,7 +102,6 @@ NSString *FightOtherID = @"FightOther";
     else if (indexPath.section == 1) {
         FightTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:FightTimeID];
         cell.selectionStyle = UITableViewScrollPositionNone;
-        cell.dateTextF.text = self.infoModel.datetimeStr;
         return cell;
     }
     else if (indexPath.section == 2) {
@@ -96,6 +111,8 @@ NSString *FightOtherID = @"FightOther";
     }
     else if (indexPath.section == 3) {
         FightTeamCell *cell = [tableView dequeueReusableCellWithIdentifier:FightTeamID];
+        RankTeamListModel *dataModel = _saveListArray[indexPath.row];
+        cell.model = dataModel;
         cell.selectionStyle = UITableViewScrollPositionNone;
         return  cell;
     }
@@ -109,7 +126,14 @@ NSString *FightOtherID = @"FightOther";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 4) {
         return 240;
-    }else {
+    }
+    else if (indexPath.section == 0) {
+        return 90;
+    }
+    else if (indexPath.section == 2) {
+        return 90;
+    }
+    else {
         return UITableViewAutomaticDimension;
     }
 }

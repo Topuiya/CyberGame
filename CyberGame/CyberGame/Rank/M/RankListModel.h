@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RankListModel : NSObject
 
 @property (nonatomic, copy)NSString *iconName;
-@property (nonatomic, assign)NSNumber *lose;
-@property (nonatomic, assign)NSNumber *score;
+@property (nonatomic, strong)NSNumber *lose;
+@property (nonatomic, strong)NSNumber *score;
 @property (nonatomic, copy)NSString *teamName;
-@property (nonatomic, assign)NSNumber *win;
+@property (nonatomic, strong)NSNumber *win;
 
 @end
 

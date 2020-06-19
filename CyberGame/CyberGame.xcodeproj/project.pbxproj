@@ -23,7 +23,6 @@
 		1821864E2491CAB9003861C1 /* RankListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821864D2491CAB9003861C1 /* RankListModel.m */; };
 		1821865124920F76003861C1 /* MutableCopyCatetory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821865024920F76003861C1 /* MutableCopyCatetory.m */; };
 		18218657249225EE003861C1 /* FihghtThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18218655249225EE003861C1 /* FihghtThemeCell.m */; };
-		18218658249225EE003861C1 /* FihghtThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18218656249225EE003861C1 /* FihghtThemeCell.xib */; };
 		1821865C249225FF003861C1 /* FightTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821865A249225FF003861C1 /* FightTimeCell.m */; };
 		1821865D249225FF003861C1 /* FightTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821865B249225FF003861C1 /* FightTimeCell.xib */; };
 		1821866124922618003861C1 /* FightRuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821865F24922618003861C1 /* FightRuleCell.m */; };
@@ -49,6 +48,8 @@
 		183AABFF248A03F60044ED05 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AABFD248A03F60044ED05 /* BannerCollectionViewCell.xib */; };
 		183AAC0B248A30FF0044ED05 /* GameSortTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AAC09248A30FF0044ED05 /* GameSortTabCell.xib */; };
 		183AAC14248A3F5D0044ED05 /* GameSortTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183AAC13248A3F5D0044ED05 /* GameSortTabCell.m */; };
+		1859D794249C549900CBBAAC /* FihghtThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859D793249C549900CBBAAC /* FihghtThemeCell.xib */; };
+		1859D797249C8DFD00CBBAAC /* FightData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859D796249C8DFD00CBBAAC /* FightData.m */; };
 		185EC403248B46E000C22C98 /* WzryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC401248B46E000C22C98 /* WzryVC.m */; };
 		185EC404248B46E000C22C98 /* WzryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EC402248B46E000C22C98 /* WzryVC.xib */; };
 		185EC408248B483700C22C98 /* LolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC406248B483700C22C98 /* LolVC.m */; };
@@ -144,7 +145,6 @@
 		1821865024920F76003861C1 /* MutableCopyCatetory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutableCopyCatetory.m; sourceTree = "<group>"; };
 		18218654249225EE003861C1 /* FihghtThemeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FihghtThemeCell.h; sourceTree = "<group>"; };
 		18218655249225EE003861C1 /* FihghtThemeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FihghtThemeCell.m; sourceTree = "<group>"; };
-		18218656249225EE003861C1 /* FihghtThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FihghtThemeCell.xib; sourceTree = "<group>"; };
 		18218659249225FF003861C1 /* FightTimeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightTimeCell.h; sourceTree = "<group>"; };
 		1821865A249225FF003861C1 /* FightTimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightTimeCell.m; sourceTree = "<group>"; };
 		1821865B249225FF003861C1 /* FightTimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FightTimeCell.xib; sourceTree = "<group>"; };
@@ -184,6 +184,9 @@
 		183AAC09248A30FF0044ED05 /* GameSortTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameSortTabCell.xib; sourceTree = "<group>"; };
 		183AAC12248A3F5D0044ED05 /* GameSortTabCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSortTabCell.h; sourceTree = "<group>"; };
 		183AAC13248A3F5D0044ED05 /* GameSortTabCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSortTabCell.m; sourceTree = "<group>"; };
+		1859D793249C549900CBBAAC /* FihghtThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FihghtThemeCell.xib; sourceTree = "<group>"; };
+		1859D795249C8DFD00CBBAAC /* FightData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightData.h; sourceTree = "<group>"; };
+		1859D796249C8DFD00CBBAAC /* FightData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightData.m; sourceTree = "<group>"; };
 		185EC400248B46E000C22C98 /* WzryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WzryVC.h; sourceTree = "<group>"; };
 		185EC401248B46E000C22C98 /* WzryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WzryVC.m; sourceTree = "<group>"; };
 		185EC402248B46E000C22C98 /* WzryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WzryVC.xib; sourceTree = "<group>"; };
@@ -345,7 +348,7 @@
 			children = (
 				18218654249225EE003861C1 /* FihghtThemeCell.h */,
 				18218655249225EE003861C1 /* FihghtThemeCell.m */,
-				18218656249225EE003861C1 /* FihghtThemeCell.xib */,
+				1859D793249C549900CBBAAC /* FihghtThemeCell.xib */,
 				18218659249225FF003861C1 /* FightTimeCell.h */,
 				1821865A249225FF003861C1 /* FightTimeCell.m */,
 				1821865B249225FF003861C1 /* FightTimeCell.xib */,
@@ -367,6 +370,8 @@
 			children = (
 				187D21CA249755D600B25957 /* FightInfoModel.h */,
 				187D21CB249755D600B25957 /* FightInfoModel.m */,
+				1859D795249C8DFD00CBBAAC /* FightData.h */,
+				1859D796249C8DFD00CBBAAC /* FightData.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -819,6 +824,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1859D794249C549900CBBAAC /* FihghtThemeCell.xib in Resources */,
 				182186462490CA41003861C1 /* DJClub.plist in Resources */,
 				183AA7E12488E20200D88B76 /* HomeBannerCell.xib in Resources */,
 				1839D4082499B08E003231BA /* DJDetailTableCell.xib in Resources */,
@@ -848,7 +854,6 @@
 				18F8A816249368EA0026458E /* SortHeadView.xib in Resources */,
 				185EC40E248B484400C22C98 /* PubgVC.xib in Resources */,
 				18F8A811249353200026458E /* MineTableCell.xib in Resources */,
-				18218658249225EE003861C1 /* FihghtThemeCell.xib in Resources */,
 				1821862F2490A73D003861C1 /* FeatureWzry.xib in Resources */,
 				18BE68B424875419000F6875 /* Assets.xcassets in Resources */,
 				183AABFA2489D4900044ED05 /* HomeVC.xib in Resources */,
@@ -956,6 +961,7 @@
 				1862AC2424989A2E009D60C4 /* ENDLCPNetWorkGET.m in Sources */,
 				183AA7E02488E20200D88B76 /* HomeBannerCell.m in Sources */,
 				1862AC0B249899E8009D60C4 /* EGHViewsTool.m in Sources */,
+				1859D797249C8DFD00CBBAAC /* FightData.m in Sources */,
 				1862AC10249899E8009D60C4 /* EGHCodeTool.m in Sources */,
 				183AABF92489D4900044ED05 /* HomeVC.m in Sources */,
 				1821865C249225FF003861C1 /* FightTimeCell.m in Sources */,

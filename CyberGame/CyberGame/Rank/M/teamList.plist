@@ -93,18 +93,6 @@
 				</dict>
 				<dict>
 					<key>iconName</key>
-					<string></string>
-					<key>lose</key>
-					<integer>1</integer>
-					<key>score</key>
-					<integer>15</integer>
-					<key>teamName</key>
-					<string>AS仙阁</string>
-					<key>win</key>
-					<integer>8</integer>
-				</dict>
-				<dict>
-					<key>iconName</key>
 					<string>RNG.M</string>
 					<key>lose</key>
 					<integer>16</integer>
