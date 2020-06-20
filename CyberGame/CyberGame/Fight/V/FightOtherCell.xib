@@ -16,16 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="207"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwb-Vd-XSD">
-                        <rect key="frame" x="16.5" y="26" width="62" height="52"/>
-                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-22"/>
-                        <state key="normal" title="游戏规则" backgroundImage="btn_rule">
-                            <color key="titleColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </state>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAk-6u-4p7">
-                        <rect key="frame" x="111" y="26" width="62" height="52"/>
+                        <rect key="frame" x="16.5" y="26" width="62" height="52"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-22"/>
                         <state key="normal" title="联系电话" backgroundImage="btn_phone">
@@ -33,10 +25,18 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhZ-l8-t8h">
-                        <rect key="frame" x="205.5" y="26" width="62" height="52"/>
+                        <rect key="frame" x="111" y="26" width="62" height="52"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-22"/>
                         <state key="normal" title="电子邮件" backgroundImage="btn_emali">
+                            <color key="titleColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwb-Vd-XSD">
+                        <rect key="frame" x="205.5" y="26" width="62" height="52"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-22"/>
+                        <state key="normal" title="游戏规则" backgroundImage="btn_rule">
                             <color key="titleColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </state>
                     </button>
@@ -62,14 +62,20 @@
                     <constraint firstItem="PAk-6u-4p7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.5" id="H2o-Wn-ag9"/>
                     <constraint firstItem="jwb-Vd-XSD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.5" id="M4L-i1-gqN"/>
                     <constraint firstItem="cSR-FX-hHA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.75" id="Rtw-Hx-hKY"/>
-                    <constraint firstItem="DhZ-l8-t8h" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.25" id="SV7-aE-TPc"/>
-                    <constraint firstItem="PAk-6u-4p7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.75" id="dOx-Co-r9C"/>
+                    <constraint firstItem="DhZ-l8-t8h" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.75" id="SV7-aE-TPc"/>
+                    <constraint firstItem="PAk-6u-4p7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.25" id="dOx-Co-r9C"/>
                     <constraint firstItem="DhZ-l8-t8h" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.5" id="emk-xv-uS1"/>
                     <constraint firstItem="FUf-Qe-ixD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1.5" id="hke-fS-0k7"/>
-                    <constraint firstItem="jwb-Vd-XSD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.25" id="zQh-NN-ras"/>
+                    <constraint firstItem="jwb-Vd-XSD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.25" id="zQh-NN-ras"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="emailBtn" destination="DhZ-l8-t8h" id="OTT-r4-eYR"/>
+                <outlet property="otherBtn" destination="cSR-FX-hHA" id="Tcs-NN-AZC"/>
+                <outlet property="phoneBtn" destination="PAk-6u-4p7" id="oKN-Ni-zIR"/>
+                <outlet property="ruleBtn" destination="jwb-Vd-XSD" id="1YV-qw-tOM"/>
+            </connections>
             <point key="canvasLocation" x="89.855072463768124" y="180.46875"/>
         </tableViewCell>
     </objects>

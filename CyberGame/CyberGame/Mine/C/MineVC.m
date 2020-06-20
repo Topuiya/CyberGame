@@ -11,6 +11,7 @@
 #import "UIImage+OriginalImage.h"
 #import "MineTableCell.h"
 #import "LoginVC.h"
+#import "MyFightVC.h"
 
 @interface MineVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -23,11 +24,7 @@
 NSString *MineID = @"Mine";
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的";
-    [self.navigationController.navigationBar setTitleTextAttributes:
-    @{NSFontAttributeName:[UIFont systemFontOfSize:18],
-      NSForegroundColorAttributeName:UIColor.blackColor}];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColor.whiteColor] forBarMetrics:UIBarMetricsDefault];
+    
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -42,6 +39,13 @@ NSString *MineID = @"Mine";
 
 - (void)viewWillAppear:(BOOL)animated {
     self.tabBarController.tabBar.hidden = NO;
+    
+    self.title = @"我的";
+    [self.navigationController.navigationBar setTitleTextAttributes:
+    @{NSFontAttributeName:[UIFont systemFontOfSize:18],
+      NSForegroundColorAttributeName:UIColor.blackColor}];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColor.whiteColor] forBarMetrics:UIBarMetricsDefault];
+    
 }
 - (void)didTapUserImageView {
     LoginVC *loginVC = [[LoginVC alloc] init];
@@ -117,6 +121,10 @@ NSString *MineID = @"Mine";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        MyFightVC *myFightVC = MyFightVC.new;
+        myFightVC.titleStr = @"我的约战";
+        [self.navigationController pushViewController:myFightVC animated:YES];
+    }
 }
 @end

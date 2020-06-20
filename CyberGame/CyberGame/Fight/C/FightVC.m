@@ -22,7 +22,9 @@
 #import "FightTeamCell.h"
 #import "FightOtherCell.h"
 
-@interface FightVC () <UITableViewDelegate, UITableViewDataSource>
+#import "FightDetailVC.h"
+
+@interface FightVC () <UITableViewDelegate, UITableViewDataSource,FightOtherCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)FightInfoModel *infoModel;
@@ -119,6 +121,7 @@ NSString *FightOtherID = @"FightOther";
     else{
         FightOtherCell *cell = [tableView dequeueReusableCellWithIdentifier:FightOtherID];
         cell.selectionStyle = UITableViewScrollPositionNone;
+        cell.delegate = self;
         return cell;
     }
 }
@@ -183,4 +186,11 @@ NSString *FightOtherID = @"FightOther";
     
     return headView;
 }
+
+#pragma mark - FightOtherCellDelegate
+- (void)didClickSortButton:(UIButton *)button {
+    FightDetailVC *detailVC = FightDetailVC.new;
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
 @end

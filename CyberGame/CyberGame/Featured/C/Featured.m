@@ -69,6 +69,10 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self wr_setNavBarTitleColor:UIColor.whiteColor];
+}
+
 #pragma mark - JXCategoryListContentViewDelegate
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];

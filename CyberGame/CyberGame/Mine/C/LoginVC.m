@@ -43,7 +43,7 @@
 - (void)addNavBarButtonItem {
     self.title = @"登录中心";
     [self.navigationController.navigationBar setTitleTextAttributes:
-     @{NSFontAttributeName:[UIFont systemFontOfSize:15],
+     @{NSFontAttributeName:[UIFont systemFontOfSize:18],
        NSForegroundColorAttributeName:[UIColor blackColor]}];
     //右边按钮
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back 拷贝"] style:UIBarButtonItemStyleDone target:self action:@selector(backBtnClick)];

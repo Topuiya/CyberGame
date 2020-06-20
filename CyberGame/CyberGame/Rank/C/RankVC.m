@@ -84,6 +84,10 @@
     self.myCategoryView.frame = CGRectMake(0, 10, SCREEN_WIDTH, 40);
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self wr_setNavBarTitleColor:UIColor.whiteColor];
+}
+
 - (JXCategoryTitleView *)myCategoryView {
     return (JXCategoryTitleView *)self.categoryView;
 }

@@ -13,6 +13,7 @@
 #import "FightVC.h"
 #import "Featured.h"
 #import "MineVC.h"
+#import "DJDetailVC.h"
 
 #import "BaseNavigationController.h"
 
@@ -70,6 +71,8 @@
                                        @"RankVC",
                                        @"FightVC",
                                        @"Featured",
+                                       @"DJDetailVC",
+                                       @"MyFightVC",
                                        @"MineVC"]];
     //#6716d6
     // 设置导航栏默认的背景颜色

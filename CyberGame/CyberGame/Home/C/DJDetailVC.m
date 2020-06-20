@@ -26,8 +26,9 @@
 NSString *DJDetailID = @"DJDetailTableCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = _model.name;
     //右边按钮
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_g"] style:UIBarButtonItemStyleDone target:self action:@selector(backBtnClick)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backBtnClick)];
     
     
     self.tableView.delegate = self;
@@ -42,18 +43,6 @@ NSString *DJDetailID = @"DJDetailTableCell";
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (UIImage *)wr_navBarBackgroundImage {
-    return UIImage.new;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-//    self.navigationItem.title = _model.name;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    
-//    [self.navigationController.navigationBar setTitleTextAttributes:
-//    @{NSFontAttributeName:[UIFont systemFontOfSize:15],
-//      NSForegroundColorAttributeName:[UIColor blackColor]}];
-}
 
 #pragma mark - UITableViewViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

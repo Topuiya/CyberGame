@@ -7,18 +7,27 @@
 //
 
 #import "FightOtherCell.h"
+#import "FightDetailVC.h"
 
 @implementation FightOtherCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    //监听点击
+    [self.phoneBtn addTarget:self action:@selector(didClickSortButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.emailBtn addTarget:self action:@selector(didClickSortButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.ruleBtn addTarget:self action:@selector(didClickSortButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.otherBtn addTarget:self action:@selector(didClickSortButton:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)didClickSortButton:(UIButton *)button {
+    if([self.delegate respondsToSelector:@selector(didClickSortButton:)])
+    {
+        [self.delegate didClickSortButton:button];
+    }
+    NSLog(@"点击了按钮");
 }
+
+
 
 @end

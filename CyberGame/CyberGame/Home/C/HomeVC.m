@@ -17,6 +17,7 @@
 #import "DJDetailVC.h"
 #import "RankVC.h"
 #import "Featured.h"
+#import "MyFightVC.h"
 
 #import <SDWebImage/SDWebImage.h>
 #import <MJExtension/MJExtension.h>
@@ -78,10 +79,10 @@
     
     UIImage *navImg =[UIImage imageNamed:@"bg"];
     navImg = [navImg resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
-  
+    
     [self.navigationController.navigationBar setBackgroundImage:navImg forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.contentMode = UIViewContentModeScaleAspectFill;
-//    [WRNavigationBar wr_setDefaultNavBarTitleColor:UIColor.whiteColor];
+    
 }
 
 
@@ -232,6 +233,31 @@ NSString *SortHeadViewID = @"SortHeadView";
         GameSortTabCell *cell = [tableView dequeueReusableCellWithIdentifier:GameTabCellID];
         //去掉cell的选中效果
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        WEAKSELF
+        cell.selectedLolViewBlock = ^{
+            MyFightVC *lolFightVC = MyFightVC.new;
+            lolFightVC.titleStr = @"英雄联盟约战专区";
+            [weakSelf.navigationController pushViewController:lolFightVC animated:YES];
+        };
+        
+        cell.selectedOwViewBlock = ^{
+            MyFightVC *owFightVC = MyFightVC.new;
+            owFightVC.titleStr = @"守望先锋约战专区";
+            [weakSelf.navigationController pushViewController:owFightVC animated:YES];
+        };
+        
+        cell.selectedWzryViewBlock = ^{
+            MyFightVC *wzryFightVC = MyFightVC.new;
+            wzryFightVC.titleStr = @"王者荣耀约战专区";
+            [weakSelf.navigationController pushViewController:wzryFightVC animated:YES];
+        };
+        
+        cell.selectedPubgViewBlock = ^{
+            MyFightVC *pubgFightVC = MyFightVC.new;
+            pubgFightVC.titleStr = @"绝地求生约战专区";
+            [weakSelf.navigationController pushViewController:pubgFightVC animated:YES];
+        };
         return cell;
     }else if (indexPath.section == 2 && indexPath.row == 0) {
         SortHeadView *cell = [tableView dequeueReusableCellWithIdentifier:SortHeadViewID];
