@@ -6,9 +6,9 @@
 //  Copyright © 2020 zzh. All rights reserved.
 //
 
-#import "DataUserModel.h"
+#import "UserInfoModel.h"
 
-@implementation DataUserModel
+@implementation UserInfoModel
 
 + (NSDictionary*) JSONKeyPathsByPropertyKey{
     return @{

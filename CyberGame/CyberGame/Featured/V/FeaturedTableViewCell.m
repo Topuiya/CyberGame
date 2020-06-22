@@ -27,7 +27,7 @@
 }
 
 - (void)setFeaturedDataModel:(FeaturedDataModel *)featuredDataModel {
-    UserModel *userModel = featuredDataModel.user;
+    UserInfoModel *userModel = featuredDataModel.user;
     
     if (featuredDataModel.content != nil) {
         self.contentLabel.text = featuredDataModel.content;

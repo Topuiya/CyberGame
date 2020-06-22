@@ -7,7 +7,7 @@
 //
 
 #import "FeaturedDataModel.h"
-#import "UserModel.h"
+#import "UserInfoModel.h"
 
 @implementation FeaturedDataModel
 //内容
@@ -31,7 +31,7 @@
 + (NSValueTransformer *)userJSONTransformer {
     return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
         NSError *newError;
-        UserModel *model = [MTLJSONAdapter modelOfClass:[UserModel class] fromJSONDictionary:value error:&newError];
+        UserInfoModel *model = [MTLJSONAdapter modelOfClass:[UserInfoModel class] fromJSONDictionary:value error:&newError];
         return model;
     }];
 }

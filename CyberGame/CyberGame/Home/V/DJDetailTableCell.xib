@@ -169,6 +169,7 @@
                 <outlet property="star3" destination="B34-Bh-6Rf" id="US4-FE-i7d"/>
                 <outlet property="star4" destination="9Wt-5z-BDc" id="6Eu-aR-1Xw"/>
                 <outlet property="star5" destination="ind-5O-jA8" id="hea-ID-8R9"/>
+                <outlet property="sureBtn" destination="CiS-tD-c1C" id="eNg-SB-QHE"/>
                 <outlet property="timeLabel" destination="qgN-wX-Avv" id="XHq-Ng-Noi"/>
             </connections>
             <point key="canvasLocation" x="23.188405797101453" y="300.66964285714283"/>

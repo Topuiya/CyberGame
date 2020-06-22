@@ -55,19 +55,39 @@
                         <color key="textColor" red="0.4590306878" green="0.21826714280000001" blue="0.74545687439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1P-FM-LJ6">
+                        <rect key="frame" x="267" y="104.66666666666667" width="24" height="22"/>
+                        <inset key="contentEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="99" image="ic_eyes">
+                            <color key="titleColor" red="0.59890276190000002" green="0.59887963529999999" blue="0.59889531139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7a-Xp-zzm">
+                        <rect key="frame" x="217" y="104.66666666666667" width="25" height="22"/>
+                        <inset key="contentEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="99" image="ic_like">
+                            <color key="titleColor" red="0.59890276190000002" green="0.59887963529999999" blue="0.59889531139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="T1P-FM-LJ6" firstAttribute="leading" secondItem="y7a-Xp-zzm" secondAttribute="trailing" constant="25" id="0oP-zY-rZJ"/>
                     <constraint firstItem="WRx-cr-47J" firstAttribute="leading" secondItem="tWN-bZ-ezs" secondAttribute="trailing" constant="15" id="1AZ-RC-gp5"/>
                     <constraint firstItem="WRx-cr-47J" firstAttribute="top" secondItem="tWN-bZ-ezs" secondAttribute="top" id="746-NN-dHf"/>
                     <constraint firstItem="bqV-Y3-9co" firstAttribute="leading" secondItem="WRx-cr-47J" secondAttribute="leading" id="BqL-jR-lcT"/>
                     <constraint firstItem="bzF-3a-EWY" firstAttribute="centerY" secondItem="h1V-I6-hV0" secondAttribute="centerY" id="KDU-1d-p5T"/>
                     <constraint firstItem="tWN-bZ-ezs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14.5" id="L7Y-bJ-p7H"/>
                     <constraint firstAttribute="bottom" secondItem="tWN-bZ-ezs" secondAttribute="bottom" constant="9" id="Yag-mA-Ln6"/>
+                    <constraint firstItem="y7a-Xp-zzm" firstAttribute="centerY" secondItem="T1P-FM-LJ6" secondAttribute="centerY" id="bWv-OQ-XCO"/>
                     <constraint firstItem="h1V-I6-hV0" firstAttribute="bottom" secondItem="tWN-bZ-ezs" secondAttribute="bottom" id="beM-ea-v2W"/>
                     <constraint firstItem="bqV-Y3-9co" firstAttribute="top" secondItem="WRx-cr-47J" secondAttribute="bottom" constant="5" id="cpU-c1-0dP"/>
+                    <constraint firstItem="T1P-FM-LJ6" firstAttribute="centerY" secondItem="bzF-3a-EWY" secondAttribute="centerY" id="dAT-yU-qkU"/>
                     <constraint firstItem="bzF-3a-EWY" firstAttribute="leading" secondItem="h1V-I6-hV0" secondAttribute="trailing" constant="6" id="j4H-OA-ig7"/>
                     <constraint firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" constant="55" id="jZE-CF-Jae"/>
                     <constraint firstItem="bqV-Y3-9co" firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" id="kxF-oV-rj1"/>
+                    <constraint firstItem="T1P-FM-LJ6" firstAttribute="trailing" secondItem="bqV-Y3-9co" secondAttribute="trailing" id="mcq-Ug-v6C"/>
                     <constraint firstItem="h1V-I6-hV0" firstAttribute="leading" secondItem="bqV-Y3-9co" secondAttribute="leading" id="nwp-JN-mZh"/>
                     <constraint firstItem="tWN-bZ-ezs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="txa-Eh-kYQ"/>
                 </constraints>
@@ -81,7 +101,11 @@
                 <outlet property="picImageView" destination="tWN-bZ-ezs" id="wgi-pO-2Zg"/>
                 <outlet property="titleLabel" destination="WRx-cr-47J" id="LYD-Mw-jPW"/>
             </connections>
-            <point key="canvasLocation" x="-393.60000000000002" y="128.57142857142858"/>
+            <point key="canvasLocation" x="-296" y="127"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_eyes" width="13" height="9"/>
+        <image name="ic_like" width="14" height="14.666666984558105"/>
+    </resources>
 </document>

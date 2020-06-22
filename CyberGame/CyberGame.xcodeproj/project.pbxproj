@@ -60,6 +60,9 @@
 		184448E2249DDE200021491F /* MyFightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184448E0249DDE200021491F /* MyFightVC.xib */; };
 		184448E6249DE1E30021491F /* MyFightTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184448E4249DE1E30021491F /* MyFightTableCell.m */; };
 		184448E7249DE1E30021491F /* MyFightTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184448E5249DE1E30021491F /* MyFightTableCell.xib */; };
+		1844752824A03EA500BC3B06 /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844752724A03EA500BC3B06 /* LocalData.m */; };
+		1844752B24A03EBD00BC3B06 /* FightDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844752A24A03EBD00BC3B06 /* FightDataModel.m */; };
+		1844753124A0972000BC3B06 /* UserDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844753024A0972000BC3B06 /* UserDataModel.m */; };
 		1859D794249C549900CBBAAC /* FihghtThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859D793249C549900CBBAAC /* FihghtThemeCell.xib */; };
 		1859D797249C8DFD00CBBAAC /* FightData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859D796249C8DFD00CBBAAC /* FightData.m */; };
 		185EC403248B46E000C22C98 /* WzryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC401248B46E000C22C98 /* WzryVC.m */; };
@@ -89,7 +92,7 @@
 		1862AC3324989ECE009D60C4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862AC2F24989ECE009D60C4 /* Reachability.m */; };
 		1862AC3424989ECE009D60C4 /* LCPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862AC3224989ECE009D60C4 /* LCPReachability.m */; };
 		1862AC372498A12A009D60C4 /* FeaturedDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862AC362498A12A009D60C4 /* FeaturedDataModel.m */; };
-		1862AC3A2498B2E5009D60C4 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862AC392498B2E5009D60C4 /* UserModel.m */; };
+		1862AC3A2498B2E5009D60C4 /* DataUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862AC392498B2E5009D60C4 /* DataUserModel.m */; };
 		1862AC3E2498BE1A009D60C4 /* WzryDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862AC3C2498BE1A009D60C4 /* WzryDetailVC.m */; };
 		1862AC3F2498BE1A009D60C4 /* WzryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1862AC3D2498BE1A009D60C4 /* WzryDetailVC.xib */; };
 		1862AC432498BF89009D60C4 /* DetailHeadTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862AC412498BF89009D60C4 /* DetailHeadTableCell.m */; };
@@ -214,6 +217,12 @@
 		184448E3249DE1E30021491F /* MyFightTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFightTableCell.h; sourceTree = "<group>"; };
 		184448E4249DE1E30021491F /* MyFightTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFightTableCell.m; sourceTree = "<group>"; };
 		184448E5249DE1E30021491F /* MyFightTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFightTableCell.xib; sourceTree = "<group>"; };
+		1844752624A03EA500BC3B06 /* LocalData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
+		1844752724A03EA500BC3B06 /* LocalData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
+		1844752924A03EBD00BC3B06 /* FightDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightDataModel.h; sourceTree = "<group>"; };
+		1844752A24A03EBD00BC3B06 /* FightDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightDataModel.m; sourceTree = "<group>"; };
+		1844752F24A0972000BC3B06 /* UserDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDataModel.h; sourceTree = "<group>"; };
+		1844753024A0972000BC3B06 /* UserDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDataModel.m; sourceTree = "<group>"; };
 		1859D793249C549900CBBAAC /* FihghtThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FihghtThemeCell.xib; sourceTree = "<group>"; };
 		1859D795249C8DFD00CBBAAC /* FightData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightData.h; sourceTree = "<group>"; };
 		1859D796249C8DFD00CBBAAC /* FightData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightData.m; sourceTree = "<group>"; };
@@ -272,8 +281,8 @@
 		1862AC3224989ECE009D60C4 /* LCPReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPReachability.m; sourceTree = "<group>"; };
 		1862AC352498A12A009D60C4 /* FeaturedDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedDataModel.h; sourceTree = "<group>"; };
 		1862AC362498A12A009D60C4 /* FeaturedDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedDataModel.m; sourceTree = "<group>"; };
-		1862AC382498B2E5009D60C4 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		1862AC392498B2E5009D60C4 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		1862AC382498B2E5009D60C4 /* UserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		1862AC392498B2E5009D60C4 /* DataUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataUserModel.m; sourceTree = "<group>"; };
 		1862AC3B2498BE1A009D60C4 /* WzryDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WzryDetailVC.h; sourceTree = "<group>"; };
 		1862AC3C2498BE1A009D60C4 /* WzryDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WzryDetailVC.m; sourceTree = "<group>"; };
 		1862AC3D2498BE1A009D60C4 /* WzryDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WzryDetailVC.xib; sourceTree = "<group>"; };
@@ -499,8 +508,8 @@
 			children = (
 				1862AC352498A12A009D60C4 /* FeaturedDataModel.h */,
 				1862AC362498A12A009D60C4 /* FeaturedDataModel.m */,
-				1862AC382498B2E5009D60C4 /* UserModel.h */,
-				1862AC392498B2E5009D60C4 /* UserModel.m */,
+				1862AC382498B2E5009D60C4 /* UserInfoModel.h */,
+				1862AC392498B2E5009D60C4 /* DataUserModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -697,6 +706,12 @@
 		18BE68E92487793A000F6875 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				1844752624A03EA500BC3B06 /* LocalData.h */,
+				1844752724A03EA500BC3B06 /* LocalData.m */,
+				1844752F24A0972000BC3B06 /* UserDataModel.h */,
+				1844753024A0972000BC3B06 /* UserDataModel.m */,
+				1844752924A03EBD00BC3B06 /* FightDataModel.h */,
+				1844752A24A03EBD00BC3B06 /* FightDataModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -982,11 +997,12 @@
 				18BE68DB248770B2000F6875 /* UIImage+Image.m in Sources */,
 				1862AC0C249899E8009D60C4 /* StringAndLabelDealTool.m in Sources */,
 				1821865124920F76003861C1 /* MutableCopyCatetory.m in Sources */,
-				1862AC3A2498B2E5009D60C4 /* UserModel.m in Sources */,
+				1862AC3A2498B2E5009D60C4 /* DataUserModel.m in Sources */,
 				18BE68DA248770B2000F6875 /* UIColor+Hex.m in Sources */,
 				1862AC0F249899E8009D60C4 /* NSString+DealError.m in Sources */,
 				1821863D2490ABA5003861C1 /* FeaturedOw.m in Sources */,
 				183AA7EC2488F47600D88B76 /* HomeBannerDataM.m in Sources */,
+				1844753124A0972000BC3B06 /* UserDataModel.m in Sources */,
 				182186432490B269003861C1 /* FeaturedTableViewCell.m in Sources */,
 				18BE68A924875414000F6875 /* AppDelegate.m in Sources */,
 				183AA7D72488C3CE00D88B76 /* BaseNavigationController.m in Sources */,
@@ -1022,6 +1038,7 @@
 				1859D797249C8DFD00CBBAAC /* FightData.m in Sources */,
 				1862AC10249899E8009D60C4 /* EGHCodeTool.m in Sources */,
 				183AABF92489D4900044ED05 /* HomeVC.m in Sources */,
+				1844752824A03EA500BC3B06 /* LocalData.m in Sources */,
 				1821865C249225FF003861C1 /* FightTimeCell.m in Sources */,
 				1862AC0E249899E8009D60C4 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				185EC40D248B484400C22C98 /* PubgVC.m in Sources */,
@@ -1039,6 +1056,7 @@
 				18BE68F324878921000F6875 /* RankVC.m in Sources */,
 				185EC403248B46E000C22C98 /* WzryVC.m in Sources */,
 				18BE68BA24875419000F6875 /* main.m in Sources */,
+				1844752B24A03EBD00BC3B06 /* FightDataModel.m in Sources */,
 				184448E1249DDE200021491F /* MyFightVC.m in Sources */,
 				1839D4022499AEDB003231BA /* DJDetailVC.m in Sources */,
 				1839D4072499B08E003231BA /* DJDetailTableCell.m in Sources */,

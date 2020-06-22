@@ -24,7 +24,7 @@ NSString *MyFightTableCellID = @"MyFightTableCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     //右边按钮
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backBtnClick)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backBtnClick)];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

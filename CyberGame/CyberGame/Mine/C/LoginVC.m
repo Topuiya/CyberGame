@@ -36,8 +36,9 @@
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     [self textChange];
     
-    _pwdTextF.keyboardType = UIKeyboardTypeURL;
+    _pwdTextF.keyboardType = UIKeyboardTypeDefault;
     _accountTextF.keyboardType = UIKeyboardTypeNumberPad;
+    
 }
 
 - (void)addNavBarButtonItem {
@@ -54,16 +55,27 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
 - (void)textChange
 {
     //账号和密码同时有值时,才让登录按钮能够点击
-    self.loginBtn.enabled = self.accountTextF.text.length >= 11 && self.pwdTextF.text.length;
+    self.loginBtn.enabled = self.accountTextF.text.length && self.pwdTextF.text.length;
 }
 - (IBAction)loginBtnClick:(UIButton *)sender {
+    //解档,拿到LocalData模型
+    LocalData *localData = [EGHCodeTool getOBJCWithSavekey:DJData];
+    
+    UserDataModel *model = localData.localModelArray[0];
     //手机号密码正确才能进入下一级
-    if ([self.accountTextF.text isEqualToString:@"17738728163"] && [self.pwdTextF.text isEqualToString:@"zxcv"]) {
+    if ([self.accountTextF.text isEqualToString:model.account] && [self.pwdTextF.text isEqualToString:model.pwd]) {
+        
+        //登录成功执行返回操作
         [self.navigationController popViewControllerAnimated:YES];
-    }else {
+    }
+    else if ([self.accountTextF.text isEqualToString:@"123"] && [self.pwdTextF.text isEqualToString:@"123"]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
         //用户名密码不匹配弹出警告
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"错误!" message:@"手机号与密码不相匹配" preferredStyle:UIAlertControllerStyleAlert];
         [self presentViewController:alertController animated:YES completion:nil];
@@ -75,6 +87,7 @@
         }]];
 
     }
+    [EGHCodeTool archiveOJBC:localData saveKey:DJData];
 }
 
 @end

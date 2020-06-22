@@ -8,7 +8,7 @@
 
 #import "WzryDetailVC.h"
 #import "DetailHeadTableCell.h"
-#import "UserModel.h"
+#import "UserInfoModel.h"
 #import <SDWebImage.h>
 #import "UIImage+OriginalImage.h"
 #import "UIImage+Image.h"
@@ -17,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)NSArray *dataArray;
-@property (nonatomic, strong)UserModel *userModel;
+@property (nonatomic, strong)UserInfoModel *userModel;
 @end
 
 @implementation WzryDetailVC

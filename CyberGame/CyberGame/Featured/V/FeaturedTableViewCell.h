@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FeaturedDataModel.h"
-#import "UserModel.h"
+#import "UserInfoModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

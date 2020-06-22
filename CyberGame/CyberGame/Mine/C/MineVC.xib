@@ -9,6 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineVC">
             <connections>
+                <outlet property="attentionLabel" destination="cKC-Wm-jVr" id="H6d-cN-knh"/>
+                <outlet property="historyLabel" destination="9vr-2t-bbx" id="gPm-Ro-pIU"/>
+                <outlet property="reservationLabel" destination="uda-Yh-K8B" id="wyC-x6-eLt"/>
                 <outlet property="tableView" destination="ddd-xd-mvQ" id="FzK-Qw-bCh"/>
                 <outlet property="userImageView" destination="2zJ-OE-fBq" id="zWj-GF-p2G"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -41,7 +44,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9n-Cs-EEE">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9n-Cs-EEE" userLabel="签到按钮">
                             <rect key="frame" x="339" y="36.5" width="75" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="68F-Ld-xoJ"/>
@@ -101,7 +104,7 @@
                                 <constraint firstItem="TjW-0A-rp7" firstAttribute="centerY" secondItem="TO3-nf-Pcj" secondAttribute="centerY" multiplier="1.75" id="z2Y-s6-AdP"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paf-yr-cwe" userLabel="精彩瞬间">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paf-yr-cwe" userLabel="我的预约">
                             <rect key="frame" x="322" y="112.5" width="60" height="60"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uda-Yh-K8B">
@@ -110,7 +113,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精彩瞬间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXT-Y3-PQy">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的预约" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXT-Y3-PQy">
                                     <rect key="frame" x="-1" y="43.5" width="62" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>

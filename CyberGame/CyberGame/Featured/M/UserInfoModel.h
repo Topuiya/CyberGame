@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UserModel : BaseModel
+@interface UserInfoModel : BaseModel
 
 @property (nonatomic, copy)NSString *head;
 @property (nonatomic, copy)NSString *nickName;

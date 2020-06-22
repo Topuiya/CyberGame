@@ -26,5 +26,10 @@
 #define TimeForMatterStr @"yyyy-MM-dd HH:mm:ss"
 
 #import "MacroHeader.h"
+#import "LocalData.h"
+#import "UserDataModel.h"
+
+#define DJData @"userLocalData"
+#define DJLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
 #endif /* PrefixHeader_pch */
