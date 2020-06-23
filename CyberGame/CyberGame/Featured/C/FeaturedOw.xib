@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeaturedOw">
             <connections>
                 <outlet property="headViewHeight" destination="G5v-oQ-ge9" id="s6H-yL-YUF"/>
+                <outlet property="tableView" destination="YYX-dl-qxO" id="T8E-Pu-Pv1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,11 +36,19 @@
                         <constraint firstAttribute="width" secondItem="86X-Ng-az0" secondAttribute="height" multiplier="375:156" id="cDE-ij-t4U"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YYX-dl-qxO">
+                    <rect key="frame" x="0.0" y="156" width="414" height="706"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="YYX-dl-qxO" secondAttribute="trailing" id="GPM-v3-W2l"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="YYX-dl-qxO" secondAttribute="bottom" id="RJB-HX-wxQ"/>
                 <constraint firstItem="86X-Ng-az0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RV3-pd-gaS"/>
                 <constraint firstItem="86X-Ng-az0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YLO-Y8-ApO"/>
+                <constraint firstItem="YYX-dl-qxO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="iO1-Vr-f2O"/>
+                <constraint firstItem="YYX-dl-qxO" firstAttribute="top" secondItem="86X-Ng-az0" secondAttribute="bottom" id="x1h-Kj-wwz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="139" y="135"/>

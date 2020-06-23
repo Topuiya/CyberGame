@@ -32,8 +32,9 @@
     if (featuredDataModel.content != nil) {
         self.contentLabel.text = featuredDataModel.content;
         
-        //截取掉下标26之前的字符串
-        NSString *str1 = [featuredDataModel.content substringToIndex:26];
+        //截取掉第一个句号之前的字符串
+        NSRange range = [featuredDataModel.content rangeOfString:@"。"];
+        NSString *str1 = [featuredDataModel.content substringToIndex:range.location];
         self.titleLabel.text = str1;
     }
     if (featuredDataModel.picture != nil) {

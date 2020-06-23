@@ -12,16 +12,80 @@
 #import "MineTableCell.h"
 #import "LoginVC.h"
 #import "MyFightVC.h"
+#import "MineHeadTableCell.h"
+
+#import "MineTableCellModel.h"
 
 @interface MineVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) NSArray *mineArray;
+
 @end
 
 @implementation MineVC
 
+- (NSArray *)mineArray
+{
+    if(_mineArray == nil)
+    {
+        MineTableCellModel *model1 = MineTableCellModel.new;
+        model1.titleStr = @"我的约战";
+        model1.icon = @"ic_fight";
+        model1.textStr = @"";
+        
+        MineTableCellModel *model2 = MineTableCellModel.new;
+        model2.titleStr = @"我的收藏";
+        model2.icon = @"ic_inform";
+        model2.textStr = @"";
+        
+        MineTableCellModel *model3 = MineTableCellModel.new;
+        model3.titleStr = @"我的点赞";
+        model3.icon = @"ic_love";
+        model3.textStr = @"";
+        
+        MineTableCellModel *model4 = MineTableCellModel.new;
+        model4.titleStr = @"关于我们";
+        model4.icon = @"ic_aboutus";
+        model4.textStr = @"最新版本1.1.0";
+        
+        MineTableCellModel *model5 = MineTableCellModel.new;
+        model5.titleStr = @"切换账号";
+        model5.icon = @"ic_account nmb";
+        model5.textStr = @"";
+        
+        MineTableCellModel *model6 = MineTableCellModel.new;
+        model6.titleStr = @"修改密码";
+        model6.icon = @"ic_code";
+        model6.textStr = @"";
+        
+        MineTableCellModel *model7 = MineTableCellModel.new;
+        model7.titleStr = @"反馈中心";
+        model7.icon = @"ic_feedback center";
+        model7.textStr = @"";
+        
+        MineTableCellModel *model8 = MineTableCellModel.new;
+        model8.titleStr = @"设置";
+        model8.icon = @"ic_site";
+        model8.textStr = @"";
+        
+        NSMutableArray *temp = NSMutableArray.new;
+        [temp addObject:model1];
+        [temp addObject:model2];
+        [temp addObject:model3];
+        [temp addObject:model4];
+        [temp addObject:model5];
+        [temp addObject:model6];
+        [temp addObject:model7];
+        [temp addObject:model8];
+        _mineArray = temp;
+    }
+    return _mineArray;
+}
+
 NSString *MineID = @"Mine";
+NSString *MineHeadTabelID = @"MineHeadTabelCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -31,13 +95,7 @@ NSString *MineID = @"Mine";
     self.tableView.backgroundColor = [UIColor colorWithHexString:@"#F1F1F9"];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MineTableCell class]) bundle:nil] forCellReuseIdentifier:MineID];
-    
-    _userImageView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *userTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapUserImageView)];
-    [_userImageView addGestureRecognizer:userTap];
-    
-    [self getUserLocalData];
-    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MineHeadTableCell class]) bundle:nil] forCellReuseIdentifier:MineHeadTabelID];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -49,10 +107,8 @@ NSString *MineID = @"Mine";
       NSForegroundColorAttributeName:UIColor.blackColor}];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColor.whiteColor] forBarMetrics:UIBarMetricsDefault];
     
-}
-- (void)didTapUserImageView {
-    LoginVC *loginVC = [[LoginVC alloc] init];
-    [self.navigationController pushViewController:loginVC animated:YES];
+//    [self getUserLocalData];
+    
 }
 
 - (void)getUserLocalData {
@@ -77,7 +133,7 @@ NSString *MineID = @"Mine";
     //关注,足迹,预约
     userModel.focus = @0;
     userModel.history = @0;
-    userModel.reservation = @"0";
+    userModel.reservation = @0;
     
     //localData的用户模型为userModel,并将login值改为真
     localData.userModel = userModel;
@@ -97,74 +153,69 @@ NSString *MineID = @"Mine";
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
+    if (section == 1) {
         return 3;
-    }else if (section == 1) {
+    }else if (section == 2) {
         return 4;
     }else
         return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MineTableCell *cell = [tableView dequeueReusableCellWithIdentifier:MineID forIndexPath:indexPath];
     
-    //解档,拿到部分用户信息数据
-    LocalData *localData = [EGHCodeTool getOBJCWithSavekey:DJData];
-    UserDataModel *model = localData.localModelArray[indexPath.row];
-    
-    self.attentionLabel.text = model.focus.description;
-    self.historyLabel.text = model.history.description;
-    self.reservationLabel.text = model.reservation.description;
-    
+   
     if (indexPath.section == 0 && indexPath.row == 0) {
-        cell.title.text = @"我的约战";
-        cell.iconImageView.image = [UIImage imageNamed:@"ic_fight"];
-        cell.ortherLbael.text = @"";
-    }else if (indexPath.section == 0 && indexPath.row == 1) {
-        cell.title.text = @"我的收藏";
-        cell.iconImageView.image = [UIImage imageNamed:@"ic_inform"];
-        cell.ortherLbael.text = localData.userModel.collection.description;
-    }else if (indexPath.section == 0 && indexPath.row == 2) {
-        cell.title.text = @"我的点赞";
-        cell.iconImageView.image = [UIImage imageNamed:@"ic_love"];
-        cell.ortherLbael.text = localData.userModel.like.description;
+        MineHeadTableCell *cell = [tableView dequeueReusableCellWithIdentifier:MineHeadTabelID];
+//        cell.attentionLabel.text = model.focus.description;
+//        cell.historyLabel.text = model.history.description;
+//        cell.reservationLabel.text = model.reservation.description;
+        WEAKSELF
+        
+        cell.selectedMineHeadTableViewCellBlock = ^{
+            LoginVC *vc = LoginVC.new;
+            [weakSelf presentViewController:vc animated:YES completion:^{
+                //解档,拿到部分用户信息数据
+                LocalData *localDataModel = [EGHCodeTool getOBJCWithSavekey:DJData];
+                UserDataModel *userModel = localDataModel.userModel;
+//                cell.reservationLabel.text = userModel.reservation.description;
+            }];
+        };
+        return cell;
+    }
+    else {
+        MineTableCell *cell = [tableView dequeueReusableCellWithIdentifier:MineID forIndexPath:indexPath];
+        if(indexPath.section == 1)
+        {
+            cell.model = self.mineArray[indexPath.row];
+        }
+        else if(indexPath.section == 2)
+        {
+            cell.model = self.mineArray[indexPath.row + 3];
+        }
+        else if(indexPath.section == 3)
+        {
+            cell.model = self.mineArray[indexPath.row + 7];
+        }
+        //归档
+        
+        
+        return cell;
     }
     
-    if (indexPath.section == 1 && indexPath.row == 0) {
-        cell.title.text = @"关于我们";
-        cell.iconImageView.image = [UIImage imageNamed:@"ic_aboutus"];
-        cell.ortherLbael.text = @"最新版本1.1.0";
-    }else if (indexPath.section == 1 && indexPath.row == 1) {
-        cell.title.text = @"切换账号";
-        cell.iconImageView.image = [UIImage imageNamed:@"ic_account nmb"];
-        cell.ortherLbael.text = nil;
-    }
-    else if (indexPath.section == 1 && indexPath.row == 2) {
-        cell.title.text = @"修改密码";
-        cell.iconImageView.image = [UIImage imageNamed:@"ic_code"];
-        cell.ortherLbael.text = nil;
-    }else if (indexPath.section == 1 && indexPath.row == 3) {
-        cell.title.text = @"反馈中心";
-        cell.iconImageView.image = [UIImage imageNamed:@"ic_feedback center"];
-        cell.ortherLbael.text = nil;
-    }
     
-    else if (indexPath.section == 2) {
-        cell.title.text = @"设置 ";
-        cell.iconImageView.image = [UIImage imageNamed:@"ic_site"];
-        cell.ortherLbael.text = nil;
-    }
-    //归档
-    [EGHCodeTool archiveOJBC:localData saveKey:DJData];
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 6;
+    if (section == 0) {
+        return 0.01f    ;
+    } else {
+        return 6;
+    }
+    
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = UIView.new;
@@ -173,7 +224,7 @@ NSString *MineID = @"Mine";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0 && indexPath.row == 0) {
+    if (indexPath.section == 1 && indexPath.row == 0) {
         MyFightVC *myFightVC = MyFightVC.new;
         myFightVC.titleStr = @"我的约战";
         [self.navigationController pushViewController:myFightVC animated:YES];

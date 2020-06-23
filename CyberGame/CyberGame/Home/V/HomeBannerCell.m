@@ -128,7 +128,7 @@ NSString *HomeBannerCellID = @"BannerCell";
 
 - (void)pagerView:(TYCyclePagerView *)pageView didScrollFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
     _pageControl.currentPage = toIndex;
-    NSLog(@"%ld ->  %ld",fromIndex,toIndex);
+//    NSLog(@"%ld ->  %ld",fromIndex,toIndex);
 }
 
 

@@ -61,33 +61,66 @@
     //账号和密码同时有值时,才让登录按钮能够点击
     self.loginBtn.enabled = self.accountTextF.text.length && self.pwdTextF.text.length;
 }
-- (IBAction)loginBtnClick:(UIButton *)sender {
-    //解档,拿到LocalData模型
-    LocalData *localData = [EGHCodeTool getOBJCWithSavekey:DJData];
-    
-    UserDataModel *model = localData.localModelArray[0];
-    //手机号密码正确才能进入下一级
-    if ([self.accountTextF.text isEqualToString:model.account] && [self.pwdTextF.text isEqualToString:model.pwd]) {
-        
-        //登录成功执行返回操作
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-    else if ([self.accountTextF.text isEqualToString:@"123"] && [self.pwdTextF.text isEqualToString:@"123"]) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-    else {
-        //用户名密码不匹配弹出警告
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"错误!" message:@"手机号与密码不相匹配" preferredStyle:UIAlertControllerStyleAlert];
-        [self presentViewController:alertController animated:YES completion:nil];
-        //添加常规类型按钮
-        [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        }]];
-        //添加销毁类型按钮
-        [alertController addAction:[UIAlertAction actionWithTitle:@"找回密码" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        }]];
 
+//点击登录按钮判断有没有注册,没有注册就注册,有就修改密码
+- (IBAction)loginBtnClick:(UIButton *)sender {
+    //判断需不需要新建一个user模型
+    //和本地数据的user数组比较,当前输入的账号,这个人有没有在本地
+    LocalData *dataModel = [EGHCodeTool getOBJCWithSavekey:DJData];
+    //新建一个user模型,保存输入的内容
+    UserDataModel *nowUserModel = UserDataModel.new;
+    nowUserModel.uesrID = self.accountTextF.text;
+    nowUserModel.pwd = self.pwdTextF.text;
+    
+    BOOL hasSameUser = NO;
+    for (UserDataModel *userLocalModel in dataModel.localModelArray) {
+        if ([userLocalModel.uesrID isEqualToString:nowUserModel.uesrID]) {
+            hasSameUser = YES;
+        }
     }
-    [EGHCodeTool archiveOJBC:localData saveKey:DJData];
+    
+    
+    if (hasSameUser == NO) {
+        //如果没有在本地,nowUserModel模型保存到本地
+        NSMutableArray *newUserArray = [NSMutableArray array];
+        for (UserDataModel *userLocalModel in dataModel.localModelArray) {
+            [newUserArray addObject:userLocalModel];
+        }
+        [newUserArray addObject:nowUserModel];
+        
+        //更新dataModel.userModel
+        dataModel.userModel = nowUserModel;
+        //更新dataModel.localModelArray
+        dataModel.localModelArray = newUserArray;
+        
+        //归档保存到本地
+        [EGHCodeTool archiveOJBC:dataModel saveKey:DJData];
+    }
+    else{
+        //如果存在,修改密码,更新本地数据
+        NSMutableArray *newUserArray = [NSMutableArray array];
+        for (UserDataModel *userLocalModel in dataModel.localModelArray) {
+            //数组里面的userLocalModel模型  是否和当前输入的nowUserModel 相等
+            if ([userLocalModel.uesrID isEqualToString:nowUserModel.uesrID]) {
+                [newUserArray addObject:nowUserModel];
+            }
+            else{
+                [newUserArray addObject:userLocalModel];
+            }
+        }
+        
+        //更新dataModel.userModel
+        dataModel.userModel = nowUserModel;
+        //更新dataModel.localModelArray
+        dataModel.localModelArray = newUserArray;
+        
+        //归档保存到本地
+        [EGHCodeTool archiveOJBC:dataModel saveKey:DJData];
+    }
+    
+    
+    [self dismissViewControllerAnimated:self completion:nil];
+    
 }
 
 @end

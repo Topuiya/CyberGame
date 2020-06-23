@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FeatureWzry : ContentBaseViewController <JXCategoryListContentViewDelegate>
-@property (weak, nonatomic) IBOutlet UIView *headView;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *headViewHeight;
 
 @end

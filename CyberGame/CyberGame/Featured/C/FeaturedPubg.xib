@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeaturedPubg">
             <connections>
                 <outlet property="headViewHeight" destination="qiH-cb-Klc" id="ekp-Wf-Ymh"/>
+                <outlet property="tableView" destination="EFm-Eo-xB6" id="IDA-s3-GkO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,10 +35,18 @@
                         <constraint firstItem="PAE-ew-3UB" firstAttribute="top" secondItem="8Fm-uQ-MHb" secondAttribute="top" id="vpR-ce-hmC"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EFm-Eo-xB6">
+                    <rect key="frame" x="0.0" y="156" width="414" height="706"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="8Fm-uQ-MHb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1yP-Xl-0SQ"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="EFm-Eo-xB6" secondAttribute="bottom" id="5YD-TO-WFo"/>
+                <constraint firstItem="EFm-Eo-xB6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="9Uc-k4-V8Z"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="EFm-Eo-xB6" secondAttribute="trailing" id="CkB-he-pRQ"/>
+                <constraint firstItem="EFm-Eo-xB6" firstAttribute="top" secondItem="8Fm-uQ-MHb" secondAttribute="bottom" id="Xh9-ai-Vpn"/>
                 <constraint firstItem="8Fm-uQ-MHb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YI7-nw-2hd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

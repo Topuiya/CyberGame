@@ -16,23 +16,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="346" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tWN-bZ-ezs">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tWN-bZ-ezs">
                         <rect key="frame" x="14.666666666666664" y="9.0000000000000071" width="98" height="117.66666666666669"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="98" id="9HT-ah-r7U"/>
                             <constraint firstAttribute="height" constant="117.5" id="KzK-qF-fUN"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRx-cr-47J" userLabel="title">
-                        <rect key="frame" x="127.66666666666667" y="9" width="163.33333333333331" height="38.333333333333336"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRx-cr-47J" userLabel="title">
+                        <rect key="frame" x="127.66666666666667" y="9" width="203.33333333333331" height="38.333333333333336"/>
                         <string key="text">RNG和TS谁的状态更好?RW能
 否战胜TES?</string>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RNG目前位居东部第二，虽然成绩 上面相比大鹅还是有一定的差距， 但整体来看也是相当强势的。最..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqV-Y3-9co">
-                        <rect key="frame" x="127.66666666666667" y="52.333333333333343" width="163.33333333333331" height="46.666666666666657"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RNG目前位居东部第二，虽然成绩 上面相比大鹅还是有一定的差距， 但整体来看也是相当强势的。最..." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqV-Y3-9co">
+                        <rect key="frame" x="127.66666666666667" y="52.333333333333343" width="203.33333333333331" height="46.666666666666657"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1P-FM-LJ6">
-                        <rect key="frame" x="267" y="104.66666666666667" width="24" height="22"/>
+                        <rect key="frame" x="307" y="104.66666666666667" width="24" height="22"/>
                         <inset key="contentEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <state key="normal" title="99" image="ic_eyes">
@@ -64,7 +64,7 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7a-Xp-zzm">
-                        <rect key="frame" x="217" y="104.66666666666667" width="25" height="22"/>
+                        <rect key="frame" x="257" y="104.66666666666667" width="25" height="22"/>
                         <inset key="contentEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <state key="normal" title="99" image="ic_like">
@@ -74,21 +74,21 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="T1P-FM-LJ6" firstAttribute="leading" secondItem="y7a-Xp-zzm" secondAttribute="trailing" constant="25" id="0oP-zY-rZJ"/>
-                    <constraint firstItem="WRx-cr-47J" firstAttribute="leading" secondItem="tWN-bZ-ezs" secondAttribute="trailing" constant="15" id="1AZ-RC-gp5"/>
-                    <constraint firstItem="WRx-cr-47J" firstAttribute="top" secondItem="tWN-bZ-ezs" secondAttribute="top" id="746-NN-dHf"/>
-                    <constraint firstItem="bqV-Y3-9co" firstAttribute="leading" secondItem="WRx-cr-47J" secondAttribute="leading" id="BqL-jR-lcT"/>
+                    <constraint firstItem="T1P-FM-LJ6" firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" id="1br-L2-ViW"/>
+                    <constraint firstItem="h1V-I6-hV0" firstAttribute="leading" secondItem="WRx-cr-47J" secondAttribute="leading" id="4iK-OU-5W9"/>
+                    <constraint firstItem="WRx-cr-47J" firstAttribute="top" secondItem="tWN-bZ-ezs" secondAttribute="top" id="J4q-WW-F0p"/>
                     <constraint firstItem="bzF-3a-EWY" firstAttribute="centerY" secondItem="h1V-I6-hV0" secondAttribute="centerY" id="KDU-1d-p5T"/>
                     <constraint firstItem="tWN-bZ-ezs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14.5" id="L7Y-bJ-p7H"/>
+                    <constraint firstItem="bqV-Y3-9co" firstAttribute="top" secondItem="WRx-cr-47J" secondAttribute="bottom" constant="5" id="OXk-vB-Nfj"/>
+                    <constraint firstItem="bqV-Y3-9co" firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" id="T8D-pP-MAR"/>
+                    <constraint firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" constant="15" id="VLh-PP-YJ9"/>
                     <constraint firstAttribute="bottom" secondItem="tWN-bZ-ezs" secondAttribute="bottom" constant="9" id="Yag-mA-Ln6"/>
                     <constraint firstItem="y7a-Xp-zzm" firstAttribute="centerY" secondItem="T1P-FM-LJ6" secondAttribute="centerY" id="bWv-OQ-XCO"/>
                     <constraint firstItem="h1V-I6-hV0" firstAttribute="bottom" secondItem="tWN-bZ-ezs" secondAttribute="bottom" id="beM-ea-v2W"/>
-                    <constraint firstItem="bqV-Y3-9co" firstAttribute="top" secondItem="WRx-cr-47J" secondAttribute="bottom" constant="5" id="cpU-c1-0dP"/>
                     <constraint firstItem="T1P-FM-LJ6" firstAttribute="centerY" secondItem="bzF-3a-EWY" secondAttribute="centerY" id="dAT-yU-qkU"/>
+                    <constraint firstItem="bqV-Y3-9co" firstAttribute="leading" secondItem="WRx-cr-47J" secondAttribute="leading" id="dBL-YV-yPd"/>
+                    <constraint firstItem="WRx-cr-47J" firstAttribute="leading" secondItem="tWN-bZ-ezs" secondAttribute="trailing" constant="15" id="h0h-lX-pS6"/>
                     <constraint firstItem="bzF-3a-EWY" firstAttribute="leading" secondItem="h1V-I6-hV0" secondAttribute="trailing" constant="6" id="j4H-OA-ig7"/>
-                    <constraint firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" constant="55" id="jZE-CF-Jae"/>
-                    <constraint firstItem="bqV-Y3-9co" firstAttribute="trailing" secondItem="WRx-cr-47J" secondAttribute="trailing" id="kxF-oV-rj1"/>
-                    <constraint firstItem="T1P-FM-LJ6" firstAttribute="trailing" secondItem="bqV-Y3-9co" secondAttribute="trailing" id="mcq-Ug-v6C"/>
-                    <constraint firstItem="h1V-I6-hV0" firstAttribute="leading" secondItem="bqV-Y3-9co" secondAttribute="leading" id="nwp-JN-mZh"/>
                     <constraint firstItem="tWN-bZ-ezs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="txa-Eh-kYQ"/>
                 </constraints>
             </tableViewCellContentView>
@@ -96,12 +96,11 @@
             <connections>
                 <outlet property="contentLabel" destination="bqV-Y3-9co" id="g7w-E3-DpV"/>
                 <outlet property="headImageView" destination="h1V-I6-hV0" id="Ijg-7i-cCb"/>
-                <outlet property="labelWidth" destination="jZE-CF-Jae" id="aeF-q5-qGX"/>
                 <outlet property="nickNameLabel" destination="bzF-3a-EWY" id="fRv-Br-yeA"/>
                 <outlet property="picImageView" destination="tWN-bZ-ezs" id="wgi-pO-2Zg"/>
                 <outlet property="titleLabel" destination="WRx-cr-47J" id="LYD-Mw-jPW"/>
             </connections>
-            <point key="canvasLocation" x="-296" y="127"/>
+            <point key="canvasLocation" x="-296" y="126.35467980295567"/>
         </tableViewCell>
     </objects>
     <resources>

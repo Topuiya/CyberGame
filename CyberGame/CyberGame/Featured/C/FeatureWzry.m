@@ -44,18 +44,29 @@ NSString *FeatureWzryID = @"FeatureWzry";
     return self.view;
 }
 
+-(void)filterData{
+    NSMutableArray *filterArray = [NSMutableArray array];
+    for (FeaturedDataModel *wzryModel in self.wzryDataArray) {
+        if ([wzryModel.content containsString:@"王者荣耀"] || [wzryModel.content containsString:@"KPL"]) {
+            [filterArray addObject:wzryModel];
+        }
+    }
+    self.wzryDataArray = filterArray;
+}
+
 - (void)getWzryData {
     WEAKSELF
-//    NSDictionary *dic = @{@"project":@"game"};
     [ENDNetWorkManager getWithPathUrl:@"/user/talk/getTalkListByProject?project=game" parameters:nil queryParams:nil Header:nil success:^(BOOL success, id result) {
         NSError *error;
         weakSelf.wzryDataArray = [MTLJSONAdapter modelsOfClass:[FeaturedDataModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
         //刷新cell
+        [weakSelf filterData];
         [self.tableView reloadData];
     } failure:^(BOOL failuer, NSError *error) {
-        [Toast makeText:weakSelf.view Message:@"请求数据失败" afterHideTime:DELAYTiME];
+        [Toast makeText:weakSelf.view Message:@"请求数据失败" afterHideTime:2];
     }];
 }
+
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -30,7 +30,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvt-bm-rcr" userLabel="队伍名">
-                        <rect key="frame" x="105.5" y="27" width="75.5" height="17"/>
+                        <rect key="frame" x="100.5" y="27" width="80.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                     <constraint firstItem="5S4-Yq-0cD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="gdf-dd-Gg9"/>
                     <constraint firstItem="rRD-Ia-htp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.4" id="htl-Nx-k9d"/>
                     <constraint firstItem="hvt-bm-rcr" firstAttribute="centerY" secondItem="hyg-cY-WFL" secondAttribute="centerY" id="mJr-9h-x7a"/>
-                    <constraint firstItem="hvt-bm-rcr" firstAttribute="leading" secondItem="rRD-Ia-htp" secondAttribute="trailing" constant="10" id="nCF-Nw-GLI"/>
+                    <constraint firstItem="hvt-bm-rcr" firstAttribute="leading" secondItem="rRD-Ia-htp" secondAttribute="trailing" constant="5" id="nCF-Nw-GLI"/>
                     <constraint firstItem="Tl3-yY-Ws1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wFC-Uf-wVw"/>
                 </constraints>
             </tableViewCellContentView>

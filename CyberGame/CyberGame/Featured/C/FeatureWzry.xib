@@ -35,15 +35,18 @@
                         <constraint firstAttribute="height" constant="156" id="jsl-K9-htE"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kqF-5q-6bZ">
-                    <rect key="frame" x="0.0" y="180" width="414" height="682"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kqF-5q-6bZ">
+                    <rect key="frame" x="0.0" y="156" width="414" height="706"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="kqF-5q-6bZ" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="0AC-Nz-I3x"/>
                 <constraint firstItem="uad-za-yLj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7AC-wY-Jy3"/>
+                <constraint firstItem="kqF-5q-6bZ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="8x9-nq-RoW"/>
+                <constraint firstItem="kqF-5q-6bZ" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="ANH-Sh-BsQ"/>
+                <constraint firstItem="kqF-5q-6bZ" firstAttribute="top" secondItem="uad-za-yLj" secondAttribute="bottom" id="otB-f9-aaH"/>
                 <constraint firstItem="uad-za-yLj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zDY-Ym-Gvq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

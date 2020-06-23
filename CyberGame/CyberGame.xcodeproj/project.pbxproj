@@ -63,6 +63,9 @@
 		1844752824A03EA500BC3B06 /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844752724A03EA500BC3B06 /* LocalData.m */; };
 		1844752B24A03EBD00BC3B06 /* FightDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844752A24A03EBD00BC3B06 /* FightDataModel.m */; };
 		1844753124A0972000BC3B06 /* UserDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844753024A0972000BC3B06 /* UserDataModel.m */; };
+		1847954924A18DF4008F3792 /* MineHeadTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847954724A18DF4008F3792 /* MineHeadTableCell.m */; };
+		1847954A24A18DF4008F3792 /* MineHeadTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1847954824A18DF4008F3792 /* MineHeadTableCell.xib */; };
+		1847954D24A1D793008F3792 /* MineTableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847954C24A1D793008F3792 /* MineTableCellModel.m */; };
 		1859D794249C549900CBBAAC /* FihghtThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859D793249C549900CBBAAC /* FihghtThemeCell.xib */; };
 		1859D797249C8DFD00CBBAAC /* FightData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859D796249C8DFD00CBBAAC /* FightData.m */; };
 		185EC403248B46E000C22C98 /* WzryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC401248B46E000C22C98 /* WzryVC.m */; };
@@ -223,6 +226,11 @@
 		1844752A24A03EBD00BC3B06 /* FightDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightDataModel.m; sourceTree = "<group>"; };
 		1844752F24A0972000BC3B06 /* UserDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDataModel.h; sourceTree = "<group>"; };
 		1844753024A0972000BC3B06 /* UserDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDataModel.m; sourceTree = "<group>"; };
+		1847954624A18DF4008F3792 /* MineHeadTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeadTableCell.h; sourceTree = "<group>"; };
+		1847954724A18DF4008F3792 /* MineHeadTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeadTableCell.m; sourceTree = "<group>"; };
+		1847954824A18DF4008F3792 /* MineHeadTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeadTableCell.xib; sourceTree = "<group>"; };
+		1847954B24A1D793008F3792 /* MineTableCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineTableCellModel.h; sourceTree = "<group>"; };
+		1847954C24A1D793008F3792 /* MineTableCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineTableCellModel.m; sourceTree = "<group>"; };
 		1859D793249C549900CBBAAC /* FihghtThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FihghtThemeCell.xib; sourceTree = "<group>"; };
 		1859D795249C8DFD00CBBAAC /* FightData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightData.h; sourceTree = "<group>"; };
 		1859D796249C8DFD00CBBAAC /* FightData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightData.m; sourceTree = "<group>"; };
@@ -649,12 +657,12 @@
 		18BE68D224877085000F6875 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				18BE68D124877068000F6875 /* PrefixHeader.pch */,
 				1862AC1724989A2E009D60C4 /* NetWorkManager */,
 				1862ABF5249899E8009D60C4 /* Tools */,
 				1862AC1124989A17009D60C4 /* Macro */,
 				18BE68D3248770B2000F6875 /* Category */,
 				18BE68DD248773F9000F6875 /* Common */,
-				18BE68D124877068000F6875 /* PrefixHeader.pch */,
 			);
 			path = SupportFile;
 			sourceTree = "<group>";
@@ -712,6 +720,8 @@
 				1844753024A0972000BC3B06 /* UserDataModel.m */,
 				1844752924A03EBD00BC3B06 /* FightDataModel.h */,
 				1844752A24A03EBD00BC3B06 /* FightDataModel.m */,
+				1847954B24A1D793008F3792 /* MineTableCellModel.h */,
+				1847954C24A1D793008F3792 /* MineTableCellModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -719,6 +729,9 @@
 		18BE68EA2487793F000F6875 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				1847954624A18DF4008F3792 /* MineHeadTableCell.h */,
+				1847954724A18DF4008F3792 /* MineHeadTableCell.m */,
+				1847954824A18DF4008F3792 /* MineHeadTableCell.xib */,
 				18F8A80D249353200026458E /* MineTableCell.h */,
 				18F8A80E249353200026458E /* MineTableCell.m */,
 				18F8A80F249353200026458E /* MineTableCell.xib */,
@@ -904,6 +917,7 @@
 				1821866224922618003861C1 /* FightRuleCell.xib in Resources */,
 				1821866C24922640003861C1 /* FightOtherCell.xib in Resources */,
 				182186672492262D003861C1 /* FightTeamCell.xib in Resources */,
+				1847954A24A18DF4008F3792 /* MineHeadTableCell.xib in Resources */,
 				185EC404248B46E000C22C98 /* WzryVC.xib in Resources */,
 				187D21D12497608200B25957 /* LoginVC.xib in Resources */,
 				183AAC0B248A30FF0044ED05 /* GameSortTabCell.xib in Resources */,
@@ -995,6 +1009,7 @@
 				1864F663248B331E001AEF84 /* ListViewController.m in Sources */,
 				18F8A82324937E3C0026458E /* DJClubModel.m in Sources */,
 				18BE68DB248770B2000F6875 /* UIImage+Image.m in Sources */,
+				1847954924A18DF4008F3792 /* MineHeadTableCell.m in Sources */,
 				1862AC0C249899E8009D60C4 /* StringAndLabelDealTool.m in Sources */,
 				1821865124920F76003861C1 /* MutableCopyCatetory.m in Sources */,
 				1862AC3A2498B2E5009D60C4 /* DataUserModel.m in Sources */,
@@ -1010,6 +1025,7 @@
 				184448DC249DB8E40021491F /* FightRuleDetailCell.m in Sources */,
 				1862AC3E2498BE1A009D60C4 /* WzryDetailVC.m in Sources */,
 				183AA7E92488F15900D88B76 /* WRImageHelper.m in Sources */,
+				1847954D24A1D793008F3792 /* MineTableCellModel.m in Sources */,
 				1864F660248B32EE001AEF84 /* ContentBaseViewController.m in Sources */,
 				1862AC2724989A2E009D60C4 /* ENDNetWorkDELETE.m in Sources */,
 				1862AC09249899E8009D60C4 /* TimerTool.m in Sources */,
@@ -1203,7 +1219,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PREFIX_HEADER = /Users/apple/Documents/GitHub/CyberGame/CyberGame/CyberGame/SupportFile/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = CyberGame/SupportFile/PrefixHeader.pch;
 				INFOPLIST_FILE = CyberGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1221,7 +1237,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PREFIX_HEADER = /Users/apple/Documents/GitHub/CyberGame/CyberGame/CyberGame/SupportFile/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = CyberGame/SupportFile/PrefixHeader.pch;
 				INFOPLIST_FILE = CyberGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

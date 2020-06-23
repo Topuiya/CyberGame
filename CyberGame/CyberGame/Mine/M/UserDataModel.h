@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UserDataModel : BaseModel
 
 @property (nonatomic, strong) FightDataModel *fightModel;
-@property (nonatomic, strong) NSArray *fightArray;
+
+//uesrID唯一主键
+@property (nonatomic, copy) NSString *uesrID;
 
 @property (nonatomic, copy) NSString *account;
 @property (nonatomic, copy) NSString *pwd;

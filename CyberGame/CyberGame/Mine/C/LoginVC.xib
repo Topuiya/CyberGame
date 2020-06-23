@@ -83,35 +83,6 @@
                         <constraint firstItem="E3d-k0-Nen" firstAttribute="leading" secondItem="vtA-fM-trq" secondAttribute="leading" id="yLT-In-3v9"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpt-hO-Cyp" userLabel="注册">
-                    <rect key="frame" x="80" y="473.5" width="254" height="42"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8Y-PB-gbh">
-                            <rect key="frame" x="0.0" y="0.0" width="254" height="42"/>
-                            <state key="normal" title="注册">
-                                <color key="titleColor" red="0.61138617989999999" green="0.1691304445" blue="0.8689014316" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <real key="value" value="22.5"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" red="0.95244306329999995" green="0.9524073005" blue="0.95243161919999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="v8Y-PB-gbh" secondAttribute="trailing" id="2HB-3y-ZHb"/>
-                        <constraint firstItem="v8Y-PB-gbh" firstAttribute="leading" secondItem="dpt-hO-Cyp" secondAttribute="leading" id="5h8-PO-Yms"/>
-                        <constraint firstItem="v8Y-PB-gbh" firstAttribute="top" secondItem="dpt-hO-Cyp" secondAttribute="top" id="7RG-5z-cLm"/>
-                        <constraint firstAttribute="bottom" secondItem="v8Y-PB-gbh" secondAttribute="bottom" id="YGZ-1U-6bs"/>
-                        <constraint firstAttribute="height" constant="42" id="eTv-dD-ihx"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <real key="value" value="22.5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录即同意《隐私政策》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpb-pa-NAi">
                     <rect key="frame" x="139.5" y="843.5" width="135" height="15"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -132,15 +103,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="lpb-pa-NAi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0gT-3a-dsl"/>
-                <constraint firstItem="dpt-hO-Cyp" firstAttribute="trailing" secondItem="uWB-Jg-3dM" secondAttribute="trailing" constant="-5" id="1SR-hY-hrY"/>
                 <constraint firstItem="uWB-Jg-3dM" firstAttribute="top" secondItem="3am-83-tXh" secondAttribute="bottom" constant="46" id="2fV-c1-9jM"/>
                 <constraint firstItem="uWB-Jg-3dM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T48-zQ-h7m"/>
                 <constraint firstItem="3am-83-tXh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="YLK-c5-ZYw"/>
                 <constraint firstItem="lpb-pa-NAi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.9" id="cGo-HV-pvt"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="3am-83-tXh" secondAttribute="trailing" id="gHe-q7-XE0"/>
                 <constraint firstItem="3am-83-tXh" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="gq6-SC-QqE"/>
-                <constraint firstItem="dpt-hO-Cyp" firstAttribute="leading" secondItem="uWB-Jg-3dM" secondAttribute="leading" constant="5" id="qdB-bb-h16"/>
-                <constraint firstItem="dpt-hO-Cyp" firstAttribute="top" secondItem="uWB-Jg-3dM" secondAttribute="bottom" constant="46.5" id="xey-WP-53g"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="131.8840579710145" y="126.5625"/>

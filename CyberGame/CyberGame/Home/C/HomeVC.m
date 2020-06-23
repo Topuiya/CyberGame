@@ -41,9 +41,6 @@
     [super viewDidLoad];
     _menuTag = 1;
     self.title = @"首页";
-    //修改navigationBar背景
-//    UIImage *bgImage = [UIImage imageNamed:@"bg"];
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg"] forBarMetrics:UIBarMetricsDefault];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -71,6 +68,17 @@
     }
     _clubArray = temp;
     
+    [self ifHasLocalData];
+}
+
+//判断本地有没有userLocalData
+-(void)ifHasLocalData{
+    LocalData *dataModel = [EGHCodeTool getOBJCWithSavekey:DJData];
+    if (dataModel == nil) {
+        dataModel = LocalData.new;
+    }
+    //归档
+    [EGHCodeTool archiveOJBC:dataModel saveKey:DJData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -145,6 +153,15 @@ NSString *SortHeadViewID = @"SortHeadView";
     
 }
 
+- (void)buildUserLocalData {
+   
+    //首先创建一个userID(思路为userID+当前时间的时间戳)
+    //当前时间,格式为:1592898100073
+    NSDate *datenow = [NSDate date];
+    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)([datenow timeIntervalSince1970]*1000)];
+    NSString *userID = [NSString stringWithFormat:@"userID%@",timeSp];
+ 
+}
 
 #pragma mark - 三个功能键跳转界面按钮
 - (void)setSortBtn:(UIView *)sortView {
@@ -318,7 +335,7 @@ NSString *SortHeadViewID = @"SortHeadView";
     return nil;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+ - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && indexPath.row == 0) {
         self.tableView.estimatedRowHeight = 100;
         return 200;

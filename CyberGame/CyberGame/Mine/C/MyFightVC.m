@@ -24,7 +24,7 @@ NSString *MyFightTableCellID = @"MyFightTableCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     //右边按钮
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backBtnClick)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backBtnClick)];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -34,7 +34,7 @@ NSString *MyFightTableCellID = @"MyFightTableCell";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyFightTableCell class]) bundle:nil] forCellReuseIdentifier:MyFightTableCellID];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {   
     //设置导航栏背景图
     UIImage *navImg =[UIImage imageNamed:@"bg"];
     navImg = [navImg resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
@@ -44,7 +44,6 @@ NSString *MyFightTableCellID = @"MyFightTableCell";
     self.title = self.titleStr;
     [self wr_setNavBarTitleColor:UIColor.whiteColor];
 }
-
 
 
 - (void)backBtnClick {

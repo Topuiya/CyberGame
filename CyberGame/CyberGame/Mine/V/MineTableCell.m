@@ -7,6 +7,7 @@
 //
 
 #import "MineTableCell.h"
+#import "MineTableCellModel.h"
 
 @implementation MineTableCell
 
@@ -15,10 +16,13 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setModel:(MineTableCellModel *)model
+{
+    _model = model;
+    
+    self.title.text = model.titleStr;
+    self.iconImageView.image = [UIImage imageNamed:model.icon];
+    self.ortherLbael.text = model.textStr;
 }
 
 @end

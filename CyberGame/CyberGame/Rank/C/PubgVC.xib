@@ -23,9 +23,51 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uK5-le-LoD">
                             <rect key="frame" x="0.0" y="41" width="414" height="42.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="排名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QV-Zp-C3u">
+                                    <rect key="frame" x="16.5" y="13" width="29" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.21780765060000001" green="0.084709443149999994" blue="0.44783353809999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="队伍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1M-VQ-2Zf">
+                                    <rect key="frame" x="99.5" y="13" width="29" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.21780765060000001" green="0.084709443149999994" blue="0.44783353809999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="胜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLe-KI-EN8">
+                                    <rect key="frame" x="199.5" y="13" width="15" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.21780765060000001" green="0.084709443149999994" blue="0.44783353809999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="负" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03E-NO-M00">
+                                    <rect key="frame" x="292.5" y="13" width="15" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.21780765060000001" green="0.084709443149999994" blue="0.44783353809999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="积分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViG-9c-83f">
+                                    <rect key="frame" x="368.5" y="13" width="29" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.21780765060000001" green="0.084709443149999994" blue="0.44783353809999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" red="0.46970266100000002" green="0.25535532830000002" blue="0.82834607360000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
+                                <constraint firstItem="4QV-Zp-C3u" firstAttribute="centerX" secondItem="uK5-le-LoD" secondAttribute="centerX" multiplier="0.15" id="7tz-Fe-Q28"/>
+                                <constraint firstItem="4QV-Zp-C3u" firstAttribute="centerY" secondItem="uK5-le-LoD" secondAttribute="centerY" id="ERD-7H-tOj"/>
+                                <constraint firstItem="03E-NO-M00" firstAttribute="centerX" secondItem="uK5-le-LoD" secondAttribute="centerX" multiplier="1.45" id="GRx-Fz-dpK"/>
+                                <constraint firstItem="N1M-VQ-2Zf" firstAttribute="centerX" secondItem="uK5-le-LoD" secondAttribute="centerX" multiplier="0.55" id="H2P-Xl-fPO"/>
+                                <constraint firstItem="xLe-KI-EN8" firstAttribute="centerY" secondItem="uK5-le-LoD" secondAttribute="centerY" id="OwP-MD-vlC"/>
+                                <constraint firstItem="N1M-VQ-2Zf" firstAttribute="centerY" secondItem="uK5-le-LoD" secondAttribute="centerY" id="PFH-EW-tdY"/>
                                 <constraint firstAttribute="height" constant="42.5" id="SDk-hc-t8P"/>
+                                <constraint firstItem="ViG-9c-83f" firstAttribute="centerY" secondItem="uK5-le-LoD" secondAttribute="centerY" id="fPc-cN-9vO"/>
+                                <constraint firstItem="xLe-KI-EN8" firstAttribute="centerX" secondItem="uK5-le-LoD" secondAttribute="centerX" id="n04-Bi-M2l"/>
+                                <constraint firstItem="ViG-9c-83f" firstAttribute="centerX" secondItem="uK5-le-LoD" secondAttribute="centerX" multiplier="1.85" id="s6x-wS-b7K"/>
+                                <constraint firstItem="03E-NO-M00" firstAttribute="centerY" secondItem="uK5-le-LoD" secondAttribute="centerY" id="urk-GB-W9S"/>
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FZs-0b-hGV">

@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *star5;
 
 @property (weak, nonatomic) IBOutlet UIButton *sureBtn;
+@property (nonatomic, assign) BOOL btnSeleted;
 @end
 
 NS_ASSUME_NONNULL_END
