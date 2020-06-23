@@ -241,15 +241,10 @@ NSString *SortHeadViewID = @"SortHeadView";
     if(indexPath.section == 0 && indexPath.row == 0)
     {
         HomeBannerCell *cell = [tableView dequeueReusableCellWithIdentifier:BannerTabCellID];
-        //去掉cell的选中效果
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
         return cell;
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
         GameSortTabCell *cell = [tableView dequeueReusableCellWithIdentifier:GameTabCellID];
-        //去掉cell的选中效果
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         WEAKSELF
         cell.selectedLolViewBlock = ^{
@@ -257,19 +252,16 @@ NSString *SortHeadViewID = @"SortHeadView";
             lolFightVC.titleStr = @"英雄联盟约战专区";
             [weakSelf.navigationController pushViewController:lolFightVC animated:YES];
         };
-        
         cell.selectedOwViewBlock = ^{
             MyFightVC *owFightVC = MyFightVC.new;
             owFightVC.titleStr = @"守望先锋约战专区";
             [weakSelf.navigationController pushViewController:owFightVC animated:YES];
         };
-        
         cell.selectedWzryViewBlock = ^{
             MyFightVC *wzryFightVC = MyFightVC.new;
             wzryFightVC.titleStr = @"王者荣耀约战专区";
             [weakSelf.navigationController pushViewController:wzryFightVC animated:YES];
         };
-        
         cell.selectedPubgViewBlock = ^{
             MyFightVC *pubgFightVC = MyFightVC.new;
             pubgFightVC.titleStr = @"绝地求生约战专区";
@@ -286,7 +278,6 @@ NSString *SortHeadViewID = @"SortHeadView";
             weakSelf.menuTag = 1;
             [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:3] withRowAnimation:UITableViewRowAnimationFade];
         };
-        
         cell.selectedRightHeadBlock = ^{
             weakSelf.menuTag = 2;
             [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:3] withRowAnimation:UITableViewRowAnimationFade];

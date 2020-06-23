@@ -106,50 +106,9 @@ NSString *MineHeadTabelID = @"MineHeadTabelCell";
     @{NSFontAttributeName:[UIFont systemFontOfSize:18],
       NSForegroundColorAttributeName:UIColor.blackColor}];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColor.whiteColor] forBarMetrics:UIBarMetricsDefault];
-    
-//    [self getUserLocalData];
-    
+        
 }
 
-- (void)getUserLocalData {
-    
-    LocalData *localData = [EGHCodeTool getOBJCWithSavekey:DJData];
-    if (localData == nil) {
-        localData = LocalData.new;
-    }
-    if (localData.login == false) {
-        //无用户登录.跳转到登录界面
-        [self addUserLocalData];
-    }
-}
-
--(void)addUserLocalData {
-    //解档,拿到LocalData模型
-    LocalData *localData = [EGHCodeTool getOBJCWithSavekey:DJData];
-    
-    UserDataModel *userModel = UserDataModel.new;
-    userModel.account = @"1";
-    userModel.pwd = @"1";
-    //关注,足迹,预约
-    userModel.focus = @0;
-    userModel.history = @0;
-    userModel.reservation = @0;
-    
-    //localData的用户模型为userModel,并将login值改为真
-    localData.userModel = userModel;
-    localData.login = true;
-    NSMutableArray *newLocalArray = [NSMutableArray array];
-    //便利数组,将userModel添加到临时数组
-    for (UserDataModel *userModel in localData.localModelArray) {
-        [newLocalArray addObject:userModel];
-    }
-    [newLocalArray addObject:userModel];
-    //将临时数组的值赋值给localModelArray之后归档
-    LocalData *localMode = LocalData.new;
-    localMode.localModelArray = newLocalArray;
-    localData = localMode;
-    [EGHCodeTool archiveOJBC:localData saveKey:DJData];
-}
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -173,36 +132,29 @@ NSString *MineHeadTabelID = @"MineHeadTabelCell";
 //        cell.attentionLabel.text = model.focus.description;
 //        cell.historyLabel.text = model.history.description;
 //        cell.reservationLabel.text = model.reservation.description;
-        WEAKSELF
         
+//        @WeakObj(cell)
+        //解档,拿到部分用户信息数据
+//        LocalData *localDataModel = [EGHCodeTool getOBJCWithSavekey:DJData];
+//        UserDataModel *userModel = localDataModel.userModel;
+//        cellWeak.reservationLabel.text = userModel.reservation.description;
+        WEAKSELF
         cell.selectedMineHeadTableViewCellBlock = ^{
             LoginVC *vc = LoginVC.new;
             [weakSelf presentViewController:vc animated:YES completion:^{
-                //解档,拿到部分用户信息数据
-                LocalData *localDataModel = [EGHCodeTool getOBJCWithSavekey:DJData];
-                UserDataModel *userModel = localDataModel.userModel;
-//                cell.reservationLabel.text = userModel.reservation.description;
             }];
         };
+        
         return cell;
     }
     else {
         MineTableCell *cell = [tableView dequeueReusableCellWithIdentifier:MineID forIndexPath:indexPath];
         if(indexPath.section == 1)
-        {
             cell.model = self.mineArray[indexPath.row];
-        }
         else if(indexPath.section == 2)
-        {
             cell.model = self.mineArray[indexPath.row + 3];
-        }
         else if(indexPath.section == 3)
-        {
             cell.model = self.mineArray[indexPath.row + 7];
-        }
-        //归档
-        
-        
         return cell;
     }
     

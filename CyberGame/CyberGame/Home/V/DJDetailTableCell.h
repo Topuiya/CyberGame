@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) IBOutlet UIButton *sureBtn;
 @property (nonatomic, assign) BOOL btnSeleted;
+@property (nonatomic, copy)void (^didSureBtnBlock)(void);
 @end
 
 NS_ASSUME_NONNULL_END
