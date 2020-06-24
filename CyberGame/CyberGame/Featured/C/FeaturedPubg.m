@@ -32,12 +32,16 @@ NSString *FeaturePubgID = @"FeaturePubg";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([FeaturedTableViewCell class]) bundle:nil] forCellReuseIdentifier:FeaturePubgID];
     
-    [self getPubgData];
-    
 }
 
 - (UIView *)listView{
     return self.view;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.pubgDataArray == nil) {
+        [self getPubgData];
+    }
 }
 
 -(void)filterData{

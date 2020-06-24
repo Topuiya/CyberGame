@@ -13,7 +13,7 @@
 #import "LoginVC.h"
 #import "MyFightVC.h"
 #import "MineHeadTableCell.h"
-
+#import "MineNameAlterVC.h"
 #import "MineTableCellModel.h"
 
 @interface MineVC () <UITableViewDelegate, UITableViewDataSource>
@@ -106,7 +106,7 @@ NSString *MineHeadTabelID = @"MineHeadTabelCell";
     @{NSFontAttributeName:[UIFont systemFontOfSize:18],
       NSForegroundColorAttributeName:UIColor.blackColor}];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColor.whiteColor] forBarMetrics:UIBarMetricsDefault];
-        
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 
@@ -129,22 +129,32 @@ NSString *MineHeadTabelID = @"MineHeadTabelCell";
    
     if (indexPath.section == 0 && indexPath.row == 0) {
         MineHeadTableCell *cell = [tableView dequeueReusableCellWithIdentifier:MineHeadTabelID];
-//        cell.attentionLabel.text = model.focus.description;
-//        cell.historyLabel.text = model.history.description;
-//        cell.reservationLabel.text = model.reservation.description;
-        
-//        @WeakObj(cell)
-        //解档,拿到部分用户信息数据
-//        LocalData *localDataModel = [EGHCodeTool getOBJCWithSavekey:DJData];
-//        UserDataModel *userModel = localDataModel.userModel;
-//        cellWeak.reservationLabel.text = userModel.reservation.description;
+    
+        @WeakObj(cell)
+        //解档,拿到LocalData模型
+        LocalData *localModel = [EGHCodeTool getOBJCWithSavekey:DJData];
+        if (localModel.login == NO) {
+            //不改变label的数值
+        }
+        else {
+            cellWeak.reservationLabel.text = localModel.userModel.reservation.description;
+            cellWeak.attentionLabel.text = localModel.userModel.focus.description;
+            cellWeak.historyLabel.text = localModel.userModel.history.description;
+        }
         WEAKSELF
         cell.selectedMineHeadTableViewCellBlock = ^{
             LoginVC *vc = LoginVC.new;
             [weakSelf presentViewController:vc animated:YES completion:^{
             }];
         };
-        
+        cell.selectedMineIDViewCellBlock = ^{
+            MineNameAlterVC *nameVC = MineNameAlterVC.new;
+            [weakSelf presentViewController:nameVC animated:YES completion:^{
+                
+            }];
+        };
+        //归档保存到本地
+        [EGHCodeTool archiveOJBC:localModel saveKey:DJData];
         return cell;
     }
     else {
@@ -180,6 +190,11 @@ NSString *MineHeadTabelID = @"MineHeadTabelCell";
         MyFightVC *myFightVC = MyFightVC.new;
         myFightVC.titleStr = @"我的约战";
         [self.navigationController pushViewController:myFightVC animated:YES];
+    }
+    if (indexPath.section == 2 && indexPath.row == 1) {
+        LoginVC *vc = LoginVC.new;
+        [self presentViewController:vc animated:YES completion:^{
+        }];
     }
 }
 @end

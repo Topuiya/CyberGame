@@ -173,6 +173,9 @@
             <connections>
                 <outlet property="attentionLabel" destination="hBX-LQ-Vx3" id="c97-Fx-nDX"/>
                 <outlet property="historyLabel" destination="p8V-UX-55z" id="6RO-qO-sXr"/>
+                <outlet property="idView" destination="wJ5-ox-0Ws" id="MYl-l3-7Ja"/>
+                <outlet property="idnumLabel" destination="cXd-Eo-O5m" id="IJ5-pb-uM9"/>
+                <outlet property="nameLabel" destination="rja-Ip-zbU" id="9dT-QZ-dnC"/>
                 <outlet property="reservationLabel" destination="ZV8-hj-gLJ" id="bBl-IL-LxN"/>
                 <outlet property="userImageView" destination="npz-qy-X8s" id="CSs-3d-tgl"/>
             </connections>

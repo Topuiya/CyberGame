@@ -15,6 +15,8 @@
 @interface MyFightVC () <UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+//存放解档之后的约战模型
+@property (nonatomic, strong)NSArray *fightArray;
 
 @end
 
@@ -32,6 +34,26 @@ NSString *MyFightTableCellID = @"MyFightTableCell";
     self.tableView.rowHeight = 220;
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyFightTableCell class]) bundle:nil] forCellReuseIdentifier:MyFightTableCellID];
+    
+    
+    // 1.解档拿到数据
+    LocalData *localModel = [EGHCodeTool getOBJCWithSavekey:DJData];
+    NSArray *fightDataArray = [EGHCodeTool getOBJCWithSavekey:localModel.userModel.uesrID];
+    self.fightArray = fightDataArray;
+    
+    // 2.判断用户是否登录
+    //  2.1是->赋值;否->提示用户登录
+    if (localModel.login == YES) {
+        
+        // 3.归档
+        [EGHCodeTool archiveOJBC:fightDataArray saveKey:localModel.userModel.uesrID];
+        
+        [Toast makeText:self.view Message:@"发布成功" afterHideTime:2];
+    } else {
+        // 没有登录提示去登录
+        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:2];
+    }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {   
@@ -43,6 +65,10 @@ NSString *MyFightTableCellID = @"MyFightTableCell";
     //设置导航栏标题
     self.title = self.titleStr;
     [self wr_setNavBarTitleColor:UIColor.whiteColor];
+    
+    //刷新tableView,显示数据
+    [self.tableView reloadData];
+    
 }
 
 
@@ -52,13 +78,17 @@ NSString *MyFightTableCellID = @"MyFightTableCell";
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return self.fightArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MyFightTableCell *cell = [tableView dequeueReusableCellWithIdentifier:MyFightTableCellID];
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"box"]];
-    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"box_over"]];
+    
+    
+    cell.fightModel = self.fightArray[indexPath.row];
+    
+    
+    
     return cell;
 }
 

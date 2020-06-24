@@ -17,7 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *historyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reservationLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *idnumLabel;
+@property (weak, nonatomic) IBOutlet UIView *idView;
+
 @property (nonatomic, copy)void (^selectedMineHeadTableViewCellBlock)(void);
+@property (nonatomic, copy)void (^selectedMineIDViewCellBlock)(void);
 
 @end
 

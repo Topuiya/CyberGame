@@ -66,6 +66,8 @@
 		1847954924A18DF4008F3792 /* MineHeadTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847954724A18DF4008F3792 /* MineHeadTableCell.m */; };
 		1847954A24A18DF4008F3792 /* MineHeadTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1847954824A18DF4008F3792 /* MineHeadTableCell.xib */; };
 		1847954D24A1D793008F3792 /* MineTableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847954C24A1D793008F3792 /* MineTableCellModel.m */; };
+		184C967024A325E700E9D74F /* MineNameAlterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C966E24A325E700E9D74F /* MineNameAlterVC.m */; };
+		184C967124A325E700E9D74F /* MineNameAlterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184C966F24A325E700E9D74F /* MineNameAlterVC.xib */; };
 		1859D794249C549900CBBAAC /* FihghtThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859D793249C549900CBBAAC /* FihghtThemeCell.xib */; };
 		1859D797249C8DFD00CBBAAC /* FightData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859D796249C8DFD00CBBAAC /* FightData.m */; };
 		185EC403248B46E000C22C98 /* WzryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EC401248B46E000C22C98 /* WzryVC.m */; };
@@ -231,6 +233,9 @@
 		1847954824A18DF4008F3792 /* MineHeadTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeadTableCell.xib; sourceTree = "<group>"; };
 		1847954B24A1D793008F3792 /* MineTableCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineTableCellModel.h; sourceTree = "<group>"; };
 		1847954C24A1D793008F3792 /* MineTableCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineTableCellModel.m; sourceTree = "<group>"; };
+		184C966D24A325E700E9D74F /* MineNameAlterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineNameAlterVC.h; sourceTree = "<group>"; };
+		184C966E24A325E700E9D74F /* MineNameAlterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineNameAlterVC.m; sourceTree = "<group>"; };
+		184C966F24A325E700E9D74F /* MineNameAlterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineNameAlterVC.xib; sourceTree = "<group>"; };
 		1859D793249C549900CBBAAC /* FihghtThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FihghtThemeCell.xib; sourceTree = "<group>"; };
 		1859D795249C8DFD00CBBAAC /* FightData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightData.h; sourceTree = "<group>"; };
 		1859D796249C8DFD00CBBAAC /* FightData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FightData.m; sourceTree = "<group>"; };
@@ -707,6 +712,9 @@
 				184448DE249DDE200021491F /* MyFightVC.h */,
 				184448DF249DDE200021491F /* MyFightVC.m */,
 				184448E0249DDE200021491F /* MyFightVC.xib */,
+				184C966D24A325E700E9D74F /* MineNameAlterVC.h */,
+				184C966E24A325E700E9D74F /* MineNameAlterVC.m */,
+				184C966F24A325E700E9D74F /* MineNameAlterVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -911,6 +919,7 @@
 				182186392490AB94003861C1 /* FeaturedLol.xib in Resources */,
 				18F8A81B249374430026458E /* SortLeftTableCell.xib in Resources */,
 				184448DD249DB8E40021491F /* FightRuleDetailCell.xib in Resources */,
+				184C967124A325E700E9D74F /* MineNameAlterVC.xib in Resources */,
 				1862AC442498BF89009D60C4 /* DetailHeadTableCell.xib in Resources */,
 				184448D8249DB0120021491F /* ClickBtnCell.xib in Resources */,
 				182186482490CA52003861C1 /* teamList.plist in Resources */,
@@ -1061,6 +1070,7 @@
 				183AABFE248A03F60044ED05 /* BannerCollectionViewCell.m in Sources */,
 				18F8A810249353200026458E /* MineTableCell.m in Sources */,
 				1862AC3324989ECE009D60C4 /* Reachability.m in Sources */,
+				184C967024A325E700E9D74F /* MineNameAlterVC.m in Sources */,
 				1862AC2D24989B51009D60C4 /* BaseModel.m in Sources */,
 				1821864B2491C97F003861C1 /* RankTeamListModel.m in Sources */,
 				1862AC08249899E8009D60C4 /* EGHImagePickerVCManager.m in Sources */,

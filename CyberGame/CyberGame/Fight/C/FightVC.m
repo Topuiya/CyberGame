@@ -31,6 +31,12 @@
 @property (nonatomic, strong)RankTeamListModel *listModel;
 @property (nonatomic, strong)NSArray *nameArray;
 @property (nonatomic, strong)NSArray *saveListArray;
+
+@property (nonatomic, copy)NSString *timeString;
+@property (nonatomic, copy)NSString *teamNameString1;
+@property (nonatomic, copy)NSString *teamImgString1;
+@property (nonatomic, copy)NSString *teamNameString2;
+@property (nonatomic, copy)NSString *teamImgString2;
 @end
 
 @implementation FightVC
@@ -103,7 +109,10 @@ NSString *FightOtherID = @"FightOther";
     }
     else if (indexPath.section == 1) {
         FightTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:FightTimeID];
-        cell.selectionStyle = UITableViewScrollPositionNone;
+        WEAKSELF
+        cell.selectedTimeBlock = ^(NSString * _Nonnull timeStr) {
+            weakSelf.timeString = timeStr;
+        };
         return cell;
     }
     else if (indexPath.section == 2) {
@@ -115,12 +124,19 @@ NSString *FightOtherID = @"FightOther";
         FightTeamCell *cell = [tableView dequeueReusableCellWithIdentifier:FightTeamID];
         RankTeamListModel *dataModel = _saveListArray[indexPath.row];
         cell.model = dataModel;
-        cell.selectionStyle = UITableViewScrollPositionNone;
+        WEAKSELF
+        cell.selectedTeam1Block = ^(NSString * _Nonnull teamNameStr1, NSString * _Nonnull teamImgStr1) {
+            weakSelf.teamNameString1 = teamNameStr1;
+            weakSelf.teamImgString1 = teamImgStr1;
+        };
+        cell.selectedTeam2Block = ^(NSString * _Nonnull teamNameStr2, NSString * _Nonnull teamImgStr2) {
+            weakSelf.teamNameString2 = teamNameStr2;
+            weakSelf.teamImgString2 = teamImgStr2;
+        };
         return  cell;
     }
     else{
         FightOtherCell *cell = [tableView dequeueReusableCellWithIdentifier:FightOtherID];
-        cell.selectionStyle = UITableViewScrollPositionNone;
         cell.delegate = self;
         return cell;
     }
@@ -144,7 +160,7 @@ NSString *FightOtherID = @"FightOther";
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 44;
 }
-
+/*SectionView*/
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     //创建headView
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
@@ -191,6 +207,38 @@ NSString *FightOtherID = @"FightOther";
 - (void)didClickSortButton:(UIButton *)button {
     FightDetailVC *detailVC = FightDetailVC.new;
     [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+- (void)didClickSureBtn:(UIButton *)button {
+    // 1.解档
+    LocalData *localModel = [EGHCodeTool getOBJCWithSavekey:DJData];
+    NSArray *fightDataArray = [EGHCodeTool getOBJCWithSavekey:localModel.userModel.uesrID];
+   
+    // 2.修改数据
+    //  2.1判断当前用户是否登录
+    if (localModel.login == YES) {
+        // 2.2保存约战主题,约战时间,添加的战队名
+        NSMutableArray *fightArray = NSMutableArray.new;
+        for (FightDataModel *fightModel in fightDataArray) {
+            [fightArray addObject:fightModel];
+        }
+        FightDataModel *fightModel = FightDataModel.new;
+        //保存发布时间
+        fightModel.publishTime = self.timeString;
+        //保存战队信息
+        fightModel.fightTeam1 = self.teamNameString1;
+        fightModel.fightTeamImg1 = self.teamImgString1;
+        fightModel.fightTeam2 = self.teamNameString2;
+        fightModel.fightTeamImg2 = self.teamImgString2;
+        [fightArray addObject:fightModel];
+        // 3.归档
+        [EGHCodeTool archiveOJBC:fightArray saveKey:localModel.userModel.uesrID];
+        
+        [Toast makeText:self.view Message:@"发布成功" afterHideTime:2];
+    } else {
+        // 没有登录提示去登录
+        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:2];
+    }
 }
 
 @end

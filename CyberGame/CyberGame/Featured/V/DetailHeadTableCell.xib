@@ -28,6 +28,11 @@
                             <constraint firstAttribute="width" constant="40" id="4ze-Uj-jiI"/>
                             <constraint firstAttribute="height" constant="40" id="X7C-Eb-dn0"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6c-hj-oYY">
                         <rect key="frame" x="79" y="75" width="31" height="18"/>

@@ -32,11 +32,16 @@ NSString *FeatureOwID = @"FeatureOw";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([FeaturedTableViewCell class]) bundle:nil] forCellReuseIdentifier:FeatureOwID];
     
-    [self getOwData];
 }
 
 -(UIView *)listView{
     return self.view;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.owDataArray == nil) {
+        [self getOwData];
+    }
 }
 
 -(void)filterData{

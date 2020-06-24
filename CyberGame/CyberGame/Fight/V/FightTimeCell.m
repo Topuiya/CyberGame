@@ -44,6 +44,11 @@
         
         self.dateTextF.textColor = [UIColor colorWithHexString:@"999999"];
         NSLog(@"选择的值: %@",selectValue);
+        //将selectValue传回去
+        if (self->_selectedTimeBlock) {
+            self->_selectedTimeBlock(selectValue);
+        }
+        
     };
     //设置自定义样式
     BRPickerStyle *customStyle = [[BRPickerStyle alloc] init];

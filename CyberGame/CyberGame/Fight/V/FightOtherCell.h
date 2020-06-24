@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol FightOtherCellDelegate <NSObject>
 
 - (void)didClickSortButton:(UIButton *)button;
+- (void)didClickSureBtn:(UIButton *)button;
 
 @end
 
@@ -24,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *ruleBtn;
 @property (weak, nonatomic) IBOutlet UIButton *otherBtn;
 
+@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
 @property (nonatomic, weak) id <FightOtherCellDelegate> delegate;
 
 @end

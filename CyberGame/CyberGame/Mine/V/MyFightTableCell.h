@@ -11,6 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyFightTableCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *timeLeftLbael;
+@property (weak, nonatomic) IBOutlet UILabel *timeRightLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *leftImage;
+@property (weak, nonatomic) IBOutlet UIImageView *rightImage;
+@property (weak, nonatomic) IBOutlet UILabel *leftNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rightNameLabel;
+
+@property (nonatomic, strong) FightDataModel *fightModel;
 
 @end
 

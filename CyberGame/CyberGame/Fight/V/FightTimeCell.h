@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *dateTextF;
 @property (nonatomic, strong) FightInfoModel  *model;
 
+@property (nonatomic, copy)void (^selectedTimeBlock)(NSString *timeStr);
 @end
 
 NS_ASSUME_NONNULL_END

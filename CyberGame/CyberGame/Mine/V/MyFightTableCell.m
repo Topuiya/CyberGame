@@ -12,13 +12,22 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"box"]];
+    self.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"box"]];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setFightModel:(FightDataModel *)fightModel {
+    _fightModel = fightModel;
+    
+    
+    _leftImage.image = [UIImage imageNamed:fightModel.fightTeamImg1];
+    _rightImage.image = [UIImage imageNamed:fightModel.fightTeamImg2];
+    _timeLeftLbael.text = fightModel.fightTeam1;
+    _timeRightLabel.text = fightModel.fightTeam2;
+    
+    _timeRightLabel.text = fightModel.publishTime;
+    _timeLeftLbael.text = fightModel.publishTime;
+    
 }
 
 @end

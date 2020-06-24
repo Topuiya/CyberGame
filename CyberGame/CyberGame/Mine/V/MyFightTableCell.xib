@@ -156,6 +156,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="leftImage" destination="J7e-Hz-uWi" id="5Rg-dM-Rsf"/>
+                <outlet property="leftNameLabel" destination="Uib-w6-DTZ" id="IIG-wl-qOR"/>
+                <outlet property="rightImage" destination="ZF3-mV-OiU" id="Vpk-cl-sjO"/>
+                <outlet property="rightNameLabel" destination="3Ln-I9-HQT" id="Jbg-eq-Gst"/>
+                <outlet property="timeLeftLbael" destination="jfc-FZ-Byu" id="Qgc-EU-aul"/>
+                <outlet property="timeRightLabel" destination="0CZ-de-rUf" id="GZj-WW-Exn"/>
+            </connections>
             <point key="canvasLocation" x="-542.02898550724638" y="167.74553571428569"/>
         </tableViewCell>
     </objects>

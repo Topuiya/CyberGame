@@ -18,6 +18,8 @@
     [self.emailBtn addTarget:self action:@selector(didClickSortButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.ruleBtn addTarget:self action:@selector(didClickSortButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.otherBtn addTarget:self action:@selector(didClickSortButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.sureBtn addTarget:self action:@selector(didClickSureBtn:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didClickSortButton:(UIButton *)button {
@@ -25,9 +27,13 @@
     {
         [self.delegate didClickSortButton:button];
     }
-    NSLog(@"点击了按钮");
 }
 
+- (void)didClickSureBtn:(UIButton *)button {
+    if ([self.delegate respondsToSelector:@selector(didClickSureBtn:)]) {
+        [self.delegate didClickSureBtn:button];
+    }
+}
 
 
 @end

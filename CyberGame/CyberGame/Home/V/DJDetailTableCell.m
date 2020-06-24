@@ -13,66 +13,64 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-//    [self.sureBtn addTarget:self action:@selector(didSureBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.sureBtn addTarget:self action:@selector(didSureBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-//此方法有问题闪退
+
 - (void)didSureBtnClick:(UIButton *)sender {
-//    _btnSeleted = !_btnSeleted;
+    _btnSeleted = !_btnSeleted;
     //解档,拿到LocalData模型
     LocalData *localModel = [EGHCodeTool getOBJCWithSavekey:DJData];
-    //新建一个user模型,保存输入的内容
-    UserDataModel *nowUserModel = UserDataModel.new;
-    
     NSInteger num = 0;
-    BOOL hasUserLogin = NO;
+    int i = [localModel.userModel.reservation intValue];
+    num = i;
     
-    for (UserDataModel *userDataModel in localModel.localModelArray) {
-        //判断当前用户是否登录
-        if ([userDataModel.uesrID isEqualToString:nowUserModel.uesrID]) {
-            //相等说明用户已经登陆
-            hasUserLogin = YES;
+    //判断当前用户是否登录
+    if (localModel.login == YES) {
+        //登录 -> 修改关注数据,更新本地数据
+        NSMutableArray *newUserArray = [NSMutableArray array];
+        if(_btnSeleted) {
+            //拿到当前登录的用户: localModel.userModel ,修改用户的数据,保存进新的数组,替代现在的用户
+            //当前用户的预约数加1
+            num ++;
+            localModel.userModel.reservation = [NSNumber numberWithInteger:num];
+            for (UserDataModel *nowUserModel in localModel.localModelArray) {
+                if ([nowUserModel.uesrID isEqualToString:localModel.userModel.uesrID]) {
+                    nowUserModel.reservation = localModel.userModel.reservation;
+                    [newUserArray addObject:nowUserModel];
+                    localModel.userModel = nowUserModel;
+                } else
+                [newUserArray addObject:nowUserModel];
+            }
+            //拿到当前保存用户的localModel.localModelArray数组,判断userID,如果不一样则不是当前用户,添加到newUserArray,
+            //是一样的则为当前用户,
+            //用newUserArray数组替换掉
+            
+
+            //更新dataModel.localModelArray
+            localModel.localModelArray = newUserArray;
+            //归档保存到本地
+            [EGHCodeTool archiveOJBC:localModel saveKey:DJData];
+        
+            //修改按钮的选中状态
+            [self.sureBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+            
+            
+            
+        }
+        //如果按钮已经点击
+        else {
+            //选中
+            [self.sureBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
         }
     }
+    
+    
     //如果没有登录,提示去登录
-    if (hasUserLogin == NO) {
+    if (localModel.login == NO) {
         [Toast makeText:self Message:@"请先注册或登录" afterHideTime:2];
     }
-    else {
-        //如果存在,修改关注数据,更新本地数据
-        NSMutableArray *newUserArray = [NSMutableArray array];
-        for (UserDataModel *userLocalModel in localModel.localModelArray) {
-           if(_btnSeleted) {
-               //选中
-               [self.sureBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
-               //预约数点击一下加1
-               num ++;
-               userLocalModel.reservation = [NSNumber numberWithInteger:num];
-               
-               //更新dataModel.userModel
-               localModel.userModel = nowUserModel;
-               //更新dataModel.localModelArray
-               localModel.localModelArray = newUserArray;
-               //归档保存到本地
-               [EGHCodeTool archiveOJBC:localModel saveKey:DJData];
-           }else {
-               //取消选中
-               [self.sureBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-               [self.sureBtn setBackgroundImage:[UIImage imageWithColor:UIColor.grayColor] forState:UIControlStateNormal];
-               //再点取消加1
-               num --;
-               userLocalModel.reservation = [NSNumber numberWithInteger:num];
-               
-               //更新dataModel.userModel
-               localModel.userModel = nowUserModel;
-               //更新dataModel.localModelArray
-               localModel.localModelArray = newUserArray;
-               //归档保存到本地
-               [EGHCodeTool archiveOJBC:localModel saveKey:DJData];
-           }
-        }
-    }
-    
+        
     if (_didSureBtnBlock) {
         _didSureBtnBlock();
     }

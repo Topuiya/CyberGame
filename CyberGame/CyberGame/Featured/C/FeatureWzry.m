@@ -36,12 +36,16 @@ NSString *FeatureWzryID = @"FeatureWzry";
     }else if (SCREEN_WIDTH == 375){
         self.headViewHeight.constant = 156;
     }
-    
-    [self getWzryData];
 }
 
 -(UIView *)listView{
     return self.view;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.wzryDataArray == nil) {
+        [self getWzryData];
+    }
 }
 
 -(void)filterData{

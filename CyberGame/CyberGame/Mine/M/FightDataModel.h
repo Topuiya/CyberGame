@@ -16,14 +16,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *fightSort;
 //发布时间
 @property (nonatomic, copy) NSString *publishTime;
-//时间
-@property (nonatomic, copy) NSString *time;
 //赛制
 @property (nonatomic, copy) NSString *fightRule;
 //战队添加
-@property (nonatomic, copy) NSString *fightTeam;
+@property (nonatomic, copy) NSString *fightTeam1;
+@property (nonatomic, copy) NSString *fightTeamImg1;
+@property (nonatomic, copy) NSString *fightTeam2;
+@property (nonatomic, copy) NSString *fightTeamImg2;
 //其他
-@property (nonatomic, copy) NSString *fightOther;
+@property (nonatomic, copy) NSString *otherPhone;
+@property (nonatomic, copy) NSString *otherEmail;
+@property (nonatomic, copy) NSString *otherRule;
+@property (nonatomic, copy) NSString *otherInfo;
 
 @end
 

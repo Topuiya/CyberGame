@@ -71,7 +71,8 @@
     UserDataModel *nowUserModel = UserDataModel.new;
     nowUserModel.uesrID = self.accountTextF.text;
     nowUserModel.pwd = self.pwdTextF.text;
-    
+    //将login判断改为真
+    dataModel.login = YES;
     BOOL hasSameUser = NO;
     for (UserDataModel *userLocalModel in dataModel.localModelArray) {
         if ([userLocalModel.uesrID isEqualToString:nowUserModel.uesrID]) {
