@@ -76,8 +76,6 @@
     datePicketView.pickerHeaderView = headerView;
     // 3.显示
     [datePicketView show];
-    
-   
 }
 
 @end

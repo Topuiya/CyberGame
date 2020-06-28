@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="233" id="KGk-i7-Jjw" customClass="GameSortTabCell">
-            <rect key="frame" x="0.0" y="0.0" width="384" height="233"/>
+            <rect key="frame" x="0.0" y="0.0" width="415" height="233"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="384" height="233"/>
+                <rect key="frame" x="0.0" y="0.0" width="415" height="233"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7J-2e-egl" userLabel="lol">
-                        <rect key="frame" x="10" y="10" width="177" height="101"/>
+                        <rect key="frame" x="20" y="10" width="177" height="101"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ban_yxs_b" translatesAutoresizingMaskIntoConstraints="NO" id="ONp-CS-wGc" userLabel="lol">
                                 <rect key="frame" x="0.0" y="0.0" width="177" height="101"/>
@@ -33,7 +33,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4X3-ve-v1j" userLabel="ow">
-                        <rect key="frame" x="197" y="10" width="177" height="101"/>
+                        <rect key="frame" x="218" y="10" width="177" height="101"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ban_sw_b" translatesAutoresizingMaskIntoConstraints="NO" id="Xfi-2O-RQk" userLabel="ow">
                                 <rect key="frame" x="0.0" y="0.0" width="177" height="101"/>
@@ -47,7 +47,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5s-s4-Vg0" userLabel="农药">
-                        <rect key="frame" x="10" y="122" width="177" height="101"/>
+                        <rect key="frame" x="20" y="122" width="177" height="101"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ban_wzry_b" translatesAutoresizingMaskIntoConstraints="NO" id="Jrh-oR-Ir8" userLabel="农药">
                                 <rect key="frame" x="0.0" y="0.0" width="177" height="101"/>
@@ -61,7 +61,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76f-24-khO" userLabel="吃鸡">
-                        <rect key="frame" x="197" y="122" width="177" height="101"/>
+                        <rect key="frame" x="218" y="122" width="177" height="101"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ban_jdqs_b" translatesAutoresizingMaskIntoConstraints="NO" id="gCq-WC-bD7" userLabel="吃鸡">
                                 <rect key="frame" x="0.0" y="0.0" width="177" height="101"/>
@@ -77,29 +77,31 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="76f-24-khO" secondAttribute="bottom" constant="10" id="4IR-Yz-VZT"/>
-                    <constraint firstAttribute="trailing" secondItem="76f-24-khO" secondAttribute="trailing" constant="10" id="INi-EC-D6K"/>
-                    <constraint firstItem="K5s-s4-Vg0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="NAq-VX-L9L"/>
                     <constraint firstItem="c7J-2e-egl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Tn4-Ix-Tqq"/>
-                    <constraint firstItem="c7J-2e-egl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="c2Q-9h-aWQ"/>
+                    <constraint firstItem="c7J-2e-egl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="c2Q-9h-aWQ"/>
                     <constraint firstItem="K5s-s4-Vg0" firstAttribute="height" secondItem="c7J-2e-egl" secondAttribute="height" id="cVG-Qd-iYy"/>
                     <constraint firstItem="76f-24-khO" firstAttribute="height" secondItem="c7J-2e-egl" secondAttribute="height" id="ew4-Rb-LDh"/>
+                    <constraint firstItem="76f-24-khO" firstAttribute="trailing" secondItem="4X3-ve-v1j" secondAttribute="trailing" id="gQp-78-OBt"/>
                     <constraint firstItem="K5s-s4-Vg0" firstAttribute="width" secondItem="c7J-2e-egl" secondAttribute="width" id="jPd-hQ-x1Z"/>
+                    <constraint firstItem="K5s-s4-Vg0" firstAttribute="leading" secondItem="c7J-2e-egl" secondAttribute="leading" id="juP-oQ-cpu"/>
                     <constraint firstItem="76f-24-khO" firstAttribute="width" secondItem="c7J-2e-egl" secondAttribute="width" id="kys-Rn-Bra"/>
                     <constraint firstItem="4X3-ve-v1j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="nBh-Ik-oMY"/>
                     <constraint firstItem="4X3-ve-v1j" firstAttribute="height" secondItem="c7J-2e-egl" secondAttribute="height" id="sMk-Hg-bKx"/>
                     <constraint firstItem="4X3-ve-v1j" firstAttribute="width" secondItem="c7J-2e-egl" secondAttribute="width" id="sOD-Vf-ozF"/>
-                    <constraint firstAttribute="trailing" secondItem="4X3-ve-v1j" secondAttribute="trailing" constant="10" id="uGI-4i-ULb"/>
+                    <constraint firstAttribute="trailing" secondItem="4X3-ve-v1j" secondAttribute="trailing" constant="20" id="uGI-4i-ULb"/>
                     <constraint firstAttribute="bottom" secondItem="K5s-s4-Vg0" secondAttribute="bottom" constant="10" id="vxw-dC-Pdt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="leftWid" destination="c2Q-9h-aWQ" id="pPm-9L-tmX"/>
                 <outlet property="lolView" destination="c7J-2e-egl" id="GVU-sp-Qr7"/>
                 <outlet property="owView" destination="4X3-ve-v1j" id="qs8-zf-RU7"/>
                 <outlet property="pubgView" destination="76f-24-khO" id="QND-u1-CyY"/>
+                <outlet property="rightWid" destination="uGI-4i-ULb" id="hSm-7W-SgP"/>
                 <outlet property="wzryView" destination="K5s-s4-Vg0" id="1Nh-zA-FFN"/>
             </connections>
-            <point key="canvasLocation" x="-103" y="164"/>
+            <point key="canvasLocation" x="-100.72463768115942" y="163.72767857142856"/>
         </tableViewCell>
     </objects>
     <resources>

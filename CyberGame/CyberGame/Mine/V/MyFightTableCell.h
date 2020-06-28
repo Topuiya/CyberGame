@@ -15,8 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *timeRightLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *leftImage;
 @property (weak, nonatomic) IBOutlet UIImageView *rightImage;
-@property (weak, nonatomic) IBOutlet UILabel *leftNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *rightNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *team1;
+@property (weak, nonatomic) IBOutlet UILabel *team2;
+
 
 @property (nonatomic, strong) FightDataModel *fightModel;
 

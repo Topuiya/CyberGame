@@ -64,7 +64,6 @@ NSString *wzryDetailHeadID = @"wzryDetailHead";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     DetailHeadTableCell *cell = [tableView dequeueReusableCellWithIdentifier:wzryDetailHeadID];
-    cell.selectionStyle = UITableViewScrollPositionNone;
     //设置图片,取第一张图片为主图
     NSURL *headURL = [NSURL URLWithString:_userModel.head];
     [cell.headImageView sd_setImageWithURL:headURL];

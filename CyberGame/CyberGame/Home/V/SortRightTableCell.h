@@ -7,22 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DJClubModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SortRightTableCell : UITableViewCell
-//@property (nonatomic, assign)NSNumber *star;
-//@property (nonatomic, assign)Boolean hot;
-//@property (nonatomic, copy)NSString *address;
-//@property (nonatomic, copy)NSString *pic;
-//@property (nonatomic, copy)NSString *name;
-
 
 @property (weak, nonatomic) IBOutlet UIImageView *picImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *hotImage;
 
+@property (nonatomic, strong) DJClubModel *clubModel;
 
 @end
 

@@ -24,7 +24,7 @@
 #import "UIImage+OriginalImage.h"
 #import <WRNavigationBar.h>
 
-@interface HomeVC () <UITableViewDelegate, UITableViewDataSource>
+@interface HomeVC () <UITableViewDelegate, UITableViewDataSource, GameSortTabCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)NSArray *clubArray;
@@ -37,10 +37,26 @@
 
 @implementation HomeVC
 
+- (NSArray *)clubArray {
+    if (_clubArray == nil) {
+        _clubArray = [DJClubModel mj_objectArrayWithFilename:@"DJClub.plist"];
+
+//        NSMutableArray *dictArray = [NSMutableArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"DJClub.plist" ofType:nil]];
+//        NSMutableArray *temp = [NSMutableArray array];
+//        for (NSDictionary *dict in dictArray) {
+//            DJClubModel *djModel = [DJClubModel djWithDict:dict];
+//            [temp addObject:djModel];
+//        }
+//        _clubArray = temp;
+    }
+    return _clubArray;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _menuTag = 1;
-    self.title = @"首页";
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -57,16 +73,12 @@
     //隐藏分割线
     self.tableView.separatorStyle = UITableViewScrollPositionNone;
     
-//    _clubArray = [DJClubModel mj_objectArrayWithFilename:@"DJClub.plist"];
+    //用star进行降序排序
+    NSArray *tempArr = self.clubArray;
+    //降序
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"star" ascending:NO];
+    _arr = [tempArr sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
     
-    
-    NSMutableArray *dictArray = [NSMutableArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"DJClub.plist" ofType:nil]];
-    NSMutableArray *temp = [NSMutableArray array];
-    for (NSDictionary *dict in dictArray) {
-        DJClubModel *djModel = [DJClubModel djWithDict:dict];
-        [temp addObject:djModel];
-    }
-    _clubArray = temp;
     
     [self ifHasLocalData];
 }
@@ -117,6 +129,7 @@ NSString *SortHeadViewID = @"SortHeadView";
 }
 
 - (void)addNavBarButtonItem {
+    self.title = @"首页";
     //左边按钮
     UIButton *addressBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     //设置Normal下的图片和偏移
@@ -153,15 +166,6 @@ NSString *SortHeadViewID = @"SortHeadView";
     
 }
 
-- (void)buildUserLocalData {
-   
-    //首先创建一个userID(思路为userID+当前时间的时间戳)
-    //当前时间,格式为:1592898100073
-    NSDate *datenow = [NSDate date];
-    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)([datenow timeIntervalSince1970]*1000)];
-    NSString *userID = [NSString stringWithFormat:@"userID%@",timeSp];
- 
-}
 
 #pragma mark - 三个功能键跳转界面按钮
 - (void)setSortBtn:(UIView *)sortView {
@@ -206,7 +210,6 @@ NSString *SortHeadViewID = @"SortHeadView";
 }
 
 - (void)gameNewsBtnClick {
-    NSLog(@"gameNewsBtnClick");
     RankVC *rankVC = RankVC.new;
     [self.navigationController pushViewController:rankVC animated:YES];
 }
@@ -231,13 +234,12 @@ NSString *SortHeadViewID = @"SortHeadView";
         return 1;
     }
     else {
-        return _clubArray.count;
+        return self.clubArray.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     if(indexPath.section == 0 && indexPath.row == 0)
     {
         HomeBannerCell *cell = [tableView dequeueReusableCellWithIdentifier:BannerTabCellID];
@@ -245,33 +247,11 @@ NSString *SortHeadViewID = @"SortHeadView";
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
         GameSortTabCell *cell = [tableView dequeueReusableCellWithIdentifier:GameTabCellID];
+        cell.delegate = self;
         
-        WEAKSELF
-        cell.selectedLolViewBlock = ^{
-            MyFightVC *lolFightVC = MyFightVC.new;
-            lolFightVC.titleStr = @"英雄联盟约战专区";
-            [weakSelf.navigationController pushViewController:lolFightVC animated:YES];
-        };
-        cell.selectedOwViewBlock = ^{
-            MyFightVC *owFightVC = MyFightVC.new;
-            owFightVC.titleStr = @"守望先锋约战专区";
-            [weakSelf.navigationController pushViewController:owFightVC animated:YES];
-        };
-        cell.selectedWzryViewBlock = ^{
-            MyFightVC *wzryFightVC = MyFightVC.new;
-            wzryFightVC.titleStr = @"王者荣耀约战专区";
-            [weakSelf.navigationController pushViewController:wzryFightVC animated:YES];
-        };
-        cell.selectedPubgViewBlock = ^{
-            MyFightVC *pubgFightVC = MyFightVC.new;
-            pubgFightVC.titleStr = @"绝地求生约战专区";
-            [weakSelf.navigationController pushViewController:pubgFightVC animated:YES];
-        };
         return cell;
     }else if (indexPath.section == 2 && indexPath.row == 0) {
         SortHeadView *cell = [tableView dequeueReusableCellWithIdentifier:SortHeadViewID];
-        //去掉cell的选中效果
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         WEAKSELF
         cell.selectedLeftHeadBlock = ^{
@@ -285,38 +265,19 @@ NSString *SortHeadViewID = @"SortHeadView";
         return cell;
     }
     else {
-        //用star进行降序排序
-        NSArray *tempArr = self.clubArray;
-        //降序
-        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"star" ascending:NO];
-        _arr = [tempArr sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
-        DJClubModel *rankModel = _arr[indexPath.row];
-        
         //加载不同的cell
         switch (self.menuTag) {
             case 1:
                 {
                     SortLeftTableCell *cell = [tableView dequeueReusableCellWithIdentifier:SortLeftTableCellID];
-                    //设置图片
-                    NSURL *picURL = [NSURL URLWithString:rankModel.pic];
-                    [cell.picImageView sd_setImageWithURL:picURL];
-                    cell.nameLabel.text = rankModel.name;
+                    cell.clubModel = _arr[indexPath.row];
                     return cell;
                 }
                 break;
             case 2:
             {
                 SortRightTableCell *cell = [tableView dequeueReusableCellWithIdentifier:SortRightTableCellID];
-                NSURL *picURL = [NSURL URLWithString:rankModel.pic];
-                [cell.picImageView sd_setImageWithURL:picURL];
-                cell.nameLabel.text = rankModel.name;
-                cell.addressLabel.text = rankModel.address;
-                if (rankModel.isHot == NO) {
-                    cell.hotImage.hidden = NO;
-                }
-                else {
-                    cell.hotImage.hidden = YES;
-                }
+                cell.clubModel = _arr[indexPath.row];
                 return cell;
             }
             default:
@@ -384,6 +345,34 @@ NSString *SortHeadViewID = @"SortHeadView";
         detailVC.model = dataModel;
         [self.navigationController pushViewController:detailVC animated:YES];
     }
+    if (indexPath.section == 2) {
+        
+    }
+}
+
+#pragma mark - GameSortTabCellDelegate
+- (void)didSelectedLolView {
+    MyFightVC *figthVC = MyFightVC.new;
+    figthVC.titleStr = @"英雄联盟约战专区";
+    [self.navigationController pushViewController:figthVC animated:YES];
+}
+
+- (void)didSelectedOwView {
+    MyFightVC *figthVC = MyFightVC.new;
+    figthVC.titleStr = @"守望先锋约战专区";
+    [self.navigationController pushViewController:figthVC animated:YES];
+}
+
+- (void)didSelectedWzryView {
+    MyFightVC *figthVC = MyFightVC.new;
+    figthVC.titleStr = @"王者荣耀约战专区";
+    [self.navigationController pushViewController:figthVC animated:YES];
+}
+
+- (void)didSelectedPubgView {
+    MyFightVC *figthVC = MyFightVC.new;
+    figthVC.titleStr = @"绝地求生约战专区";
+    [self.navigationController pushViewController:figthVC animated:YES];
 }
 
 @end

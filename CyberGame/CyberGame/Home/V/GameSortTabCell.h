@@ -10,17 +10,27 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class GameSortTabCell;
+
+@protocol GameSortTabCellDelegate <NSObject>
+
+- (void)didSelectedLolView;
+- (void)didSelectedOwView;
+- (void)didSelectedWzryView;
+- (void)didSelectedPubgView;
+
+@end
+
 @interface GameSortTabCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *lolView;
 @property (weak, nonatomic) IBOutlet UIView *owView;
 @property (weak, nonatomic) IBOutlet UIView *wzryView;
 @property (weak, nonatomic) IBOutlet UIView *pubgView;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftWid;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightWid;
 
-@property (nonatomic, copy)void (^selectedLolViewBlock)(void);
-@property (nonatomic, copy)void (^selectedOwViewBlock)(void);
-@property (nonatomic, copy)void (^selectedWzryViewBlock)(void);
-@property (nonatomic, copy)void (^selectedPubgViewBlock)(void);
+@property (nonatomic, weak) id <GameSortTabCellDelegate> delegate;
 
 @end
 

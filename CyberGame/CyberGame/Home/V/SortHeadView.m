@@ -13,6 +13,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    //去掉cell的选中效果
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     [self.leftBtn addTarget:self action:@selector(headLeftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.rightBtn addTarget:self action:@selector(headRightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 }

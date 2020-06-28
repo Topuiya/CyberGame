@@ -15,10 +15,20 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setClubModel:(DJClubModel *)clubModel {
+    _clubModel = clubModel;
+    
+    NSURL *picURL = [NSURL URLWithString:clubModel.pic];
+    [self.picImageView sd_setImageWithURL:picURL];
+    self.nameLabel.text = clubModel.name;
+    self.addressLabel.text = clubModel.address;
+    if (clubModel.isHot == NO) {
+        self.hotImage.hidden = NO;
+    }
+    else {
+        self.hotImage.hidden = YES;
+    }
+    
 }
 
 @end

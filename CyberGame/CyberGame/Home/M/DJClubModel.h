@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DJClubModel : NSObject
 
 @property (nonatomic, strong)NSNumber *star;
-//@property (nonatomic, assign)Boolean hot;
 @property (nonatomic, copy)NSString *address;
 @property (nonatomic, copy)NSString *pic;
 @property (nonatomic, copy)NSString *name;

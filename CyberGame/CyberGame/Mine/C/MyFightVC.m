@@ -47,8 +47,8 @@ NSString *MyFightTableCellID = @"MyFightTableCell";
         
         // 3.归档
         [EGHCodeTool archiveOJBC:fightDataArray saveKey:localModel.userModel.uesrID];
+   
         
-        [Toast makeText:self.view Message:@"发布成功" afterHideTime:2];
     } else {
         // 没有登录提示去登录
         [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:2];
@@ -84,10 +84,7 @@ NSString *MyFightTableCellID = @"MyFightTableCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MyFightTableCell *cell = [tableView dequeueReusableCellWithIdentifier:MyFightTableCellID];
     
-    
     cell.fightModel = self.fightArray[indexPath.row];
-    
-    
     
     return cell;
 }

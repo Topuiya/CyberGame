@@ -84,7 +84,6 @@ NSString *FightRuleDetailCellID = @"FightRuleDetailCell";
     }
     else {
         FightRuleTableCell *cell = [tableView dequeueReusableCellWithIdentifier:FightRuleTableCellID];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
 }

@@ -21,7 +21,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    self.selectionStyle = UITableViewScrollPositionNone;
     NSArray *nameArray = [NSArray arrayWithObjects:@"三局二胜制", @"五局三胜制", @"单淘汰制", nil];
     
     CGFloat w = SCREEN_WIDTH / nameArray.count;

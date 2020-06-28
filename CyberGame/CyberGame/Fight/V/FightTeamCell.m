@@ -29,10 +29,7 @@
     [_iconLImageView addGestureRecognizer:iconTap];
     self.nameArray = [NSMutableArray array];
     self.imageArray = [NSMutableArray array];
-    
-    //中间图片点击
-//    _iconCImageView.userInteractionEnabled = YES;
-    
+    self.selectionStyle = UITableViewScrollPositionNone;
 }
 
 - (void)didTapIconImageView {

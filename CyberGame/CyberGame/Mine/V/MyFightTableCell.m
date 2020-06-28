@@ -22,11 +22,12 @@
     
     _leftImage.image = [UIImage imageNamed:fightModel.fightTeamImg1];
     _rightImage.image = [UIImage imageNamed:fightModel.fightTeamImg2];
-    _timeLeftLbael.text = fightModel.fightTeam1;
-    _timeRightLabel.text = fightModel.fightTeam2;
+    _team1.text = fightModel.fightTeam1;
+    _team2.text = fightModel.fightTeam2;
     
-    _timeRightLabel.text = fightModel.publishTime;
-    _timeLeftLbael.text = fightModel.publishTime;
+    NSString *leftTimeStr = [fightModel.publishTime substringToIndex:11];
+    _timeRightLabel.text = [NSString stringWithFormat:@"%@时",fightModel.publishTime];
+    _timeLeftLbael.text = leftTimeStr;
     
 }
 

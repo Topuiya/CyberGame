@@ -104,7 +104,6 @@ NSString *FightOtherID = @"FightOther";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         FightTeamCell *cell = [tableView dequeueReusableCellWithIdentifier:FihghtThemeID];
-        cell.selectionStyle = UITableViewScrollPositionNone;
         return cell;
     }
     else if (indexPath.section == 1) {
@@ -117,7 +116,6 @@ NSString *FightOtherID = @"FightOther";
     }
     else if (indexPath.section == 2) {
         FightRuleCell *cell = [tableView dequeueReusableCellWithIdentifier:FightRuleID];
-        cell.selectionStyle = UITableViewScrollPositionNone;
         return  cell;
     }
     else if (indexPath.section == 3) {
@@ -165,7 +163,8 @@ NSString *FightOtherID = @"FightOther";
     //创建headView
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
     //添加图片
-    UIImageView *headImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"list_org_bg"]];
+    UIImageView *headImageView = [[UIImageView alloc] init];
+    headImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 44);
     [headView addSubview:headImageView];
     //添加线条
     UIImageView *lineImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"line"]];
@@ -176,9 +175,7 @@ NSString *FightOtherID = @"FightOther";
     titleLabel.frame = CGRectMake(28, 14, 100, 15);
     titleLabel.textColor = UIColor.whiteColor;
     [headView addSubview:titleLabel];
-    
-    [self.tableView addSubview:headView];
-    
+    // 设置不同组数的图片和标题
     if (section == 0) {
         [headImageView setImage:[UIImage imageNamed:@"list_org_bg"]];
         titleLabel.text = @"约战主题";
