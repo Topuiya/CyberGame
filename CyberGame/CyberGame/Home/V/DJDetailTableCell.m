@@ -53,15 +53,35 @@
             [EGHCodeTool archiveOJBC:localModel saveKey:DJData];
         
             //修改按钮的选中状态
-            [self.sureBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
-            
-            
+            [self.sureBtn setTitle:@"取消预约" forState:UIControlStateNormal];
             
         }
         //如果按钮已经点击
         else {
+            
+            num --;
+            localModel.userModel.reservation = [NSNumber numberWithInteger:num];
+            for (UserDataModel *nowUserModel in localModel.localModelArray) {
+                if ([nowUserModel.uesrID isEqualToString:localModel.userModel.uesrID]) {
+                    nowUserModel.reservation = localModel.userModel.reservation;
+                    [newUserArray addObject:nowUserModel];
+                    localModel.userModel = nowUserModel;
+                } else
+                    [newUserArray addObject:nowUserModel];
+            }
+            //拿到当前保存用户的localModel.localModelArray数组,判断userID,如果不一样则不是当前用户,添加到newUserArray,
+            //是一样的则为当前用户,
+            //用newUserArray数组替换掉
+            
+            
+            //更新dataModel.localModelArray
+            localModel.localModelArray = newUserArray;
+            //归档保存到本地
+                       [EGHCodeTool archiveOJBC:localModel saveKey:DJData];
+            
             //选中
             [self.sureBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+            [self.sureBtn setTitle:@"立即预约" forState:UIControlStateNormal];
         }
     }
     

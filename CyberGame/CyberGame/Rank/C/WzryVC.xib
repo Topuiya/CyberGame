@@ -82,7 +82,7 @@
                         <constraint firstItem="el4-KB-BaL" firstAttribute="leading" secondItem="lk4-EY-v79" secondAttribute="leading" id="3Ep-lx-b06"/>
                         <constraint firstAttribute="trailing" secondItem="el4-KB-BaL" secondAttribute="trailing" id="3LY-bx-krc"/>
                         <constraint firstItem="el4-KB-BaL" firstAttribute="top" secondItem="lk4-EY-v79" secondAttribute="top" constant="41" id="DV5-8R-meI"/>
-                        <constraint firstAttribute="bottom" secondItem="KoU-5i-n12" secondAttribute="bottom" id="Nip-qy-qcb"/>
+                        <constraint firstAttribute="bottom" secondItem="KoU-5i-n12" secondAttribute="bottom" id="UzK-1T-AGW"/>
                         <constraint firstItem="KoU-5i-n12" firstAttribute="top" secondItem="el4-KB-BaL" secondAttribute="bottom" id="lYI-dA-RzK"/>
                     </constraints>
                 </view>
@@ -95,7 +95,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="lk4-EY-v79" secondAttribute="bottom" id="xRL-1T-JeF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="94" y="55"/>
+            <point key="canvasLocation" x="92.753623188405811" y="54.910714285714285"/>
         </view>
     </objects>
 </document>

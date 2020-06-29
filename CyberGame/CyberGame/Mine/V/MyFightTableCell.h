@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) FightDataModel *fightModel;
 
+@property (nonatomic, copy)void (^selectedMyFightVCBlock)(FightDataModel *myFightModel);
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *nickNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *saveBtn;
 
+@property (nonatomic, copy)void (^selectedSaveButtonBlock)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END

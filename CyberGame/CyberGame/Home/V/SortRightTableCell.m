@@ -23,10 +23,10 @@
     self.nameLabel.text = clubModel.name;
     self.addressLabel.text = clubModel.address;
     if (clubModel.isHot == NO) {
-        self.hotImage.hidden = NO;
+        self.hotImage.hidden = YES;
     }
     else {
-        self.hotImage.hidden = YES;
+        self.hotImage.hidden = NO;
     }
     
 }

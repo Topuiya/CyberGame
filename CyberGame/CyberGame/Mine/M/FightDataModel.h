@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FightDataModel : BaseModel
 
-//约战主题
-@property (nonatomic, copy) NSString *fightSort;
+//约战主题(tag)
+@property (nonatomic, assign)NSInteger fightSortTag;
 //发布时间
 @property (nonatomic, copy) NSString *publishTime;
 //赛制

@@ -29,6 +29,9 @@
     _timeRightLabel.text = [NSString stringWithFormat:@"%@时",fightModel.publishTime];
     _timeLeftLbael.text = leftTimeStr;
     
+    if (_selectedMyFightVCBlock) {
+        _selectedMyFightVCBlock(fightModel);
+    }
 }
 
 @end

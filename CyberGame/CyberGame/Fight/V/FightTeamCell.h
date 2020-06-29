@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong)RankTeamListModel *model;
 
+@property (nonatomic, assign)NSInteger tagBtn;
+
 @property (nonatomic, copy)void (^selectedTeam1Block)(NSString *teamNameStr1, NSString *teamImgStr1);
 @property (nonatomic, copy)void (^selectedTeam2Block)(NSString *teamNameStr2, NSString *teamImgStr2);
 @end

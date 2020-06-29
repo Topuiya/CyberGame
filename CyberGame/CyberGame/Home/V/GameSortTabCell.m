@@ -17,7 +17,7 @@
         self.leftWid.constant = self.rightWid.constant = 10;
     }
     else if (SCREEN_WIDTH == 414) {
-        self.leftWid.constant = self.rightWid.constant = 20;
+        self.leftWid.constant = self.rightWid.constant = 22;
     }
     
     self.lolView.userInteractionEnabled = YES;

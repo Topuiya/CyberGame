@@ -37,6 +37,9 @@
 @property (nonatomic, copy)NSString *teamImgString1;
 @property (nonatomic, copy)NSString *teamNameString2;
 @property (nonatomic, copy)NSString *teamImgString2;
+
+@property (nonatomic, assign)NSInteger buttonTag;
+
 @end
 
 @implementation FightVC
@@ -103,7 +106,13 @@ NSString *FightOtherID = @"FightOther";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        FightTeamCell *cell = [tableView dequeueReusableCellWithIdentifier:FihghtThemeID];
+        FihghtThemeCell *cell = [tableView dequeueReusableCellWithIdentifier:FihghtThemeID];
+        WEAKSELF
+        cell.didClickSortGameButtonBlock = ^(NSInteger btnTag) {
+            weakSelf.buttonTag = btnTag;
+            //将tag赋值之后需要第三组tableView
+            [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:3] withRowAnimation:UITableViewRowAnimationFade];
+        };
         return cell;
     }
     else if (indexPath.section == 1) {
@@ -120,8 +129,10 @@ NSString *FightOtherID = @"FightOther";
     }
     else if (indexPath.section == 3) {
         FightTeamCell *cell = [tableView dequeueReusableCellWithIdentifier:FightTeamID];
-        RankTeamListModel *dataModel = _saveListArray[indexPath.row];
+        //根据tag值找到数组里面对应的
+        RankTeamListModel *dataModel = _saveListArray[self.buttonTag];
         cell.model = dataModel;
+
         WEAKSELF
         cell.selectedTeam1Block = ^(NSString * _Nonnull teamNameStr1, NSString * _Nonnull teamImgStr1) {
             weakSelf.teamNameString1 = teamNameStr1;
@@ -205,7 +216,7 @@ NSString *FightOtherID = @"FightOther";
     FightDetailVC *detailVC = FightDetailVC.new;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
-
+#pragma mark - 点击发布按钮,修改信息并归档
 - (void)didClickSureBtn:(UIButton *)button {
     // 1.解档
     LocalData *localModel = [EGHCodeTool getOBJCWithSavekey:DJData];
@@ -227,11 +238,18 @@ NSString *FightOtherID = @"FightOther";
         fightModel.fightTeamImg1 = self.teamImgString1;
         fightModel.fightTeam2 = self.teamNameString2;
         fightModel.fightTeamImg2 = self.teamImgString2;
+        //保存按钮的tag值
+        fightModel.fightSortTag = self.buttonTag;
         [fightArray addObject:fightModel];
-        // 3.归档
-        [EGHCodeTool archiveOJBC:fightArray saveKey:localModel.userModel.uesrID];
         
-        [Toast makeText:self.view Message:@"发布成功" afterHideTime:2];
+        if (fightModel.publishTime != nil && fightModel.fightTeam2 != nil) {
+            [Toast makeText:self.view Message:@"发布成功" afterHideTime:2];
+            // 3.归档
+            [EGHCodeTool archiveOJBC:fightArray saveKey:localModel.userModel.uesrID];
+        }else {
+            [Toast makeText:self.view Message:@"请填写必要信息!" afterHideTime:2];
+        }
+        
     } else {
         // 没有登录提示去登录
         [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:2];

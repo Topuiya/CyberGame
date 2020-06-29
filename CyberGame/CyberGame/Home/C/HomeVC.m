@@ -135,7 +135,6 @@ NSString *SortHeadViewID = @"SortHeadView";
     //设置Normal下的图片和偏移
     [addressBtn setImage:[UIImage originalImageWithName:@"ic_id"] forState:UIControlStateNormal];
     [addressBtn setImageEdgeInsets:UIEdgeInsetsMake(0,- addressBtn.currentImage.size.height + 10, 0, 0)];
-    
     [addressBtn setImage:[UIImage originalImageWithName:@"ic_address"] forState:UIControlStateHighlighted];
     //设置Normal下的Title
     [addressBtn setTitle:@"成都" forState:UIControlStateNormal];
@@ -146,14 +145,10 @@ NSString *SortHeadViewID = @"SortHeadView";
     //按钮自适应
     [addressBtn sizeToFit];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:addressBtn];
-    
-    
     //右边按钮
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_search"] style:UIBarButtonItemStyleDone target:self action:@selector(searchBtnClick)];
     
 }
-
-
 - (void)addressBtnClick {
     
 }
@@ -166,14 +161,12 @@ NSString *SortHeadViewID = @"SortHeadView";
     
 }
 
-
 #pragma mark - 三个功能键跳转界面按钮
 - (void)setSortBtn:(UIView *)sortView {
     CGFloat spaceW = (SCREEN_WIDTH - 3*61 - 14.5*2)/2;
     //电竞快讯(第一个)按钮
     UIButton *gameNewsBtn = [[UIButton alloc] initWithFrame:CGRectMake(14.5, 0, 100, 41.5)];
     [gameNewsBtn setTitle:@"电竞快讯" forState:UIControlStateNormal];
-//    [gameNewsBtn setFont:[UIFont systemFontOfSize:13]];
     gameNewsBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [gameNewsBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [gameNewsBtn setImage:[UIImage imageNamed:@"ic_01"] forState:UIControlStateNormal];
@@ -210,13 +203,14 @@ NSString *SortHeadViewID = @"SortHeadView";
 }
 
 - (void)gameNewsBtnClick {
-    RankVC *rankVC = RankVC.new;
-    [self.navigationController pushViewController:rankVC animated:YES];
+    Featured *featureVC = Featured.new;
+    [self.navigationController pushViewController:featureVC animated:YES];
 }
 
 - (void)gameRankBtnClick {
-    Featured *featureVC = Featured.new;
-    [self.navigationController pushViewController:featureVC animated:YES];
+    RankVC *rankVC = RankVC.new;
+    [self.navigationController pushViewController:rankVC animated:YES];
+
 }
 
 #pragma mark - UITableViewViewDataSource
@@ -248,7 +242,6 @@ NSString *SortHeadViewID = @"SortHeadView";
     else if (indexPath.section == 1 && indexPath.row == 0) {
         GameSortTabCell *cell = [tableView dequeueReusableCellWithIdentifier:GameTabCellID];
         cell.delegate = self;
-        
         return cell;
     }else if (indexPath.section == 2 && indexPath.row == 0) {
         SortHeadView *cell = [tableView dequeueReusableCellWithIdentifier:SortHeadViewID];
@@ -287,7 +280,7 @@ NSString *SortHeadViewID = @"SortHeadView";
     return nil;
 }
 
- - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && indexPath.row == 0) {
         self.tableView.estimatedRowHeight = 100;
         return 200;

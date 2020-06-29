@@ -20,9 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *idnumLabel;
 @property (weak, nonatomic) IBOutlet UIView *idView;
+@property (weak, nonatomic) IBOutlet UIButton *iconBtn;
 
 @property (nonatomic, copy)void (^selectedMineHeadTableViewCellBlock)(void);
 @property (nonatomic, copy)void (^selectedMineIDViewCellBlock)(void);
+
+@property (nonatomic, strong) UserDataModel *userModel;
 
 @end
 

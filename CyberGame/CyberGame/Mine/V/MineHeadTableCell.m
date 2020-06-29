@@ -21,6 +21,19 @@
     [self.idView addGestureRecognizer:idTap];
 }
 
+- (void)setUserModel:(UserDataModel *)userModel {
+    _userModel = userModel;
+    
+    self.reservationLabel.text = userModel.reservation.description;
+    self.attentionLabel.text = userModel.focus.description;
+    self.historyLabel.text = userModel.history.description;
+    if (userModel.name == nil) {
+        self.nameLabel.text = @"快来取个昵称吧";
+    } else
+    self.nameLabel.text = userModel.name;
+}
+
+
 - (void)didTapUserImageView {
     if (_selectedMineHeadTableViewCellBlock) {
         _selectedMineHeadTableViewCellBlock();

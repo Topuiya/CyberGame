@@ -134,24 +134,32 @@ NSString *MineHeadTabelID = @"MineHeadTabelCell";
         //解档,拿到LocalData模型
         LocalData *localModel = [EGHCodeTool getOBJCWithSavekey:DJData];
         if (localModel.login == NO) {
-            //不改变label的数值
+            //不改变label的数值,将IDLabel该为空
+            cell.idnumLabel.text = @"--";
+            cell.nameLabel.text = @"请点击头像登录";
+            cell.iconBtn.hidden = YES;
         }
         else {
-            cellWeak.reservationLabel.text = localModel.userModel.reservation.description;
-            cellWeak.attentionLabel.text = localModel.userModel.focus.description;
-            cellWeak.historyLabel.text = localModel.userModel.history.description;
+            cell.iconBtn.hidden = NO;
+            cellWeak.userModel = localModel.userModel;
+            cell.idnumLabel.text = @"ID:123 456";
         }
         WEAKSELF
         cell.selectedMineHeadTableViewCellBlock = ^{
             LoginVC *vc = LoginVC.new;
             [weakSelf presentViewController:vc animated:YES completion:^{
             }];
+            [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
         };
         cell.selectedMineIDViewCellBlock = ^{
             MineNameAlterVC *nameVC = MineNameAlterVC.new;
             [weakSelf presentViewController:nameVC animated:YES completion:^{
-                
             }];
+            nameVC.selectedSaveButtonBlock = ^{
+                //返回
+                [weakSelf dismissViewControllerAnimated:YES completion:nil];
+                [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+            };
         };
         //归档保存到本地
         [EGHCodeTool archiveOJBC:localModel saveKey:DJData];

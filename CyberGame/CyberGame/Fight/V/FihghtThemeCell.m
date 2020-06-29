@@ -26,6 +26,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     NSArray *nameArray = [NSArray arrayWithObjects:@"王者荣耀", @"英雄联盟", @"绝地求生", @"守望先锋", nil];
     CGFloat w = SCREEN_WIDTH / nameArray.count;
     self.btnArray = [NSMutableArray array];
@@ -63,6 +65,9 @@
         UIButton *btn = self.btnArray[i];
         if (button.tag == i) {
             btn.selected = btn.selected;
+            if (_didClickSortGameButtonBlock) {
+                _didClickSortGameButtonBlock(button.tag);
+            }
         }else {
             btn.selected = NO;
         }
@@ -80,7 +85,6 @@
         btn.backgroundColor = [UIColor colorWithHexString:@"#FDD9C1"];
         [button setTitleColor:[UIColor colorWithHexString:@"#F87812"] forState:UIControlStateNormal];
     }
-
 }
 
 @end

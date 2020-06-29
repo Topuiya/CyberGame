@@ -173,6 +173,7 @@
             <connections>
                 <outlet property="attentionLabel" destination="hBX-LQ-Vx3" id="c97-Fx-nDX"/>
                 <outlet property="historyLabel" destination="p8V-UX-55z" id="6RO-qO-sXr"/>
+                <outlet property="iconBtn" destination="yqh-Oh-9R7" id="ExW-5W-MwS"/>
                 <outlet property="idView" destination="wJ5-ox-0Ws" id="MYl-l3-7Ja"/>
                 <outlet property="idnumLabel" destination="cXd-Eo-O5m" id="IJ5-pb-uM9"/>
                 <outlet property="nameLabel" destination="rja-Ip-zbU" id="9dT-QZ-dnC"/>

@@ -45,8 +45,8 @@
     stringPickerView.dataSourceArr = self.nameArray;
     stringPickerView.resultModelBlock = ^(BRResultModel * _Nullable resultModel) {
         self.leftTextF.text = resultModel.value;
-        if (self->_selectedTeam1Block) {
-            self->_selectedTeam1Block(resultModel.value, self.imageArray[resultModel.index]);
+        if (self.selectedTeam1Block) {
+            self.selectedTeam1Block(resultModel.value, self.imageArray[resultModel.index]);
         }
         self.iconLImageView.image = [UIImage imageNamed:self.imageArray[resultModel.index]];
         //左边有值才能点击
@@ -74,8 +74,8 @@
     stringPickerView.dataSourceArr = self.nameArray;
     stringPickerView.resultModelBlock = ^(BRResultModel * _Nullable resultModel) {
         self.centerTextF.text = resultModel.value;
-        if (self->_selectedTeam2Block) {
-            self->_selectedTeam2Block(resultModel.value, self.imageArray[resultModel.index]);
+        if (self.selectedTeam2Block) {
+            self.selectedTeam2Block(resultModel.value, self.imageArray[resultModel.index]);
         }
         self.iconCImageView.image = [UIImage imageNamed:self.imageArray[resultModel.index]];
         //点击之后设置中间图片为+号
